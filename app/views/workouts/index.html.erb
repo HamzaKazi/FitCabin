@@ -1,4 +1,32 @@
-<h1>hey</h1>
-<% @workouts.each do |workout| %>
-<%= link_to workout.id, workout_path(workout) %>
+
+<div class="cover mb-4 d-flex align-items-center justify-content-center">
+  <div class="text-center text-blue">
+    <h1></h1>
+    <h3 class="typed-js" data-controller="typed-js"></h3>
+  </div>
+</div>
+<div class="container py-5">
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <h3 class="mb-0">My workouts</h3>
+    <%= link_to "Log Workout", new_workout_path, class: "btn btn-flat" %>
+  </div>
+
+
+<% @workouts.each do |workouts| %>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><strong><%= workouts.exercise%></strong></h5>
+      <p class="card-text"><em>Sets:</em>      <%= workouts.set%></p>
+      <p class="card-text"><em>Repititions:</em>      <%= workouts.rep%></p>
+      <p class="card-text"><em>Weight:</em>      <%= workouts.weight%></p>
+      <p class="card-text"><em>Date:</em>      <%= workouts.date%></p>
+      <% @workouts.each do |workout| %>
+      <%= link_to "Details", workout_path(workout) %>
+      <% end %>
+    </div>
+  </div>
 <% end %>
+
+<%# <% @workouts.each do |workout| %>
+<%# <%= link_to workout.id, workout_path(workout) %>
+<%# <% end %>
