@@ -2,6 +2,7 @@ class WorkoutsController < ApplicationController
   def index
     @workouts = Workout.all
     @workout = Workout.new
+    @exercise = Exercise.new
   end
 
   def show
@@ -34,6 +35,6 @@ class WorkoutsController < ApplicationController
   private
 
   def workout_params
-    params.require(:workout).permit(:exercise, :set, :rep, :weight, :date)
+	  params.require(:workout).permit(:date)
   end
 end
