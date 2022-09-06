@@ -5,6 +5,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+<<<<<<< HEAD
   resources :workout
   resources :posts
+=======
+  resources :workouts
+>>>>>>> 24a70132235e1dacfef05d07684b02cd231a5d2a
 end

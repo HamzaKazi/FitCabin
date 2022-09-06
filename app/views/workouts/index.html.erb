@@ -1,0 +1,4 @@
+<h1>hey</h1>
+<% @workouts.each do |workout| %>
+<%= link_to workout.id, workout_path(workout) %>
+<% end %>
