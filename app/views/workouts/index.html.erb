@@ -16,7 +16,12 @@
 <% @workouts.each do |workout| %>
   <div class="card" style="width: 18rem;">
     <div class="card-body">
-      <h5 class="card-title"><strong><%=workout.exercise%></strong><button><%= link_to "Delete", workout_path(workout), class: "btn btn-cancel", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this workout log?" } %> </button></h5>
+    <div class="d-flex justify-content-between">
+      <h5 class="card-title"><strong><%=workout.exercise%></strong></h5>
+      <%= link_to workout_path(workout), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this workout log?" } do %>
+       <%= image_tag "bin_delete.png", style: "width: 25px; height: 25xpx" %>
+      <% end %>
+    </div>
       <p class="card-text"><em>Sets:</em>      <%= workout.set%></p>
       <p class="card-text"><em>Repititions:</em>      <%= workout.rep%></p>
       <p class="card-text"><em>Weight:</em>      <%= workout.weight%></p>
