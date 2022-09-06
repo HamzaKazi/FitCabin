@@ -1,0 +1,42 @@
+
+  <section id="header" class="jumbotron text-center">
+  <%= form_with url: posts_path, method: :get, class: "d-flex" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a post"%>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
+  <br>
+      <h1 class="display-3">Social Feed Page</h1>
+  </section>
+
+  <section id="gallery">
+  <br>
+    <div class="container">
+      <div class="row" style="width: 100%;">
+          <% @posts.each do |post| %>
+             <div class="col">
+                <div class="card" style="width: 20rem;">
+                <% if post.image.attached? %>
+                     <%=cl_image_tag post.image.key, class: "mx-auto d-block card-img-top img-fluid" %>
+                     <% else %>
+                     <%= image_tag url="https://media.istockphoto.com/vectors/no-image-available-icon-vector-id1216251206?k=20&m=1216251206&s=170667a&w=0&h=A72dFkHkDdSfmT6iWl6eMN9t_JZmqGeMoAycP-LMAw4=" %>
+                     <% end %>
+                  <div class="card-body">
+                    <h5 class="card-title" style="color:black;"><%= post.caption%></h5>
+                  < <head>
+                  <meta charset="UTF-8">
+                  <meta name="viewport" content="width=device-width,initial-scale=1">
+                </head>
+                    <p class="card-price" style="color:black;">Likes  <%= post.likes%></p>
+                    <%= link_to like_post_path(post), data: { turbo_method: 'put', controller: "like_button"} do%>
+                   <i class="fa-solid fa-heart"></i>
+                    <% end %>
+                  </div>
+                </div>
+            </div>
+          <% end %>
+        </div>
+    </div>
+  </section>

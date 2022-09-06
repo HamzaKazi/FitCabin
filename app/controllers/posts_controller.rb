@@ -1,25 +1,39 @@
 class PostsController < ApplicationController
 
+
+  def new
+    @post = Post.new
+  end
+
+  def like
+    @post = Post.find(params[:id])
+    @post.likes += 1
+    @post.save!
+    redirect_to posts_path, status: :see_other
+  end
+
   def create
-    @chatroom = Chatroom.find(params[:chatroom_id])
     @post = Post.new(post_params)
-    @post.chatroom = @chatroom
     @post.user = current_user
     if @post.save
-      ChatroomChannel.broadcast_to(
-        @chatroom,
-        render_to_string(partial: "post", locals: {post: @post})
-      )
-      head :ok
+      redirect_to posts_path
     else
-      render "chatrooms/show", status: :unprocessable_entity
+      render :new, status: :unprocessable_entity
     end
+  end
+
+  def index
+    @posts = Post.all
   end
 
   private
 
+  def set_list
+    @post = Post.find(params[:id])
+  end
+
   def post_params
-    params.require(:post).permit(:content)
+    params.require(:post).permit(:caption, :likes, :image)
   end
 
 end

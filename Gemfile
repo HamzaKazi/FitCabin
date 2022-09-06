@@ -5,6 +5,8 @@ ruby "3.1.2"
 
 gem "devise"
 
+gem "acts_as_votable"
+
 gem "dotenv-rails", groups: [:development, :test]
 
 gem "cloudinary"
