@@ -1,11 +1,9 @@
-
 class WorkoutsController < ApplicationController
   def index
     @workouts = Workout.all
     @workout = Workout.new
     @exercise = Exercise.new
   end
-
 
   def show
     @workout = Workout.find(params[:id])
@@ -27,7 +25,7 @@ class WorkoutsController < ApplicationController
 
   def destroy
     @workout = Workout.find(params[:id])
-   if @workout.destroy
+    if @workout.destroy
       redirect_to workouts_path, status: :see_other
     else
       render "workouts/index"
