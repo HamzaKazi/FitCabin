@@ -5,6 +5,12 @@ ruby "3.1.2"
 
 gem "devise"
 
+# gem "acts_as_votable"
+
+gem "dotenv-rails", groups: [:development, :test]
+
+gem "cloudinary"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3", ">= 7.0.3.1"
 
