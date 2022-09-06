@@ -1,6 +1,8 @@
+
 class WorkoutsController < ApplicationController
   def index
     @workouts = Workout.all
+    @workout = Workout.new
   end
 
 
@@ -16,11 +18,21 @@ class WorkoutsController < ApplicationController
     @workout = Workout.new(workout_params)
     @workout.user = current_user
     if @workout.save
-      redirect_to workout_path(@workout)
+      redirect_to workouts_path
     else
       render :new, status: :unprocessable_entity
     end
   end
+
+  def destroy
+    @workout = Workout.find(params[:id])
+   if @workout.destroy
+      redirect_to workouts_path, status: :see_other
+    else
+      render "workouts/index"
+    end
+  end
+
 
   private
 

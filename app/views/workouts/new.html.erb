@@ -1,9 +1,0 @@
-    <%= simple_form_for @workout do |workout| %>
-      <%= workout.error_notification %>
-      <%= workout.input :exercise, label: "Name of exercise", placeholder: "Bench press, Tricep pushdown etc ...." %>
-      <%= workout.input :set, label: "Number of sets", placeholder: "" %>
-      <%= workout.input :rep, label: "Number of reps", placeholder: "10 reps..." %>
-      <%= workout.input :weight, label: "Weight", placeholder: "55 kgs" %>
-      <%= workout.input :date, label: "Date", placeholder: "" %>
-      <%= workout.button :submit, "Submit", class: "btn btn-danger btn-lg"%>
-    <% end %>
