@@ -1,0 +1,31 @@
+
+
+
+<!-- Modal -->
+<%# <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div> %>
+
+      <div class="modal-body">
+          <%= simple_form_for @workout do |workout| %>
+            <%= workout.error_notification %>
+            <%= workout.input :exercise, label: "Name of exercise", placeholder: "Bench press, Tricep pushdown etc ...." %>
+            <%= workout.input :set, label: "Number of sets", placeholder: "" %>
+            <%= workout.input :rep, label: "Number of reps", placeholder: "10 reps..." %>
+            <%= workout.input :weight, label: "Weight", placeholder: "55 kgs" %>
+            <%= workout.input :date, html5: true, as: :date, label: "Date", placeholder: "" %>
+            <%= workout.button :submit, "Submit", class: "btn btn btn-lg "%>
+        <% end %>
+
+      <%# </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div> %>
