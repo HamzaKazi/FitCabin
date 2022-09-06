@@ -13,32 +13,40 @@
   </div>
 </div>
 
-
-
-
-
-
-
 <% @workouts.each do |workout| %>
   <div class="card" style="width: 18rem;">
     <div class="card-body">
       <div class="d-flex justify-content-between">
         <h5 class="card-title"><strong><%= workout.date.strftime('%d/%m/%Y')%></strong></h5>
-          <button type="button" class="btn btn-primary" style= "width: 100px; height: 60px" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Launch demo
-          </button>
+        <button type="button" class="btn btn-primary" style= "width: 100px; height: 60px" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Launch demo
+        </button>
         <%= link_to workout_path(workout), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this workout log?" } do %>
           <%= image_tag "bin_delete.png", style: "width: 25px; height: 25xpx" %>
         <% end %>
+      </div>
     </div>
   </div>
- </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+        <div class="modal-body">
+          <%= render "exercises/new", exercise: @exercise, workout: workout %>
+        </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 <% end %>
 
-      <%# <%= link_to "Details", workout_path(workout) %>
-<%# <% @workouts.each do |workout| %>
-<%# <%= link_to workout.id, workout_path(workout) %>
-<%# <% end %>
+
 
 
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -55,20 +63,8 @@
   </div>
 </div>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-        <div class="modal-body">
-          <%= render "new" %>
-        </div>
-      <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+
+      <%# <%= link_to "Details", workout_path(workout) %>
+<%# <% @workouts.each do |workout| %>
+<%# <%= link_to workout.id, workout_path(workout) %>
+<%# <% end %>
