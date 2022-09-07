@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
 
-
   def new
     @post = Post.new
+    @comment = Comment.new(post_id: params[:post_id])
   end
 
   def like
@@ -10,6 +10,10 @@ class PostsController < ApplicationController
     @post.likes += 1
     @post.save!
     redirect_to posts_path, status: :see_other
+  end
+
+  def show
+    @comment = @post.comments
   end
 
   def create
