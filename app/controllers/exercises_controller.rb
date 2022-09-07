@@ -10,7 +10,8 @@ class ExercisesController < ApplicationController
     if @exercise.save
       redirect_to workouts_path
     else
-      render "workouts/index", status: :unprocessable_entity
+      flash[:notice] = 'This needs to be filled'
+      # raise 'this needs to be filled'
     end
   end
 
