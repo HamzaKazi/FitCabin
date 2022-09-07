@@ -1,18 +1,11 @@
-   <section class="">
-            <div class="">
-                <div class="d-flex  mx-4 mt-4">
-                    <div class="p-4">
-                        <div class="small mb-1"></div>
-                        <h1 class=""><%= @workout.exercise %></h1>
-                           <div class="row" style="margin-top: 2%;">
-                        <div class="">
-                            <span class="text-decoration-line-through"></span>
-                            <span>Date: <%=@workout.date.strftime('%d/%m/%Y')%></span>
-                        </div>
-                           <div class="row" style="margin-top: 5%;">
-                        <p class="lead"><em>Sets:</em>    <%=@exercise.set%></p>
-                        <p class="lead"><em>Reps:</em>    <%=@exercise.rep%></p>
-                        <p class="lead"><em>Weight:</em>    <%=@exercise.weight%></p>
-                </div>
-            </div>
-        </section>
+
+<h1 class=""><%= @workout.name %></h1>
+
+<span class="text-decoration-line-through"></span>
+<span>Date: <%=@workout.date.strftime('%d/%m/%Y')%></span>
+    <% @exercises.each do |exercise| %>
+    <p class="lead"><em>Name:</em>    <%=exercise.name%></p>
+      <p class="lead"><em>Sets:</em>    <%=exercise.set%></p>
+      <p class="lead"><em>Reps:</em>    <%=exercise.rep%></p>
+      <p class="lead"><em>Weight:</em>    <%=exercise.weight%></p>
+    <% end %>
