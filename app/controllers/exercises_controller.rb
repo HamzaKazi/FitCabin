@@ -7,16 +7,17 @@ class ExercisesController < ApplicationController
     @exercise = Exercise.new(exercise_params)
     @workout = Workout.find(params[:workout_id])
     @exercise.workout = @workout
-    if @exercise.save
+    if @exercise.save!
       redirect_to workouts_path
     else
-      render "workouts/index", status: :unprocessable_entity
+      flash[:notice] = 'This needs to be filled'
+      # raise 'this needs to be filled'
     end
   end
 
   private
 
   def exercise_params
-	  params.require(:exercise).permit(:name, :set, :rep, :weight, :workout_id)
+	  params.require(:exercise).permit(:name, :set, :rep, :weight)
   end
 end

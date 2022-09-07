@@ -1,6 +1,5 @@
-<%# <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-  <%= render "shared/navbar" %>
   <head>
     <title>FitCabin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,10 +7,11 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%# <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
   <body>
+  <%= render "shared/navbar" %>
     <%= yield %>
     <%= render "shared/flashes" %>
   </body>

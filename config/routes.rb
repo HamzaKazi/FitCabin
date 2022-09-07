@@ -9,13 +9,10 @@ Rails.application.routes.draw do
   resources :workouts do
     resources :exercises
   end
-
-
   resources :posts
   resources :posts do
     member do
       put 'like', to: 'posts#like'
     end
   end
-
 end
