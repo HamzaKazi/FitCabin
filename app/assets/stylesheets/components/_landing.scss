@@ -224,16 +224,14 @@ h2 {
     }
 
     .button-23 {
-      size: 10px;
       background-color: #ff9100;
       border: 1px solid #222222;
       border-radius: 8px;
       box-sizing: border-box;
       color: #ffffff;
-      cursor: pointer;
       display: inline-block;
       font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
-      font-size: 16px;
+      font-size: 24px;
       font-weight: 600;
       line-height: 20px;
       margin: 0;
@@ -252,17 +250,28 @@ h2 {
       user-select: none;
       -webkit-user-select: none;
       width: auto;
+      cursor: pointer;
+
     }
 
-    .button-23:focus-visible {
-      box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
-      transition: box-shadow .2s;
+    .button-23:after {
+      content: "";
+      background: #f1f1f1;
+      display: block;
+      position: absolute;
+      padding-top: 300%;
+      padding-left: 350%;
+      margin-left: -20px !important;
+      margin-top: -120%;
+      opacity: 0;
+      transition: all 0.8s
     }
 
-    .button-23:active {
-      background-color: #F7F7F7;
-      border-color: #000000;
-      transform: scale(.96);
+    .button-23:active:after {
+      padding: 0;
+      margin: 0;
+      opacity: 1;
+      transition: 0s
     }
 
     // .button-23:disabled {
