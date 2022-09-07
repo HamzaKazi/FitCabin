@@ -1,27 +1,32 @@
-
+<div class = "background-workout">
 <div class="cover mb-4 d-flex align-items-center justify-content-center">
   <div class="text-center text-blue">
     <h3 class="typed-js" data-controller="typed-js"></h3>
   </div>
 </div>
-<div class="container py-5">
+
+<div class="container">
+   <img src = "https://res.cloudinary.com/hamzakazi/image/upload/v1662475252/Screenshot_2022-09-05_at_14.42.14-removebg-preview_dayrpd.png" class = "logo" alt = "Test Image" />
+
   <div class="d-flex align-items-center justify-content-between mb-3">
-    <h3 class="mb-0">My workouts</h3>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+
+<button class="button-28" role="button">My workouts</button>
+
+  </div>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
         Log workout
     </button>
-  </div>
 </div>
 
 <% @workouts.each do |workout| %>
   <%= link_to  workout_path(workout) do %>
-    <div class="card" style="width: 18rem;">
+    <div class="card-workout" style="width: 18rem;">
       <div class="card-body">
         <div class="d-flex justify-content-between">
           <h5 class="card-title"><strong><%= workout.name %></strong></h5>
           <h5><strong><%= workout.date.strftime('%d/%m/%Y')%></strong></h5>
     <% end %>
-          <button type="button" class="btn btn-primary" style= "width: 100px; height: 50px; padding: 1px;" data-bs-toggle="modal" data-bs-target="#exampleModal<%= workout.id %>">
+          <button type="button" class="btn btn-warning" style= "width: 100px; height: 50px; padding: 1px;" data-bs-toggle="modal" data-bs-target="#exampleModal<%= workout.id %>">
             Add exercise
           </button>
           <%= link_to workout_path(workout), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this workout log?" } do %>
@@ -61,6 +66,8 @@
       </div>
     </div>
   </div>
+</div>
+
 </div>
 
 
