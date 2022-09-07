@@ -1,7 +1,7 @@
  <div class="modal-body">
           <%= simple_form_for [workout, exercise] do |f| %>
             <%= f.error_notification %>
-             <%= f.input :name, label: "Name of exercise", placeholder: "Bench press, Tricep pushdown etc ...."%>
+             <%= f.input :name, label: "Type of exercise", placeholder: "Bench press, Tricep pushdown etc ...."%>
             <%= f.input :set, label: "Number of sets", placeholder: "Bench press, Tricep pushdown etc ...."%>
             <%= f.input :rep,  label: "Number of reps", placeholder: ""  %>
             <%= f.input :weight, label: "Weight ", placeholder: ""  %>
