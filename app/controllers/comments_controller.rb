@@ -28,9 +28,9 @@ class CommentsController < ApplicationController
     end
   end
 
-  def index
-    @comments = Comment.where(user_id: current_user.id)
-  end
+  # def index
+  #   @comments = Comment.where(user_id: current_user.id)
+  # end
 
   def destroy
     set_comment

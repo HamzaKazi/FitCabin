@@ -6,8 +6,15 @@ class PostsController < ApplicationController
   end
 
   def like
+    set_list
     @post = Post.find(params[:id])
-    @post.likes += 1
+    # @post.likes = :likes
+    # if posts.likes.nil?
+    #   post.likes = 1
+    # else
+      @post.likes += 1
+    # end
+
     @post.save!
     redirect_to posts_path, status: :see_other
   end
@@ -28,6 +35,8 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    @post = Post.new
+    @comment = Comment.new
   end
 
   private
@@ -37,6 +46,10 @@ class PostsController < ApplicationController
   end
 
   def post_params
+    params.require(:post).permit(:caption, :likes, :image)
+  end
+
+  def comment_params
     params.require(:post).permit(:caption, :likes, :image)
   end
 

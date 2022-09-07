@@ -1,0 +1,10 @@
+
+
+      <div class="modal-body">
+          <%= simple_form_for @post do |post| %>
+          <div class="form-inputs">
+            <%= post.error_notification %>
+            <%= post.input :caption, label: "Caption for post", placeholder: "Look at these carbs!!" %>
+            <%= post.input :image, as: :file, label: "image", placeholder: "" %>
+            <%= post.button :submit, "Submit", class: "btn btn btn-lg "%>
+        <% end %>
