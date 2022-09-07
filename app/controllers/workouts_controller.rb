@@ -7,7 +7,7 @@ class WorkoutsController < ApplicationController
 
   def show
     @workout = Workout.find(params[:id])
-    @exercises = Exercise.where(workout_id: @workout.id)
+    @exercises = @workout.exercises
   end
 
   def new
@@ -36,6 +36,6 @@ class WorkoutsController < ApplicationController
   private
 
   def workout_params
-	  params.require(:workout).permit(:date)
+	  params.require(:workout).permit(:name, :date)
   end
 end

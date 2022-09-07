@@ -7,7 +7,7 @@ class ExercisesController < ApplicationController
     @exercise = Exercise.new(exercise_params)
     @workout = Workout.find(params[:workout_id])
     @exercise.workout = @workout
-    if @exercise.save
+    if @exercise.save!
       redirect_to workouts_path
     else
       flash[:notice] = 'This needs to be filled'
@@ -18,6 +18,6 @@ class ExercisesController < ApplicationController
   private
 
   def exercise_params
-	  params.require(:exercise).permit(:name, :set, :rep, :weight, :workout_id)
+	  params.require(:exercise).permit(:name, :set, :rep, :weight)
   end
 end
