@@ -1,0 +1,19 @@
+
+<p id="notice"><%= notice %></p>
+
+<%= @post.content %>
+<br>
+<%= @post.text %>
+<br>
+
+<b>Comments</b>
+<br>
+<%- @post.comments.each do |comment|%>
+  <%= comment.caption%>
+  <br>
+<% end %>
+
+<%= render "comments/form", comment: @comment%>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
