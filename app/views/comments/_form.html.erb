@@ -1,0 +1,13 @@
+<%= simple_form_for [post, comment] do |form| %>
+
+
+  <%= form.hidden_field :post_id %>
+
+  <%= form.label :content, "Text:" %>
+  <%= form.text_area :content %>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
