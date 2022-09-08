@@ -6,7 +6,11 @@
 	<link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
 
   <%# <section id="header" class="jumbotron text-center"> %>
-
+     <div class="display-3">
+      <button type="button" class="btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    New post
+  </button>
+  </div>
   <br>
       <h1 class="display-3">Social Feed Page</h1>
   </section>
@@ -17,19 +21,15 @@
 		   <div class="col-lg-6 offset-lg-3">
 
   <br>
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    New post
-  </button>
-      <div class="container">
-      <div class="row" style="width: 100%;">
+      <%# <div class="container"> %>
+      <%# <div class="row" style="width: 100%;"> %>
           <% @posts.each do |post| %>
-<div class="cardbox shadow-lg bg-white">
+      <div class="cardbox shadow-lg bg-white">
 
 			 <div class="cardbox-heading">
 			  <!-- START dropdown-->
 			  <div class="dropdown float-right">
 			   <button class="btn btn-flat btn-flat-icon" type="button" data-toggle="dropdown" aria-expanded="false">
-				<em class="fa fa-ellipsis-h"></em>
 			   </button>
 			   <div class="dropdown-menu dropdown-scale dropdown-menu-right" role="menu" style="position: absolute; transform: translate3d(-136px, 28px, 0px); top: 0px; left: 0px; will-change: transform;">
 				<a class="dropdown-item" href="#">Hide post</a>
@@ -60,14 +60,17 @@
 			 <div class="cardbox-base">
 			  <ul class="float-right">
 			   <li><a><i class="fa fa-comments"></i></a></li>
-			   <li><a><em class="mr-5">12</em></a></li>
+			   <li><a><em class="mr-5"><%= post.likes%></em></a></li>
 			   <li><a><i class="fa fa-share-alt"></i></a></li>
 			   <li><a><em class="mr-3">03</em></a></li>
 			  </ul>
 			  <ul>
-         <%= link_to like_post_path(post), data: { turbo_method: 'put', controller: "like_button"} do%>
-         <li><a><i class="fa-solid fa-heart"></i></a></li>
-          <% end %>
+
+         <li>
+            <%= link_to like_post_path(post), data: { turbo_method: 'put', controller: "like_button"} do %>
+              <i class="fa-solid fa-heart"></i>
+            <% end %>
+         </li>
 
 			   <li><a href="#"><img src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/3.jpeg" class="img-fluid rounded-circle" alt="User"></a></li>
 			   <li><a href="#"><img src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/1.jpg" class="img-fluid rounded-circle" alt="User"></a></li>
@@ -76,11 +79,17 @@
 			   <li><a><span><%= post.likes%></span></a></li>
          <li><a><span><%= post.caption%></span></a></li>
 			  </ul>
+        <!--/ comment section-->
+        <div class="row" style="width: 100%;">
+        <div class="comments">
+        	<li><span> <% post.comments.each do |comment| %>
+          <p class="comment-card-title" style="color:black;"><%= comment.content%></p>
+          20/08/3022
+          <% end %>
+          </span></li>
+        </div>
 			 </div><!--/ cardbox-base -->
 			 <div class="cardbox-comments">
-            <% post.comments.each do |comment| %>
-                    <h5 class="card-title" style="color:black;"><%= comment.content%></h5>
-                    <% end %>
 			  <span class="comment-avatar float-left">
 			   <a href=""><img class="rounded-circle" src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/6.jpg" alt="..."></a>
 			  </span>
@@ -89,17 +98,17 @@
         <%= render "new_comment", post: post %>
       </div>
 			   <%# <input placeholder="Write a comment" type="text"> %>
-			   <button><i class="fa fa-camera"></i></button>
 			  </div><!--/. Search -->
 			 </div><!--/ cardbox-like -->
 			</div><!--/ cardbox -->
 
-          <% end %>
            </div><!--/ col-lg-6 -->
+
 
           </div><!--/ row -->
          </div><!--/ container -->
 
+          <% end %>
         </section>
 
 

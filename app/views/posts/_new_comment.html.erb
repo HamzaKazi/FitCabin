@@ -1,11 +1,14 @@
-    <div class="modal-body2">
+
+    <div class="modal-body2" >
 
   <%= simple_form_for [post, @comment], data: { disable_with: false} do |form| %>
-  <%= form.hidden_field :post_id %>
-  <%= form.label :content, "Text:" %>
-  <%= form.text_area :content %>
+  <div class="col-sm- col-md-12 form-group">
+   <%= form.hidden_field :post_id %>
+
+  <%= form.text_area :content, class: "form-control mr-3", placeholder: "Add comment" %>
+
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit%>
   </div>
 <% end %>
