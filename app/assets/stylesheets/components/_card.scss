@@ -33,7 +33,7 @@
 .card-gym {
   position: relative;
   display: block;
-  max-height: 20rem;
+  max-height: 18rem;
   max-width: 20rem;
   border-radius: calc(var(--curve) * 1px);
   overflow: hidden;
@@ -41,7 +41,7 @@
 }
 
 .card__image {
-  width: 18rem;
+  width: 20rem;
   height: 20rem;
 }
 
