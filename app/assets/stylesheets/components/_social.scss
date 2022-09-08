@@ -187,7 +187,8 @@ text-align: center;
 ---------------------------------- */
 .cardbox-comments{
   padding: 10px 40px 20px 40px !important;
-  font-size: 0px;
+  // font-size: 5px;
+  // width: 25px;
   text-align: center;
   display: inline-block;
 }
@@ -210,7 +211,7 @@ text-align: center;
  margin-bottom: -40px;
  border: 2px solid #f4f4f4;
  width: 100%;
- overflow: hidden;
+ overflow: visible;
 }
 .search input[type="text"] {
  background-color: #fff;
