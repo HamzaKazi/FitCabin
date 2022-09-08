@@ -1,6 +1,6 @@
 .background-workout{
   width: 100%;
-  height: 900px;
+  height: 990px;
   background-color: #272727;
 }
 
@@ -13,9 +13,9 @@
   }
 
   .card-workout {
-    position: absolute;
+    // position: absolute;
     width: 606px;
-    height: 315px;
+    height: 149px;
     left: 620px;
     top: 380px;
     background: #fff;
@@ -36,7 +36,7 @@
   color: #ffffff;
   display: inline-block;
   font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  font-size: 32px;
+  font-size: 42px;
   font-weight: 600;
   line-height: normal;
   margin: 0;
@@ -54,37 +54,43 @@
   position: absolute;
 width: 350px;
 height: 120px;
-left: 586px;
+left: 850px;
 top: 202px;
 
 mix-blend-mode: color-dodge;
-border: 2px solid #FF9900;
+border: 5px solid #FF9900;
 border-radius: 20px;
 }
 
-.btn-primary {
-      background-color: #ff9100;
-      border: 1px solid #222222;
-      border-radius: 20px;
-      box-sizing: border-box;
-      color: #ffffff;
-      display: inline-block;
-      font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
-      font-size: 24px;
-      font-weight: 600;
-      line-height: 20px;
-      margin: 0;
-      margin-bottom: 15rem;
-      margin-left: 44rem;
-      outline: none;
-      padding: 13px 23px;
-      position: absolute;
-      left: 0;
-      bottom:-100px;
-      align-items: center;
-      text-align: center;
-      text-decoration: none;
-      transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+.log-btn {
+  appearance: none;
+  background-color: #FF9900;
+  border-radius: 15px;
+  border: 3.5px solid black;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 42px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  width: 20px;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  position: absolute;
+width: 350px;
+height: 120px;
+left: 850px;
+top: 900px;
     }
 
     .btn-warning {
@@ -93,19 +99,36 @@ border-radius: 20px;
     }
 
     h5.card-title {
-      margin-top: -133px;
-      margin-bottom: 0.5rem;
+      margin-top: -60px;
       font-family: "Nunito", "Helvetica", "sans-serif";
       font-weight: 500;
-      margin-left: 104px;
+      margin-left: 100px;
       line-height: 4;
+      color: #ff9100;
+      font-size: 26px;
+
   }
 
   .heart {
     position: absolute;
-    width: 1673px;
+    width: 1700px;
     height: 915px;
     left: -76px;
     top: 131px;
     opacity: 20%;
+}
+
+.lady {
+    position: absolute;
+    width: 680px;
+    height: 676px;
+    left: -180px;
+    top: 302px;
+}
+
+
+.card-x {
+  position: absolute;
+  top: 400px;
+  left: 625px;
 }
