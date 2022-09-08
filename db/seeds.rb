@@ -36,7 +36,7 @@ gym = Gym.create(
   address: "Hoxton",
   rating: 5,
   description: "Arnold's gym",
-  price: 30,
+  price: 30
 )
 gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
 gym.save

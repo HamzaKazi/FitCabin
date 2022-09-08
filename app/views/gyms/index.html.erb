@@ -1,20 +1,21 @@
+<% @gyms.each do |gym| %>
 <div class="cards-all">
   <a href="" class="card-gym">
-    <img src="https://images.unsplash.com/photo-1623874106686-5be2b325c8f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80" class="card__image" alt="" />
+
+  <%=cl_image_tag gym.image.key, class: "mx-auto d-block card-img-top img-fluid" %>
       <div class="card__overlay">
         <div class="card__header">
           <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
           <div class="card__header-text">
-            <h3 class="card__title">Gym Name</h3>
-            <span class="card__status">Rating</span>
+
+
+            <h3 class="card__title"> <%= gym.name %></h3>
+            <span class="card__status"><%= gym.rating%></span>
+            <span class="card__status"><%= gym.description%></span>
+            <span class="card__status"><%= gym.price%></span>
           </div>
         </div>
         <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
       </div>
   </a>
-
-  <% @gyms.each do |gym| %>
-  <%= gym.name %>
-  <%= gym.address%>
-  <%= gym.rating%>
   <% end %>
