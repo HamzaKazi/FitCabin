@@ -12,8 +12,11 @@ Rails.application.routes.draw do
   end
 
   resources :workouts do
-    resources :exercises
+    resources :exercises, only: [:new, :create]
   end
+
+  resources :exercises, only: [:destroy]
+  resources :posts
 
   resources :posts do
     member do

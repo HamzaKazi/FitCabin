@@ -10,11 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema[7.0].define(version: 2022_09_07_102937) do
-=======
+ActiveRecord::Schema[7.0].define(version: 2022_09_07_114210) do
 
->>>>>>> d8d3db11e91369361b40592d50621e100e55bafe
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -46,7 +43,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_07_102937) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-<<<<<<< HEAD
+
   create_table "comments", force: :cascade do |t|
     t.text "content"
     t.datetime "created_at", null: false
@@ -55,7 +52,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_07_102937) do
     t.bigint "user_id", null: false
     t.index ["post_id"], name: "index_comments_on_post_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
-=======
+
   create_table "exercises", force: :cascade do |t|
     t.string "name"
     t.integer "set"
@@ -65,7 +62,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_07_102937) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["workout_id"], name: "index_exercises_on_workout_id"
->>>>>>> d8d3db11e91369361b40592d50621e100e55bafe
   end
 
   create_table "posts", force: :cascade do |t|
@@ -109,10 +105,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_07_102937) do
   end
 
   create_table "workouts", force: :cascade do |t|
-    t.string "exercise"
-    t.integer "set"
-    t.integer "rep"
-    t.float "weight"
     t.datetime "date"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
@@ -123,11 +115,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_07_102937) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-<<<<<<< HEAD
+
   add_foreign_key "comments", "users"
-=======
+
   add_foreign_key "exercises", "workouts"
->>>>>>> d8d3db11e91369361b40592d50621e100e55bafe
+
   add_foreign_key "posts", "users"
   add_foreign_key "workouts", "users"
 end
