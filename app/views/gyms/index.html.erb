@@ -1,5 +1,5 @@
-<% @gyms.each do |gym| %>
 <div class="cards-all">
+<% @gyms.each do |gym| %>
   <a href="" class="card-gym">
     <%=cl_image_tag gym.image.key, class: "card__image" %>
       <div class="card__overlay">
@@ -8,13 +8,12 @@
           <div class="card__header-text">
 
 
-            <h3 class="card__title"> <%= gym.name %></h3>
-            <span class="card__status">Rating:<%= gym.rating%></span>
-            <span class="card__status">Description:<%= gym.description%></span>
-            <span class="card__status">£<%= gym.price%>/monthly</span>
+            <h3 class="card__title"><strong><%= gym.name %></strong></h3>
+            <span class="card__status"><strong>Rating:<%= gym.rating%></strong></span>
+            <span class="card__status"><strong>£<%= gym.price%>/monthly</strong></span>
           </div>
         </div>
-        <p class="card__description"><%= gym.description%></p>
+            <p class="card__description">Read more</p>
       </div>
   </a>
   <% end %>
