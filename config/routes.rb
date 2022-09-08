@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :exercises
   end
 
+  resources :gyms
 
   resources :posts
   resources :posts do
