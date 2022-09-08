@@ -77,14 +77,26 @@ gym = Gym.create(
 gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
 gym.save
 
-file = URI.open("")
+file = URI.open("https://media.vanityfair.com/photos/5e8f3038b263650008165bba/4:3/w_1776,h_1332,c_limit/barrys-bootcamp-online-classes.jpg")
 puts "save worked"
 gym = Gym.create(
-  name: "Golds Gym",
+  name: "Barry's Bootcamp",
+  address: "163 Euston Rd, London NW1 2BH",
+  rating: 4.6,
+  description: "Opened in 2013, Central is the OG London studio and one of the first boutique fitness concepts to hit the UK. It was also the first basement-level Red Room.",
+  price: 79.99
+)
+gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.save
+
+file = URI.open("https://www.thirdspace.london/media/blog-main-190121.jpg")
+puts "save worked"
+gym = Gym.create(
+  name: "Virgin Active",
   address: "Hoxton",
-  rating: 5,
-  description: "Arnold's gym",
-  price: 30
+  rating: 4.4,
+  description: "Join a community of riders, trainers, stretchers and activists today. T&Cs apply. Be fit. Be happy. Be well. Be human at Virgin Active. Join Today. T&Cs apply.",
+  price: 150
 )
 gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
 gym.save
@@ -101,62 +113,50 @@ gym = Gym.create(
 gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
 gym.save
 
-file = URI.open("")
+file = URI.open("https://manofmany.com/wp-content/uploads/2018/03/Best-Boxing-Gyms-Melbourne-Dohertys-Gym.jpg")
 puts "save worked"
 gym = Gym.create(
-  name: "Golds Gym",
-  address: "Hoxton",
+  name: "KO Boxing",
+  address: "187 Bancroft Rd, Bethnal Green, London E1 4ET",
   rating: 5,
-  description: "Arnold's gym",
+  description: "Hidden away, the setting is simple and effective. Mirroring the atmosphere of traditional boxing gyms.",
+  price: 45
+)
+gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.save
+
+file = URI.open("https://www.fitnessfirst.co.uk/media/ztcbzv5l/fitnessfirst-w21-interiors-bangor-106.jpg?width=540&height=405&quality=80&rnd=132890619953070000")
+puts "save worked"
+gym = Gym.create(
+  name: "FtinessFirst",
+  address: "128 Albert St, London NW1 7NE",
+  rating: 3.8,
+  description: "Explore a wide variety of classes and special training programmes on offer. Browse Classes. Sign Up For Offers. Find A Gym. Courses: Bodycombat, Spinning, Circuit Training, Pilates, Boxercise.",
   price: 30
 )
 gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
 gym.save
 
-file = URI.open("")
+file = URI.open("https://images.squarespace-cdn.com/content/v1/5f1b2a53a0f2f72f69d3c522/1595859171436-PJRH0FRCCGSXY71X4ZUD/Gymbox+Home+Page.jpg")
 puts "save worked"
 gym = Gym.create(
-  name: "Golds Gym",
-  address: "Hoxton",
-  rating: 5,
-  description: "Arnold's gym",
-  price: 30
+  name: "GymBox",
+  address: "Westfield stratford city, 6A Chestnut Place, London E20 1GL",
+  rating: 3.5,
+  description: "We're home to the most unique and diverse classes in London. Olympic sized boxing rings, combat cages, world-class free weights sections, live DJs and larger-than-life personal trainers.",
+  price: 69.99
 )
 gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
 gym.save
 
-file = URI.open("")
+file = URI.open("https://milieuconsult.com/wp-content/uploads/2015/05/TTS-Web-2.jpg")
 puts "save worked"
 gym = Gym.create(
-  name: "Golds Gym",
-  address: "Hoxton",
-  rating: 5,
-  description: "Arnold's gym",
-  price: 30
-)
-gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
-gym.save
-
-file = URI.open("")
-puts "save worked"
-gym = Gym.create(
-  name: "Golds Gym",
-  address: "Hoxton",
-  rating: 5,
-  description: "Arnold's gym",
-  price: 30
-)
-gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
-gym.save
-
-file = URI.open("")
-puts "save worked"
-gym = Gym.create(
-  name: "Golds Gym",
-  address: "Hoxton",
-  rating: 5,
-  description: "Arnold's gym",
-  price: 30
+  name: "Third Space Soho",
+  address: "67 Brewer St, London W1F 9US",
+  rating: 4.9,
+  description: "Purpose-built studios for extensive yoga, hot yoga, barre and Pilates classes, led by inspirational and expert instructors. Explore Show less.",
+  price: 220
 )
 gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
 gym.save
