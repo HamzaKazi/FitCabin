@@ -101,13 +101,13 @@ gym = Gym.create(
 gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
 gym.save
 
-file = URI.open("")
+file = URI.open("https://media-cdn.tripadvisor.com/media/photo-s/15/b1/35/1c/the-amazing-cardio-area.jpg")
 puts "save worked"
 gym = Gym.create(
-  name: "Golds Gym",
-  address: "Hoxton",
-  rating: 5,
-  description: "Arnold's gym",
+  name: "Gymbox Covent Garden",
+  address: " 42-49 St Martin's Ln, London WC2N 4EJ",
+  rating: 4.6,
+  description: "At Gymbox Covent Garden, you've got a front-row ticket to a high-performance London gym that knows how to pull in the crowds",
   price: 30
 )
 gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
