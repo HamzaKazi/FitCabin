@@ -15,7 +15,7 @@
   .card-workout {
     position: absolute;
     width: 606px;
-    height: 130px;
+    height: 315px;
     left: 620px;
     top: 380px;
     background: #fff;
@@ -24,6 +24,8 @@
     align-items: center;
     overflow: hidden;
     border-radius: 5%;
+    box-shadow: 5px 5px;
+
   }
 
 .button-28 {
@@ -63,7 +65,7 @@ border-radius: 20px;
 .btn-primary {
       background-color: #ff9100;
       border: 1px solid #222222;
-      border-radius: 8px;
+      border-radius: 20px;
       box-sizing: border-box;
       color: #ffffff;
       display: inline-block;
@@ -78,10 +80,32 @@ border-radius: 20px;
       padding: 13px 23px;
       position: absolute;
       left: 0;
-      bottom:0;
+      bottom:-100px;
       align-items: center;
       text-align: center;
       text-decoration: none;
-      touch-action: manipulation;
       transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
     }
+
+    .btn-warning {
+      border-radius: 20px;
+      background-color: #ff9100;
+    }
+
+    h5.card-title {
+      margin-top: -133px;
+      margin-bottom: 0.5rem;
+      font-family: "Nunito", "Helvetica", "sans-serif";
+      font-weight: 500;
+      margin-left: 104px;
+      line-height: 4;
+  }
+
+  .heart {
+    position: absolute;
+    width: 1673px;
+    height: 915px;
+    left: -76px;
+    top: 131px;
+    opacity: 20%;
+}

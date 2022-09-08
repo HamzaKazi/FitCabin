@@ -14,7 +14,7 @@
                 <p class="lead"><em>Weight:</em>    <%=exercise.weight%></p>
 
           <%= link_to exercise_path(exercise), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this workout log?" } do %>
-            <%= image_tag "bin_delete.png", style: "width: 20px; height: 20px" %>
+            <%= image_tag "bin_delete.png",  style: "width: 20px; height: 20px" %>
           <% end %>
         </div>
       </div>
