@@ -9,11 +9,11 @@ class PostsController < ApplicationController
     set_list
     @post = Post.find(params[:id])
     # @post.likes = :likes
-    # if posts.likes.nil?
-    #   post.likes = 1
-    # else
+    if @post.likes.nil?
+      @post.likes = 1
+    else
       @post.likes += 1
-    # end
+    end
 
     @post.save!
     redirect_to posts_path, status: :see_other

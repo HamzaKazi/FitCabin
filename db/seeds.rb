@@ -11,6 +11,7 @@ require "json"
 puts "Cleaning up database..."
 Workout.destroy_all
 User.destroy_all
+Gym.destroy_all
 puts "Database cleaned"
 workout = Workout.create(date: 10112022)
 user = User.create(email: "admin@fitcabin.com", password: "123456")
@@ -28,6 +29,137 @@ puts "user #{user.id}"
 # )
 # bmw.save
 
+file = URI.open("https://www.gannett-cdn.com/presto/2020/04/16/USAT/5b7ef814-a04d-44c8-86ef-1d47c798a1f1-Golds_gym_CharlesTown.jpg?crop=2655,1494,x10,y0&width=2655&height=1494&format=pjpg&auto=webp")
+puts "save worked"
+gym = Gym.create(
+  name: "Golds Gym",
+  address: "54-62 Uxbridge Rd, London W7 3SU",
+  rating: 3.9,
+  description: "Arnold's gym",
+  price: 40
+)
+gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.save
+
+file = URI.open("https://www.thirdspace.london/media/CW-Header3B@2x.jpg")
+puts "save worked"
+gym = Gym.create(
+  name: "Third Space",
+  address: "Canary Wharf, 16-19 Canada Square, London E14 5ER",
+  rating: 4.8,
+  description: "High-end fitness club featuring a pool, sauna & spa, training equipment & a climbing wall.",
+  price: 180
+)
+gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.save
+
+file = URI.open("https://www.qmsu.org/asset/News/21286/personaltraining.jpg?thumbnail_width=360&thumbnail_height=335&resize_type=CropToFit")
+puts "save worked"
+gym = Gym.create(
+  name: "Qmotion Sport and Fitness Centre",
+  address: "15 Godward Square, Bethnal Green, London E1 4FZ",
+  rating: 4.2,
+  description: "Queen Mary University gym offering strength & cardio equipment, personal training & group classes.",
+  price: 29.99
+)
+gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.save
+
+file = URI.open("https://prod-ne-cdn-media.puregym.com/media/794204/londonshoreditch201808_016.jpg?quality=80")
+puts "save worked"
+gym = Gym.create(
+  name: "Pure Gym",
+  address: "8 Bacon St, London E1 6LF",
+  rating: 4,
+  description: "The PureGym Group is one of the largest gym and fitness operators in Europe and provides high quality, low cost, flexible physical fitness facilities.",
+  price: 25
+)
+gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.save
+
+file = URI.open("https://media.vanityfair.com/photos/5e8f3038b263650008165bba/4:3/w_1776,h_1332,c_limit/barrys-bootcamp-online-classes.jpg")
+puts "save worked"
+gym = Gym.create(
+  name: "Barry's Bootcamp",
+  address: "163 Euston Rd, London NW1 2BH",
+  rating: 4.6,
+  description: "Opened in 2013, Central is the OG London studio and one of the first boutique fitness concepts to hit the UK. It was also the first basement-level Red Room.",
+  price: 79.99
+)
+gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.save
+
+file = URI.open("https://www.thirdspace.london/media/blog-main-190121.jpg")
+puts "save worked"
+gym = Gym.create(
+  name: "Virgin Active",
+  address: "Hoxton",
+  rating: 4.4,
+  description: "Join a community of riders, trainers, stretchers and activists today. T&Cs apply. Be fit. Be happy. Be well. Be human at Virgin Active. Join Today. T&Cs apply.",
+  price: 150
+)
+gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.save
+
+file = URI.open("https://media-cdn.tripadvisor.com/media/photo-s/15/b1/35/1c/the-amazing-cardio-area.jpg")
+puts "save worked"
+gym = Gym.create(
+  name: "Gymbox Covent Garden",
+  address: " 42-49 St Martin's Ln, London WC2N 4EJ",
+  rating: 4.6,
+  description: "At Gymbox Covent Garden, you've got a front-row ticket to a high-performance London gym that knows how to pull in the crowds",
+  price: 30
+)
+gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.save
+
+file = URI.open("https://manofmany.com/wp-content/uploads/2018/03/Best-Boxing-Gyms-Melbourne-Dohertys-Gym.jpg")
+puts "save worked"
+gym = Gym.create(
+  name: "KO Boxing",
+  address: "187 Bancroft Rd, Bethnal Green, London E1 4ET",
+  rating: 5,
+  description: "Hidden away, the setting is simple and effective. Mirroring the atmosphere of traditional boxing gyms.",
+  price: 45
+)
+gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.save
+
+file = URI.open("https://www.fitnessfirst.co.uk/media/ztcbzv5l/fitnessfirst-w21-interiors-bangor-106.jpg?width=540&height=405&quality=80&rnd=132890619953070000")
+puts "save worked"
+gym = Gym.create(
+  name: "FtinessFirst",
+  address: "128 Albert St, London NW1 7NE",
+  rating: 3.8,
+  description: "Explore a wide variety of classes and special training programmes on offer. Browse Classes. Sign Up For Offers. Find A Gym. Courses: Bodycombat, Spinning, Circuit Training, Pilates, Boxercise.",
+  price: 30
+)
+gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.save
+
+file = URI.open("https://images.squarespace-cdn.com/content/v1/5f1b2a53a0f2f72f69d3c522/1595859171436-PJRH0FRCCGSXY71X4ZUD/Gymbox+Home+Page.jpg")
+puts "save worked"
+gym = Gym.create(
+  name: "GymBox",
+  address: "Westfield stratford city, 6A Chestnut Place, London E20 1GL",
+  rating: 3.5,
+  description: "We're home to the most unique and diverse classes in London. Olympic sized boxing rings, combat cages, world-class free weights sections, live DJs and larger-than-life personal trainers.",
+  price: 69.99
+)
+gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.save
+
+file = URI.open("https://milieuconsult.com/wp-content/uploads/2015/05/TTS-Web-2.jpg")
+puts "save worked"
+gym = Gym.create(
+  name: "Third Space Soho",
+  address: "67 Brewer St, London W1F 9US",
+  rating: 4.9,
+  description: "Purpose-built studios for extensive yoga, hot yoga, barre and Pilates classes, led by inspirational and expert instructors. Explore Show less.",
+  price: 220
+)
+gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.save
 
 puts "User created"
 puts "Workout created"
