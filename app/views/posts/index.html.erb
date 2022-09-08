@@ -5,7 +5,7 @@
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
 
-  <section id="header" class="jumbotron text-center">
+  <%# <section id="header" class="jumbotron text-center"> %>
 
   <br>
       <h1 class="display-3">Social Feed Page</h1>
@@ -51,7 +51,7 @@
 
 			 <div class="cardbox-item">
 			  <img class="img-fluid"  >
-        <% if post.image.attached? %>
+                    <% if post.image.attached? %>
                      <%=cl_image_tag post.image.key, class: "mx-auto d-block card-img-top img-fluid" %>
                      <% else %>
                      <%= image_tag url="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" %>
@@ -67,7 +67,7 @@
 			  <ul>
          <%= link_to like_post_path(post), data: { turbo_method: 'put', controller: "like_button"} do%>
          <li><a><i class="fa-solid fa-heart"></i></a></li>
-          <% end %>
+               <% end %>
 			   <li><a href="#"><img src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/3.jpeg" class="img-fluid rounded-circle" alt="User"></a></li>
 			   <li><a href="#"><img src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/1.jpg" class="img-fluid rounded-circle" alt="User"></a></li>
 			   <li><a href="#"><img src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/5.jpg" class="img-fluid rounded-circle" alt="User"></a></li>
@@ -77,7 +77,7 @@
 			  </ul>
 			 </div><!--/ cardbox-base -->
 			 <div class="cardbox-comments">
-        <% post.comments.each do |comment| %>
+            <% post.comments.each do |comment| %>
                     <h5 class="card-title" style="color:black;"><%= comment.content%></h5>
                     <% end %>
 			  <span class="comment-avatar float-left">
@@ -91,13 +91,14 @@
 			   <button><i class="fa fa-camera"></i></button>
 			  </div><!--/. Search -->
 			 </div><!--/ cardbox-like -->
-
 			</div><!--/ cardbox -->
 
+          <% end %>
            </div><!--/ col-lg-6 -->
 
           </div><!--/ row -->
          </div><!--/ container -->
+
         </section>
 
 
