@@ -11,9 +11,12 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  resources :gyms
+
   resources :workouts do
     resources :exercises, only: [:new, :create]
   end
+
 
   resources :exercises, only: [:destroy]
   resources :posts
