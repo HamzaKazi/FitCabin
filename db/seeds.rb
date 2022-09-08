@@ -18,15 +18,15 @@ puts "user #{user.id}"
 
 
 
-bmw = Workout.create(
-  exercise: "Bench press",
-  set: 3,
-  rep: 12,
-  weight: 90,
-  date: "5/9/2022",
-  user_id: user.id
-)
-bmw.save
+# bmw = Workout.create(
+#   name: "Bench press",
+#   set: 3,
+#   rep: 12,
+#   weight: 90,
+#   date: "5/9/2022",
+#   user_id: user.id
+# )
+# bmw.save
 
 
 puts "User created"

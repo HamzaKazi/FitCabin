@@ -2,21 +2,28 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
 
+  <section id="header" class="jumbotron text-center">
 
-		<link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
-		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <br>
+      <h1 class="display-3">Social Feed Page</h1>
+  </section>
 
-	    <!-- ==============================================
-	    Hero
-	    =============================================== -->
         <section class="hero">
          <div class="container">
           <div class="row">
-
 		   <div class="col-lg-6 offset-lg-3">
 
-			<div class="cardbox shadow-lg bg-white">
+  <br>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    New post
+  </button>
+      <div class="container">
+      <div class="row" style="width: 100%;">
+          <% @posts.each do |post| %>
+<div class="cardbox shadow-lg bg-white">
 
 			 <div class="cardbox-heading">
 			  <!-- START dropdown-->
@@ -43,7 +50,12 @@
 			 </div><!--/ cardbox-heading -->
 
 			 <div class="cardbox-item">
-			  <img class="img-fluid" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Image">
+			  <img class="img-fluid"  >
+        <% if post.image.attached? %>
+                     <%=cl_image_tag post.image.key, class: "mx-auto d-block card-img-top img-fluid" %>
+                     <% else %>
+                     <%= image_tag url="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" %>
+                     <% end %>
 			 </div><!--/ cardbox-item -->
 			 <div class="cardbox-base">
 			  <ul class="float-right">
@@ -53,20 +65,30 @@
 			   <li><a><em class="mr-3">03</em></a></li>
 			  </ul>
 			  <ul>
-			   <li><a><i class="fa fa-thumbs-up"></i></a></li>
+         <%= link_to like_post_path(post), data: { turbo_method: 'put', controller: "like_button"} do%>
+         <li><a><i class="fa-solid fa-heart"></i></a></li>
+          <% end %>
+
 			   <li><a href="#"><img src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/3.jpeg" class="img-fluid rounded-circle" alt="User"></a></li>
 			   <li><a href="#"><img src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/1.jpg" class="img-fluid rounded-circle" alt="User"></a></li>
 			   <li><a href="#"><img src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/5.jpg" class="img-fluid rounded-circle" alt="User"></a></li>
 			   <li><a href="#"><img src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/2.jpg" class="img-fluid rounded-circle" alt="User"></a></li>
-			   <li><a><span>242 Likes</span></a></li>
+			   <li><a><span><%= post.likes%></span></a></li>
+         <li><a><span><%= post.caption%></span></a></li>
 			  </ul>
 			 </div><!--/ cardbox-base -->
 			 <div class="cardbox-comments">
+        <% post.comments.each do |comment| %>
+                    <h5 class="card-title" style="color:black;"><%= comment.content%></h5>
+                    <% end %>
 			  <span class="comment-avatar float-left">
 			   <a href=""><img class="rounded-circle" src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/6.jpg" alt="..."></a>
 			  </span>
 			  <div class="search">
-			   <input placeholder="Write a comment" type="text">
+        <div class="modal-body2">
+        <%= render "new_comment", post: post %>
+      </div>
+			   <%# <input placeholder="Write a comment" type="text"> %>
 			   <button><i class="fa fa-camera"></i></button>
 			  </div><!--/. Search -->
 			 </div><!--/ cardbox-like -->
@@ -78,3 +100,24 @@
           </div><!--/ row -->
          </div><!--/ container -->
         </section>
+
+
+<p id="notice"><%= notice %></p>
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Enter details of your workout</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= render "new_post" %>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+	    <!-- ==============================================
+	    Hero
+	    =============================================== -->

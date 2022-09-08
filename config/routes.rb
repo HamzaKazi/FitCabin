@@ -6,17 +6,24 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  resources :workouts do
-    resources :exercises
+
+  resources :posts do
+    resources :comments
   end
 
   resources :gyms
 
+  resources :workouts do
+    resources :exercises, only: [:new, :create]
+  end
+
+
+  resources :exercises, only: [:destroy]
   resources :posts
+
   resources :posts do
     member do
       put 'like', to: 'posts#like'
     end
   end
-
 end

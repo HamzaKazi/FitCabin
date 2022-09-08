@@ -1,18 +1,22 @@
-   <section class="">
-            <div class="">
-                <div class="d-flex  mx-4 mt-4">
-                    <div class="p-4">
-                        <div class="small mb-1"></div>
-                        <h1 class=""><%= @workout.exercise %></h1>
-                           <div class="row" style="margin-top: 2%;">
-                        <div class="">
-                            <span class="text-decoration-line-through"></span>
-                            <span>Date: <%=@workout.date.strftime('%d/%m/%Y')%></span>
-                        </div>
-                           <div class="row" style="margin-top: 5%;">
-                        <p class="lead"><em>Sets:</em>    <%=@exercise.set%></p>
-                        <p class="lead"><em>Reps:</em>    <%=@exercise.rep%></p>
-                        <p class="lead"><em>Weight:</em>    <%=@exercise.weight%></p>
-                </div>
-            </div>
-        </section>
+
+<h1 class=""><%= @workout.name %></h1>
+<p>Date: <%=@workout.date.strftime('%d/%m/%Y')%></p>
+
+<% @exercises.each do |exercise| %>
+<div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <span class="text-decoration-line-through"></span>
+
+              <p class="lead"><em>Exercise type:</em>    <%=exercise.name%></p>
+                <p class="lead"><em>Sets:</em>    <%=exercise.set%></p>
+                <p class="lead"><em>Reps:</em>    <%=exercise.rep%></p>
+                <p class="lead"><em>Weight:</em>    <%=exercise.weight%></p>
+
+          <%= link_to exercise_path(exercise), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this workout log?" } do %>
+            <%= image_tag "bin_delete.png", style: "width: 20px; height: 20px" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+<% end %>

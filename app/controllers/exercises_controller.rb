@@ -7,11 +7,23 @@ class ExercisesController < ApplicationController
     @exercise = Exercise.new(exercise_params)
     @workout = Workout.find(params[:workout_id])
     @exercise.workout = @workout
-    if @exercise.save
+    if @exercise.save!
       redirect_to workouts_path
     else
-      render "workouts/index", status: :unprocessable_entity
+      flash[:notice] = 'This needs to be filled'
+      # raise 'this needs to be filled'
     end
+  end
+
+    def destroy
+      @exercise = Exercise.find(params[:id])
+      @exercise.destroy
+      redirect_to workout_path, status: :see_other
+      # @exercise = exercise.find(params[:id])
+      # if @exercise.destroy
+      #   redirect_to workout_path, status: :see_other
+      # else
+      #   render "workouts/show"
   end
 
   private
