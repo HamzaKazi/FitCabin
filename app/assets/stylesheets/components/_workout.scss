@@ -18,7 +18,7 @@
     height: 149px;
     left: 620px;
     top: 380px;
-    background: #fff;
+    background: rgb(208, 208, 208);
     text-align: center;
     display: flex;
     align-items: center;
@@ -53,9 +53,9 @@
   width: 100%;
   position: absolute;
 width: 350px;
-height: 120px;
+height: 94px;
 left: 850px;
-top: 202px;
+top: 101px;
 
 mix-blend-mode: color-dodge;
 border: 5px solid #FF9900;
@@ -88,13 +88,13 @@ border-radius: 20px;
   width: 100%;
   position: absolute;
 width: 350px;
-height: 120px;
+height: 94px;
 left: 850px;
-top: 900px;
+top: 800px;
     }
 
     .btn-warning {
-      border-radius: 20px;
+      border-radius: 10%;
       background-color: #ff9100;
     }
 
@@ -102,11 +102,10 @@ top: 900px;
       margin-top: -60px;
       font-family: "Nunito", "Helvetica", "sans-serif";
       font-weight: 500;
-      margin-left: 100px;
-      line-height: 4;
+      margin-left: 76px;
+      line-height: 2.5;
       color: #ff9100;
-      font-size: 26px;
-
+      font-size: 40px;
   }
 
   .heart {
@@ -129,6 +128,6 @@ top: 900px;
 
 .card-x {
   position: absolute;
-  top: 400px;
+  top: 250px;
   left: 625px;
 }
