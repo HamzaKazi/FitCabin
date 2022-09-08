@@ -1,7 +1,7 @@
 <div class="cards-all">
 <% @gyms.each do |gym| %>
-  <a href="" class="card-gym">
-    <%=cl_image_tag gym.image.key, class: "card__image" %>
+  <div class="card-gym">
+    <%=link_to  gym_path(gym) do cl_image_tag gym.image.key, class: "card__image" end%>
       <div class="card__overlay">
         <div class="card__header">
           <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
@@ -15,5 +15,5 @@
         </div>
             <p class="card__description">Read more</p>
       </div>
-  </a>
+  </div>
   <% end %>
