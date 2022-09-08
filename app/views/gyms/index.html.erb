@@ -9,12 +9,12 @@
 
 
             <h3 class="card__title"> <%= gym.name %></h3>
-            <span class="card__status"><%= gym.rating%></span>
-            <span class="card__status"><%= gym.description%></span>
-            <span class="card__status"><%= gym.price%></span>
+            <span class="card__status">Rating:<%= gym.rating%></span>
+            <span class="card__status">Description:<%= gym.description%></span>
+            <span class="card__status">£<%= gym.price%>/monthly</span>
           </div>
         </div>
-        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+        <p class="card__description"><%= gym.description%></p>
       </div>
   </a>
   <% end %>

@@ -33,6 +33,126 @@ file = URI.open("https://www.gannett-cdn.com/presto/2020/04/16/USAT/5b7ef814-a04
 puts "save worked"
 gym = Gym.create(
   name: "Golds Gym",
+  address: "54-62 Uxbridge Rd, London W7 3SU",
+  rating: 3.9,
+  description: "Arnold's gym",
+  price: 40
+)
+gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.save
+
+file = URI.open("https://www.thirdspace.london/media/CW-Header3B@2x.jpg")
+puts "save worked"
+gym = Gym.create(
+  name: "Third Space",
+  address: "Canary Wharf, 16-19 Canada Square, London E14 5ER",
+  rating: 4.8,
+  description: "High-end fitness club featuring a pool, sauna & spa, training equipment & a climbing wall.",
+  price: 180
+)
+gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.save
+
+file = URI.open("https://www.qmsu.org/asset/News/21286/personaltraining.jpg?thumbnail_width=360&thumbnail_height=335&resize_type=CropToFit")
+puts "save worked"
+gym = Gym.create(
+  name: "Qmotion Sport and Fitness Centre",
+  address: "15 Godward Square, Bethnal Green, London E1 4FZ",
+  rating: 4.2,
+  description: "Queen Mary University gym offering strength & cardio equipment, personal training & group classes.",
+  price: 29.99
+)
+gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.save
+
+file = URI.open("https://prod-ne-cdn-media.puregym.com/media/794204/londonshoreditch201808_016.jpg?quality=80")
+puts "save worked"
+gym = Gym.create(
+  name: "Pure Gym",
+  address: "8 Bacon St, London E1 6LF",
+  rating: 4,
+  description: "The PureGym Group is one of the largest gym and fitness operators in Europe and provides high quality, low cost, flexible physical fitness facilities.",
+  price: 25
+)
+gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.save
+
+file = URI.open("")
+puts "save worked"
+gym = Gym.create(
+  name: "Golds Gym",
+  address: "Hoxton",
+  rating: 5,
+  description: "Arnold's gym",
+  price: 30
+)
+gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.save
+
+file = URI.open("")
+puts "save worked"
+gym = Gym.create(
+  name: "Golds Gym",
+  address: "Hoxton",
+  rating: 5,
+  description: "Arnold's gym",
+  price: 30
+)
+gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.save
+
+file = URI.open("")
+puts "save worked"
+gym = Gym.create(
+  name: "Golds Gym",
+  address: "Hoxton",
+  rating: 5,
+  description: "Arnold's gym",
+  price: 30
+)
+gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.save
+
+file = URI.open("")
+puts "save worked"
+gym = Gym.create(
+  name: "Golds Gym",
+  address: "Hoxton",
+  rating: 5,
+  description: "Arnold's gym",
+  price: 30
+)
+gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.save
+
+file = URI.open("")
+puts "save worked"
+gym = Gym.create(
+  name: "Golds Gym",
+  address: "Hoxton",
+  rating: 5,
+  description: "Arnold's gym",
+  price: 30
+)
+gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.save
+
+file = URI.open("")
+puts "save worked"
+gym = Gym.create(
+  name: "Golds Gym",
+  address: "Hoxton",
+  rating: 5,
+  description: "Arnold's gym",
+  price: 30
+)
+gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.save
+
+file = URI.open("")
+puts "save worked"
+gym = Gym.create(
+  name: "Golds Gym",
   address: "Hoxton",
   rating: 5,
   description: "Arnold's gym",
