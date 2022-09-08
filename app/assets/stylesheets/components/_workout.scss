@@ -1,0 +1,87 @@
+.background-workout{
+  width: 100%;
+  height: 900px;
+  background-color: #272727;
+}
+
+.logo {
+  height: 50%;
+  width: auto;
+  position: absolute;
+  left: 30px;
+  top: -100px;
+  }
+
+  .card-workout {
+    position: absolute;
+    width: 606px;
+    height: 130px;
+    left: 620px;
+    top: 380px;
+    background: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 5%;
+  }
+
+.button-28 {
+  appearance: none;
+  background-color: transparent;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 32px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  width: 20px;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  position: absolute;
+width: 350px;
+height: 120px;
+left: 586px;
+top: 202px;
+
+mix-blend-mode: color-dodge;
+border: 2px solid #FF9900;
+border-radius: 20px;
+}
+
+.btn-primary {
+      background-color: #ff9100;
+      border: 1px solid #222222;
+      border-radius: 8px;
+      box-sizing: border-box;
+      color: #ffffff;
+      display: inline-block;
+      font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 20px;
+      margin: 0;
+      margin-bottom: 15rem;
+      margin-left: 44rem;
+      outline: none;
+      padding: 13px 23px;
+      position: absolute;
+      left: 0;
+      bottom:0;
+      align-items: center;
+      text-align: center;
+      text-decoration: none;
+      touch-action: manipulation;
+      transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+    }
