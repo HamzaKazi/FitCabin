@@ -20,14 +20,14 @@ puts "user #{user.id}"
 
 
 workout = Workout.create(
-  name: "Legs + Shoulders",
+  name: "Legs",
   date: "5/9/2022",
   user_id: user.id
 )
 workout.save
 
 workout = Workout.create(
-  name: "Chest + Back",
+  name: "Chest",
   date: "6/9/2022",
   user_id: user.id
 )
