@@ -19,15 +19,26 @@ puts "user #{user.id}"
 
 
 
-# bmw = Workout.create(
-#   name: "Bench press",
-#   set: 3,
-#   rep: 12,
-#   weight: 90,
-#   date: "5/9/2022",
-#   user_id: user.id
-# )
-# bmw.save
+workout = Workout.create(
+  name: "Legs + Shoulders",
+  date: "5/9/2022",
+  user_id: user.id
+)
+workout.save
+
+workout = Workout.create(
+  name: "Chest + Back",
+  date: "6/9/2022",
+  user_id: user.id
+)
+workout.save
+
+workout = Workout.create(
+  name: "Arms",
+  date: "7/9/2022",
+  user_id: user.id
+)
+workout.save
 
 file = URI.open("https://www.gannett-cdn.com/presto/2020/04/16/USAT/5b7ef814-a04d-44c8-86ef-1d47c798a1f1-Golds_gym_CharlesTown.jpg?crop=2655,1494,x10,y0&width=2655&height=1494&format=pjpg&auto=webp")
 puts "save worked"

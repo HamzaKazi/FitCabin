@@ -156,12 +156,15 @@ h2 {
    }
 
    .title {
-     font-size: 1.3rem;
+     font-size: 1.4rem;
      font-weight: bold;
      line-height: 1.25rem;
      color: white;
      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     }
+
+
+
 
    .copy {
      font-size: 1.125rem;
@@ -240,9 +243,9 @@ h2 {
       margin-left: 35rem;
       outline: none;
       padding: 13px 23px;
-      position: absolute;
-      left: 0;
-      bottom:0;
+      position: relative;
+      left: -550px;
+      bottom:1000px;
       align-items: center;
       text-align: center;
       text-decoration: none;
