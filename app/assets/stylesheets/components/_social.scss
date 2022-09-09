@@ -5,6 +5,26 @@
 * ===========================================================
 *
 */
+
+.whole-social-page {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(
+    to right,
+    #272727 0%,
+    #272727 80%,
+    #ff9900 50%,
+    #ff9900 100%,
+    )
+}
+
+.btn-primary {
+  margin-left: 30px;
+  border: 2px solid black;
+}
+.display-3 {
+  color: white;
+}
 .hero {
   padding: 2.25rem 0px !important;
   margin: 0px !important;
@@ -135,7 +155,7 @@ text-align: center;
   font-family: 'Rokkitt', serif;
   font-weight: 500 !important;
   font-size: 14px;
-  color: #88898a;
+  color: black;
 }
 .media-body small span{
   font-family: 'Rokkitt', serif;
@@ -168,6 +188,19 @@ text-align: center;
 .fw {
     width: 100% !important;
 	height: auto;
+}
+
+.heart {
+  background-color: red;
+  display: inline-block;
+  height: 50px;
+  margin: 0 10px;
+  position: relative;
+  top: 0;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 45%; top: 45%;
+  width: 50px;
 }
 
 
@@ -203,7 +236,7 @@ text-align: center;
 }
 .cardbox-base li a span{
  font-family: 'Rokkitt', serif;
- font-size: 14px;
+ font-size: 17px;
  color: #8d8d8d;
  margin-left: 20px;
  position: relative;
@@ -236,7 +269,6 @@ text-align: center;
   justify-content: space-between;
   // display: inline-block;
 }
-
 .comment-card-title {
   margin-bottom: 0.50rem;
   padding: 0px 40px 20px 40px !important

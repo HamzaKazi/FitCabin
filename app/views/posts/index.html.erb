@@ -6,6 +6,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
 
   <%# <section id="header" class="jumbotron text-center"> %>
+<div class="whole-social-page">
+
      <div class="display-3">
       <button type="button" class="btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
     New post
@@ -42,7 +44,7 @@
 				<a href=""><img class="img-fluid rounded-circle" src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/4.jpg" alt="User"></a>
 			   </div>
 			   <div class="media-body">
-			    <p class="m-0">FitCabin_username</p>
+			    <p class="m-0">FitCabin_Username</p>
 				<small><span><i class="icon ion-md-pin"></i> London, England</span></small>
 				<small><span><i class="icon ion-md-time"></i> 10 hours ago</span></small>
 			   </div>
@@ -76,8 +78,8 @@
 			   <li><a href="#"><img src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/1.jpg" class="img-fluid rounded-circle" alt="User"></a></li>
 			   <li><a href="#"><img src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/5.jpg" class="img-fluid rounded-circle" alt="User"></a></li>
 			   <li><a href="#"><img src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/2.jpg" class="img-fluid rounded-circle" alt="User"></a></li>
-			   <li><a><span><%= post.likes%></span></a></li>
-         <li><a><span><%= post.caption%></span></a></li>
+			   <li><a><span class="post-likes"><%= post.likes%></span></a></li>
+         <li><a><span class="post-caption"><%= post.caption%></span></a></li>
 			  </ul>
         <!--/ comment section-->
         <div class="row" style="width: 100%;">
@@ -112,20 +114,21 @@
         </section>
 
 
-<p id="notice"><%= notice %></p>
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Enter details of your workout</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <%= render "new_post" %>
-      </div>
+    <p id="notice"><%= notice %></p>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Enter details of your workout</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <%= render "new_post" %>
+          </div>
 
+        </div>
+      </div>
     </div>
-  </div>
 </div>
 
 	    <!-- ==============================================
