@@ -5,6 +5,26 @@
 * ===========================================================
 *
 */
+
+.whole-social-page {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(
+    to right,
+    #272727 0%,
+    #272727 80%,
+    #ff9900 50%,
+    #ff9900 100%,
+    )
+}
+
+.btn-primary {
+  margin-left: 30px;
+  border: 2px solid black;
+}
+.display-3 {
+  color: white;
+}
 .hero {
   padding: 2.25rem 0px !important;
   margin: 0px !important;
@@ -95,7 +115,7 @@ text-align: center;
   padding: 4px 0px 4px 10px;
   clear: both;
   font-weight: 400;
-  font-family: 'Abhaya Libre', serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 14px !important;
   color: #848484;
   text-align: inherit;
@@ -132,13 +152,13 @@ text-align: center;
   padding: .4rem !important;
 }
 .media-body p{
-  font-family: 'Rokkitt', serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 500 !important;
-  font-size: 14px;
-  color: #88898a;
+  font-size: 18px;
+  color: black;
 }
 .media-body small span{
-  font-family: 'Rokkitt', serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 12px;
   color: #aaa;
   margin-right: 10px;
@@ -168,6 +188,19 @@ text-align: center;
 .fw {
     width: 100% !important;
 	height: auto;
+}
+
+.heart {
+  background-color: red;
+  display: inline-block;
+  height: 50px;
+  margin: 0 10px;
+  position: relative;
+  top: 0;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 45%; top: 45%;
+  width: 50px;
 }
 
 
@@ -202,15 +235,15 @@ text-align: center;
  margin-right: 15px;
 }
 .cardbox-base li a span{
- font-family: 'Rokkitt', serif;
- font-size: 14px;
- color: #8d8d8d;
+ font-family: 'Nunito', sans-serif;
+ font-size: 17px;
+ color: black;
  margin-left: 20px;
  position: relative;
  top: 5px;
 }
 .cardbox-base li a em{
- font-family: 'Rokkitt', serif;
+ font-family: 'Nunito', sans-serif;
  font-size: 14px;
  color: #8d8d8d;
  position: relative;
@@ -236,21 +269,21 @@ text-align: center;
   justify-content: space-between;
   // display: inline-block;
 }
-
 .comment-card-title {
   margin-bottom: 0.50rem;
-  padding: 0px 40px 20px 40px !important
+  padding: 0px 40px 20px 40px !important;
+  font-size: 13px;
 }
 .comments{
   padding: 10px 40px 20px 40px !important;
   // font-size: 5px;
-  height: 200px;
+  height: auto;
   width: 100%;
   overflow: auto;
   text-align: left;
   display: flex;
   justify-content: space-between;
-  font-family: system-ui;
+  font-family: 'Nunito', sans-serif;
   font-size: 62.5%  /* 1em = 10px */
   // display: inline-block;
 }
@@ -293,7 +326,7 @@ text-align: center;
  border: none;
  border-radius: 4px;
  width: 350px;
- font-family: 'Rokkitt', serif;
+ font-family: 'Nunito', sans-serif;
  font-size: 14px;
  color: #8d8d8d;
  height: inherit;
@@ -326,12 +359,12 @@ text-align: center;
 /* Author
 ---------------------------------- */
 .author a{
- font-family: 'Rokkitt', serif;
+ font-family: 'Nunito', sans-serif;
  font-size: 16px;
  color: #00C4CF;
 }
 .author p{
- font-family: 'Rokkitt', serif;
+ font-family: 'Nunito', sans-serif;
  font-size: 16px;
  color: #8d8d8d;
 }
