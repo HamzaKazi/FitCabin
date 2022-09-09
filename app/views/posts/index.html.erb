@@ -4,7 +4,9 @@
 <!------ Include the above in your HEAD tag ---------->
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
-
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Bebas+Neue&family=Cinzel&family=Italiana&family=Nunito:wght@300&family=Vollkorn&display=swap');
+</style>
   <%# <section id="header" class="jumbotron text-center"> %>
 <div class="whole-social-page">
 
@@ -13,8 +15,7 @@
     New post
   </button>
   </div>
-  <br>
-      <h1 class="display-3">Social Feed Page</h1>
+      <%# <h1 class="display-3">Social Feed Page</h1> %>
   </section>
 
         <section class="hero">
@@ -85,8 +86,8 @@
         <div class="row" style="width: 100%;">
         <div class="comments">
         	<li><span> <% post.comments.each do |comment| %>
+          FitCabin_Username
           <p class="comment-card-title" style="color:black;"><%= comment.content%></p>
-          20/08/3022
           <% end %>
           </span></li>
         </div>
