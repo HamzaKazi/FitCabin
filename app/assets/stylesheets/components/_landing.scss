@@ -52,11 +52,11 @@ h2 {
      grid-gap: 2rem;
      padding: 1rem;
      max-width: 1200px;
-     margin: 0 auto;
      position: relative;
      right: 135px;
      bottom: 0px;
      top: -1050px;
+     height: 350px;
 
      @media (min-width: $bp-md) {
        grid-template-columns: repeat(2, 1fr);
@@ -159,11 +159,12 @@ h2 {
    }
 
    .title {
-     font-size: 1.4rem;
+     font-size: 1.8rem;
      font-weight: bold;
-     line-height: 1.25rem;
      color: white;
      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+     line-height: 5rem;
+
     }
 
 
