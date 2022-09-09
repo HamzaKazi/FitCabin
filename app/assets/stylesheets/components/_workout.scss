@@ -18,13 +18,13 @@
     height: 149px;
     left: 620px;
     top: 380px;
-    background: #fff;
+    background: 	#454545;
     text-align: center;
     display: flex;
     align-items: center;
     overflow: hidden;
     border-radius: 5%;
-    box-shadow: 5px 5px;
+    box-shadow: 2px 2px;
 
   }
 
@@ -52,14 +52,13 @@
   touch-action: manipulation;
   width: 100%;
   position: absolute;
-width: 350px;
-height: 120px;
-left: 850px;
-top: 202px;
-
-mix-blend-mode: color-dodge;
-border: 5px solid #FF9900;
-border-radius: 20px;
+  width: 350px;
+  height: 93px;
+  left: 850px;
+  top: 202px;
+  mix-blend-mode: color-dodge;
+  border: 5px solid #FF9900;
+  border-radius: 20px;
 }
 
 .log-btn {
@@ -87,32 +86,36 @@ border-radius: 20px;
   touch-action: manipulation;
   width: 100%;
   position: absolute;
-width: 350px;
-height: 120px;
-left: 850px;
-top: 900px;
+  width: 350px;
+  height: 93px;
+  left: 850px;
+  top: 900px;
     }
 
     .btn-warning {
       border-radius: 20px;
+      position: relative;
+      left: 1rem;
       background-color: #ff9100;
     }
 
-    h5.card-title {
-      margin-top: -60px;
+    h5.card-title, .card-title.h5 {
+      /* margin-top: -27px; */
       font-family: "Nunito", "Helvetica", "sans-serif";
       font-weight: 500;
-      margin-left: 50px;
-      line-height: 4;
+      margin-left: 94px;
+      line-height: 1;
       color: #ff9100;
-      font-size: 26px;
-
+      font-size: 32px;
   }
   // ADDED A NEW CSS FOR DATE !!!!
   p.card-title-date {
-
       color: #ff9100;
-
+      position: relative;
+      bottom: -0.5rem;
+      left: 0.4rem;
+      text-decoration: none !important;
+      font-size: 20px;
   }
 // ADDED A NEW CSS FOR DATE!!!!
   .heart {
@@ -126,7 +129,7 @@ top: 900px;
 
 .lady {
     position: absolute;
-    width: 680px;
+    width: 794px;
     height: 676px;
     left: -180px;
     top: 302px;
@@ -137,4 +140,8 @@ top: 900px;
   position: absolute;
   top: 400px;
   left: 625px;
+}
+
+a {
+  text-decoration: none !important;
 }
