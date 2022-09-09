@@ -42,12 +42,12 @@ h2 {
      display: grid;
      grid-gap: 2rem;
      padding: 1rem;
-     max-width: 1200px;
+     max-width: 1800px;
      position: relative;
      right: 135px;
      bottom: 0px;
      top: -1050px;
-     height: 350px;
+     height: 550px;
      @media (min-width: $bp-md) {
        grid-template-columns: repeat(2, 1fr);
      }
