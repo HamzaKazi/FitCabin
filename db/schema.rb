@@ -119,6 +119,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_08_153301) do
   end
 
   create_table "workouts", force: :cascade do |t|
+    t.string "exercise"
+    t.integer "set"
+    t.integer "rep"
+    t.float "weight"
     t.datetime "date"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
