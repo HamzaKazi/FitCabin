@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@600&display=swap");
 .container-landing{
   width: 100%;
   height: auto;
@@ -15,19 +15,19 @@
     width: 977px;
     height: 1300px;
     font-size: 70px;
-    // font-family: 'Merriweather', serif;
-    font-family: 'Source Sans Pro', sans-serif;
+    // font-family: ‘Merriweather’, serif;
+    font-family: "Source Sans Pro", sans-serif;
   }
 h2 {
   position: relative;
   width: 977px;
   height: 500px;
-  color: white;
+  color: rgb(255, 255, 255);
   top: 100px;
   right: 200px;
   font-size: 5rem;
    }
-   $imageIds: '1576678927484-cc907957088c', '1657211548377-67c51948661f', '1602803056945-ebac8ae8fd00',;
+   $imageIds: "1576678927484-cc907957088c", "1657211548377-67c51948661f", "1602803056945-ebac8ae8fd00";
    $bp-md: 600px;
    $bp-lg: 800px;
    :root {
@@ -42,12 +42,12 @@ h2 {
      display: grid;
      grid-gap: 2rem;
      padding: 1rem;
-     max-width: 1800px;
+     max-width: 1200px;
+     margin: 0 auto;
      position: relative;
      right: 135px;
      bottom: 0px;
      top: -1050px;
-     height: 550px;
      @media (min-width: $bp-md) {
        grid-template-columns: repeat(2, 1fr);
      }
@@ -74,7 +74,7 @@ h2 {
        height: 350px;
      }
      &:before {
-       content: '';
+       content: "";
        position: absolute;
        top: 0;
        left: 0;
@@ -87,7 +87,7 @@ h2 {
        pointer-events: none;
      }
      &:after {
-       content: '';
+       content: "";
        display: block;
        position: absolute;
        top: 0;
@@ -139,11 +139,11 @@ h2 {
      }
    }
    .title {
-     font-size: 1.8rem;
+     font-size: 1.4rem;
      font-weight: bold;
+     line-height: 1.25rem;
      color: white;
      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-     line-height: 5rem;
     }
     h4.title {
       text-align: center;
@@ -207,7 +207,7 @@ h2 {
       box-sizing: border-box;
       color: #FFFFFF;
       display: inline-block;
-      font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+      font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,“Helvetica Neue”,sans-serif;
       font-size: 24px;
       font-weight: 600;
       line-height: 20px;
