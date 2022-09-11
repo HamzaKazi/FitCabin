@@ -5,6 +5,9 @@ ruby "3.1.2"
 
 gem "devise"
 
+#geocoder
+gem "geocoder"
+
 # gem "acts_as_votable"
 
 gem "dotenv-rails", groups: [:development, :test]
