@@ -1,9 +1,10 @@
-<nav>
+<nav data-controller="navbar">
   <%# <a href="#">Home</a> %>
 <%= link_to "Home", root_path, class: 'nav-item' %>
 <%= link_to "Food", root_path, class: 'nav-item' %>
 <%= link_to "Log", workouts_path, class: 'nav-item' %>
 <%= link_to "Gyms", gyms_path, class: 'nav-item' %>
 <%= link_to "Social Feed", posts_path, class: 'nav-item' %>
-  <div class="animation start-home"></div>
+  <div class="animation start-home" data-controller="navbar">
 </nav>
+</div>
