@@ -1,40 +1,53 @@
-  <body>
-      <div class="container-landing">
-           <img src = "https://res.cloudinary.com/hamzakazi/image/upload/v1662475252/Screenshot_2022-09-05_at_14.42.14-removebg-preview_dayrpd.png" class = "logo" alt = "Test Image" />
-      <br>
-      <br>
-      <div class="text-center mt-5">
-            <h2 class="lead">Start your journey <span style="color:orange">now</span></h2>
-  </section>
+<%# <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link href="css/styles.css" rel="stylesheet" />
+    </head> %>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@600&display=swap');
+</style>
+
+<div class="container-landing">
+  <img src = "https://res.cloudinary.com/hamzakazi/image/upload/v1662475252/Screenshot_2022-09-05_at_14.42.14-removebg-preview_dayrpd.png" class = "logo" alt = "Test Image" />
+  <br>
+  <br>
+  <div class="text-center mt-5" style = "position:relative; left:-170px; top:2px;">
+    <h2 class="lead" style = >Start your journey <span style="color:orange">now</span></h2>
+  </div>
+  <main class="page-content">
+    <div class="card">
+      <%= link_to  workouts_path do %>
+      <div class="content">
+        <h4 class="title">Log <span style="color:orange">workout</span></h4>
+        <p class="copy">Find a gym near you for the price <strong>you</strong> want</p>
       </div>
-      </div>
-</body>
-</html>
-<main class="page-content">
-  <div class="card">
-    <div class="content">
-      <h6 class="title">Gyms</h6>
-      <p class="copy">Find a gym near you for the price <strong>you</strong> want</p>
-    </div>
+    <% end %>
   </div>
   <div class="card">
+  <%# link to food section %>
     <div class="content">
-      <h6 class="title">Log your food</h6>
+      <h6 class="title">Log <span style="color:orange">food</span></h6>
       <p class="copy">Log and track your calorie intake so you can keep on top of your goals!</p>
     </div>
+  <%# end %>
   </div>
   <div class="card">
-    <div class="content">
-      <h6 class="title">Join the community</h6>
-      <p class="copy">Share your fitness journey with your friends!</p>
-    </div>
+    <%= link_to  posts_path do %>
+      <div class="content">
+        <h6 class="title">Join the <span style="color:orange">community</span></h6>
+        <p class="copy">Share your fitness journey with your friends!</p>
+      </div>
+    <% end %>
   </div>
+  </main>
+
+    <!-- HTML !-->
+    <%= link_to gyms_path do %>
+    <button class="button-23" role="button">Gym Finder</button>
+    <img src = "https://res.cloudinary.com/hamzakazi/image/upload/v1662478681/My_project_xbfksz.png" class = "Lady-run" alt = "Test Image" />
   </div>
-</main>
-<!-- HTML !-->
-<button class="button-23" role="button">Gym Finder</button>
-<img src = "https://res.cloudinary.com/hamzakazi/image/upload/v1662478681/My_project_xbfksz.png" class = "Lady-run" alt = "Test Image" />
-
-</body>
-
-</html>
+  <% end %>
+</div>
