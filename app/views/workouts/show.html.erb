@@ -1,17 +1,20 @@
 
+<div class = exercise-background >
+<img src= "https://res.cloudinary.com/hamzakazi/image/upload/v1662733755/kisspng-t-shirt-fitness-centre-exercise-health-high-intens-descubra-como-perder-peso-e-transformar-seu-corpo-5d40472e428678.7749310915644936142725_izgygy.png" class = "heart-fitness" alt = "" />
 <h1 class=""><%= @workout.name %></h1>
-<p>Date: <%=@workout.date.strftime('%d/%m/%Y')%></p>
+<p class = "date-title" >Date: <%=@workout.date.strftime('%d/%m/%Y')%></p>
 
 <% @exercises.each do |exercise| %>
-<div class="card" style="width: 18rem;">
+<div class="card-exercise" style="width: 25rem; height: 25rem;">
       <div class="card-body">
         <div class="d-flex justify-content-between">
           <span class="text-decoration-line-through"></span>
 
-              <p class="lead"><em>Exercise type:</em>    <%=exercise.name%></p>
-                <p class="lead"><em>Sets:</em>    <%=exercise.set%></p>
-                <p class="lead"><em>Reps:</em>    <%=exercise.rep%></p>
-                <p class="lead"><em>Weight:</em>    <%=exercise.weight%></p>
+              <p class="lead-exercise"><em>Exercise    </em>    <%=exercise.name%></p>
+              <br>
+                <p class="lead-exercise"><em>Sets:</em>    <%=exercise.set%></p>
+                <p class="lead-exercise"><em>Reps:</em>    <%=exercise.rep%></p>
+                <p class="lead-exercise"><em>Weight:</em>    <%=exercise.weight%></p>
 
           <%= link_to exercise_path(exercise), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this workout log?" } do %>
             <%= image_tag "bin_delete.png", style: "width: 20px; height: 20px" %>
@@ -19,4 +22,7 @@
         </div>
       </div>
     </div>
+    <h2 class= "motivation"> "Nothing will work unless <strong>you</strong> do"</h2>
+    </div>
+
 <% end %>
