@@ -1,4 +1,3 @@
-
 :root {
   --surface-color: #ff9900;
   --curve: 40;
@@ -9,7 +8,7 @@
 }
 
 body {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   background-color: #ff9900;
 }
 
@@ -48,7 +47,6 @@ body {
 .card__image {
   width: 100%;
   height: 100%;
-
 }
 
 .card__overlay {
@@ -90,7 +88,7 @@ body {
 
 .card__arc path {
   fill: #ff9900;
-  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+  d: path(“M 40 80 c 22 0 40 -22 40 -40 v 40 Z”);
 }
 
 .card-gym:hover .card__header {
@@ -114,7 +112,7 @@ body {
 .card__tagline {
   display: block;
   margin: 1em 0;
-  font-family: "MockFlowFont";
+  font-family: “MockFlowFont”;
   font-size: .7em;
   color: #ff9900;
 }
@@ -130,126 +128,9 @@ body {
   padding: 0 1.5em 1.5em;
   margin: 0;
   color: white;
-  font-family: "MockFlowFont";
+  font-family: “MockFlowFont”;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
 }
-
-// .cards {
-//   // display: grid;
-//   // grid-template-columns: repeat(3, 1fr);
-//   // grid-auto-rows: auto;
-//   // grid-gap: 1rem;
-//   // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-//   // gap: 2rem;
-//   // margin: 4rem 5vw;
-//   // padding: 1;
-
-//   display: grid;
-//   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-//   gap: 2rem;
-//   margin: 4rem 5vw;
-//   padding: 0;
-// }
-
-// .card {
-//   position: relative;
-//   display: block;
-//   height: 20rem;
-//   max-width: 20rem;
-//   border-radius: calc(var(--curve) * 1px);
-//   overflow: hidden;
-//   text-decoration: none;
-// }
-
-// .card__image {
-//   width: 100%;
-//   height: 100%;
-// }
-
-// .card__overlay {
-//   position: absolute;
-//   bottom: 0;
-//   left: 0;
-//   right: 0;
-//   z-index: 1;
-//   border-radius: calc(var(--curve) * 1px);
-//   background-color: var(--surface-color);
-//   transform: translateY(100%);
-//   transition: .2s ease-in-out;
-// }
-
-// .card:hover .card__overlay {
-//   transform: translateY(0);
-// }
-
-// .card__header {
-//   position: relative;
-//   display: flex;
-//   align-items: center;
-//   gap: 0.7em;
-//   padding: 0.7em;
-//   border-radius: calc(var(--curve) * 1px) 0 0 0;
-//   background-color: #ff9900;
-//   transform: translateY(-100%);
-//   transition: .2s ease-in-out;
-// }
-
-// .card__arc {
-//   width: 80px;
-//   height: 80px;
-//   position: absolute;
-//   bottom: 100%;
-//   right: 0;
-//   z-index: 1;
-// }
-
-// .card__arc path {
-//   fill: #ff9900;
-//   d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
-// }
-
-// .card:hover .card__header {
-//   transform: translateY(0);
-// }
-
-// .card__thumb {
-//   flex-shrink: 0;
-//   width: 50px;
-//   height: 50px;
-//   border-radius: 50%;
-// }
-
-// .card__title {
-//   font-size: 1em;
-//   margin: 0 0 .2em;
-//   color: white;
-//   padding-left: 15px;
-// }
-
-// .card__tagline {
-//   display: block;
-//   margin: 1em 0;
-//   font-family: "MockFlowFont";
-//   font-size: .8em;
-//   color: #ff9900;
-// }
-
-// .card__status {
-//   font-size: .8em;
-//   color: white;
-//   padding-left: 15px;
-// }
-
-// .card__description {
-//   padding: 0 2em 2em;
-//   margin: 0;
-//   color: white;
-//   font-family: "MockFlowFont";
-//   display: -webkit-box;
-//   -webkit-box-orient: vertical;
-//   -webkit-line-clamp: 3;
-//   overflow: hidden;
-// }
