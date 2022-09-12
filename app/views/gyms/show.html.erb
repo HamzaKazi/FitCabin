@@ -15,73 +15,29 @@
               <input type="radio" name="slides" id="slide-5">
               <input type="radio" name="slides" id="slide-6">
               <ul class="carousel__slides">
+                          <% @gym.images.each do |image| %>
                   <li class="carousel__slide">
                       <figure>
                           <div>
-                          <%= cl_image_tag @gym.image.key%>
+                          <%= cl_image_tag image.key%>
                           </div>
                       </figure>
                   </li>
-                  <li class="carousel__slide">
-                      <figure>
-                          <div>
-                              <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z3ltfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60" alt="">
-                          </div>
-                      </figure>
-                  </li>
-                  <li class="carousel__slide">
-                      <figure>
-                          <div>
-                              <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Z3ltfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60" alt="">
-                          </div>
-                      </figure>
-                  </li>
-                  <li class="carousel__slide">
-                      <figure>
-                          <div>
-                              <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGd5bXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1000&q=60" alt="">
-                          </div>
-                      </figure>
-                  </li>
-                  <li class="carousel__slide">
-                      <figure>
-                          <div>
-                              <img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGd5bXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1000&q=60" alt="">
-                          </div>
-                      </figure>
-                  </li>
-                  <li class="carousel__slide">
-                      <figure>
-                          <div>
-                              <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGd5bXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1000&q=60" alt="">
-                          </div>
-                      </figure>
-                  </li>
+                          <% end %>
               </ul>
               <ul class="carousel__thumbnails">
+                    <% @gym.images.each_with_index do |image , index| %>
                   <li>
-                      <label for="slide-1"><img src="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxzZWFyY2h8MXx8Z3ltfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60" alt=""></label>
+                      <label for="slide-<%= index + 1 %>"><%= cl_image_tag image.key%></label>
                   </li>
-                  <li>
-                      <label for="slide-2"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z3ltfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60" alt=""></label>
-                  </li>
-                  <li>
-                      <label for="slide-3"><img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Z3ltfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60" alt=""></label>
-                  </li>
-                  <li>
-                      <label for="slide-4"><img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGd5bXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1000&q=60" alt=""></label>
-                  </li>
-                  <li>
-                      <label for="slide-5"><img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGd5bXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1000&q=60" alt=""></label>
-                  </li>
-                  <li>
-                      <label for="slide-6"><img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGd5bXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1000&q=60" alt=""></label>
-                  </li>
+                  <% end %>
               </ul>
           </div>
       </div>
   </section>
 </div>
+
+
     <%# <div class="container-new">
       <div class="carousel-new">
         <div class="carousel__face"><span>This is something</span></div>
@@ -123,12 +79,14 @@
 
           <!-- Product Color -->
           <div class="product-color">
-            <span><p>Rating: <%= @gym.rating.to_i.times do%></p></span>
-CHANGES I HAVE MADE ARE HERE!!!!!!!
+            <span><p>Rating: <%= @gym.rating%></p></span>
+<%# CHANGES I HAVE MADE ARE HERE!!!!!!! %>
+          <ul>
             <%  @gym.rating.to_i.times do  %>
-              <i class="bi bi-star-fill"></i>
-            <% end %></p>
-CHANGES I HAVE MADE HERE!!!!!!!
+            <li>⭐️</li>
+            <% end %>
+            </ul>
+<%# CHANGES I HAVE MADE HERE!!!!!!! %>
             <div class="ratings">
 
             </div>
