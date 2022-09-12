@@ -1,5 +1,5 @@
-<section id="header" class="jumbotron text-center">
-  <%= form_with url: vehicles_path, method: :get, class: "d-flex" do %>
+<div id="header" class="jumbotron text-center" data-controller="nutritionix">
+  <%= form_with url: foods_path, method: :get, class: "d-flex" do %>
     <%= text_field_tag :query,
       params[:query],
       class: "form-control",

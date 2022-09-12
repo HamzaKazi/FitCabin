@@ -20,4 +20,9 @@ class FoodsController < ApplicationController
   def destroy
   end
 
+  private
+
+  def food_params
+    params.require(:food).permit(:name, :calories)
+  end
 end
