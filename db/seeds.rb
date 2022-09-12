@@ -58,11 +58,11 @@ workout = Workout.create(
 workout.save
 
 file = URI.open("https://www.gannett-cdn.com/presto/2020/04/16/USAT/5b7ef814-a04d-44c8-86ef-1d47c798a1f1-Golds_gym_CharlesTown.jpg?crop=2655,1494,x10,y0&width=2655&height=1494&format=pjpg&auto=webp")
-file1 = URI.open("https://www.gannett-cdn.com/presto/2020/04/16/USAT/5b7ef814-a04d-44c8-86ef-1d47c798a1f1-Golds_gym_CharlesTown.jpg?crop=2655,1494,x10,y0&width=2655&height=1494&format=pjpg&auto=webp")
-file2 = URI.open("https://www.gannett-cdn.com/presto/2020/04/16/USAT/5b7ef814-a04d-44c8-86ef-1d47c798a1f1-Golds_gym_CharlesTown.jpg?crop=2655,1494,x10,y0&width=2655&height=1494&format=pjpg&auto=webp")
-file3 = URI.open("https://www.gannett-cdn.com/presto/2020/04/16/USAT/5b7ef814-a04d-44c8-86ef-1d47c798a1f1-Golds_gym_CharlesTown.jpg?crop=2655,1494,x10,y0&width=2655&height=1494&format=pjpg&auto=webp")
-file4 = URI.open("https://www.gannett-cdn.com/presto/2020/04/16/USAT/5b7ef814-a04d-44c8-86ef-1d47c798a1f1-Golds_gym_CharlesTown.jpg?crop=2655,1494,x10,y0&width=2655&height=1494&format=pjpg&auto=webp")
-file5 = URI.open("https://www.gannett-cdn.com/presto/2020/04/16/USAT/5b7ef814-a04d-44c8-86ef-1d47c798a1f1-Golds_gym_CharlesTown.jpg?crop=2655,1494,x10,y0&width=2655&height=1494&format=pjpg&auto=webp")
+file1 = URI.open("https://www.what-franchise.com/franchise-opportunities/gym-franchises/golds-gym")
+file2 = URI.open("https://www.leisureopportunities.co.uk/images/THUMB20829_768303.jpg")
+file3 = URI.open("https://i4.hurimg.com/i/hurriyet/75/1200x675/5cecfecf67b0a90b9ca0d41f.jpg")
+file4 = URI.open("https://www.thenewsminute.com/sites/default/files/Golds_Gym_Rajamundry.jpg")
+file5 = URI.open("https://i.insider.com/5e9859ecdcd88c5e8c061688?width=700")
 puts "save worked"
 
 gym = Gym.create(
