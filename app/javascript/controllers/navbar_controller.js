@@ -12,7 +12,7 @@ export default class extends Controller {
     //   }
     // }
 
-console.log("hello")
+
 
 // const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
