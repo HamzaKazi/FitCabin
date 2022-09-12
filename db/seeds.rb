@@ -58,7 +58,13 @@ workout = Workout.create(
 workout.save
 
 file = URI.open("https://www.gannett-cdn.com/presto/2020/04/16/USAT/5b7ef814-a04d-44c8-86ef-1d47c798a1f1-Golds_gym_CharlesTown.jpg?crop=2655,1494,x10,y0&width=2655&height=1494&format=pjpg&auto=webp")
+file1 = URI.open("https://www.gannett-cdn.com/presto/2020/04/16/USAT/5b7ef814-a04d-44c8-86ef-1d47c798a1f1-Golds_gym_CharlesTown.jpg?crop=2655,1494,x10,y0&width=2655&height=1494&format=pjpg&auto=webp")
+file2 = URI.open("https://www.gannett-cdn.com/presto/2020/04/16/USAT/5b7ef814-a04d-44c8-86ef-1d47c798a1f1-Golds_gym_CharlesTown.jpg?crop=2655,1494,x10,y0&width=2655&height=1494&format=pjpg&auto=webp")
+file3 = URI.open("https://www.gannett-cdn.com/presto/2020/04/16/USAT/5b7ef814-a04d-44c8-86ef-1d47c798a1f1-Golds_gym_CharlesTown.jpg?crop=2655,1494,x10,y0&width=2655&height=1494&format=pjpg&auto=webp")
+file4 = URI.open("https://www.gannett-cdn.com/presto/2020/04/16/USAT/5b7ef814-a04d-44c8-86ef-1d47c798a1f1-Golds_gym_CharlesTown.jpg?crop=2655,1494,x10,y0&width=2655&height=1494&format=pjpg&auto=webp")
+file5 = URI.open("https://www.gannett-cdn.com/presto/2020/04/16/USAT/5b7ef814-a04d-44c8-86ef-1d47c798a1f1-Golds_gym_CharlesTown.jpg?crop=2655,1494,x10,y0&width=2655&height=1494&format=pjpg&auto=webp")
 puts "save worked"
+
 gym = Gym.create(
   name: "Golds Gym",
   address: "54-62 Uxbridge Rd, London W7 3SU",
@@ -67,10 +73,21 @@ gym = Gym.create(
   price: 40
 )
 gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.image.attach(io: file1, filename: "nes.png", content_type: "image/png")
+gym.image.attach(io: file2, filename: "nes.png", content_type: "image/png")
+gym.image.attach(io: file3, filename: "nes.png", content_type: "image/png")
+gym.image.attach(io: file4, filename: "nes.png", content_type: "image/png")
+gym.image.attach(io: file5, filename: "nes.png", content_type: "image/png")
 gym.save
 
 file = URI.open("https://www.thirdspace.london/media/CW-Header3B@2x.jpg")
+file1 = URI.open("https://www.thirdspace.london/media/CW-Header3B@2x.jpg")
+file2 = URI.open("https://www.thirdspace.london/media/CW-Header3B@2x.jpg")
+file3 = URI.open("https://www.thirdspace.london/media/CW-Header3B@2x.jpg")
+file4 = URI.open("https://www.thirdspace.london/media/CW-Header3B@2x.jpg")
+file5 = URI.open("https://www.thirdspace.london/media/CW-Header3B@2x.jpg")
 puts "save worked"
+
 gym = Gym.create(
   name: "Third Space",
   address: "Canary Wharf, 16-19 Canada Square, London E14 5ER",
@@ -79,6 +96,11 @@ gym = Gym.create(
   price: 180
 )
 gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.image.attach(io: file1, filename: "nes.png", content_type: "image/png")
+gym.image.attach(io: file2, filename: "nes.png", content_type: "image/png")
+gym.image.attach(io: file3, filename: "nes.png", content_type: "image/png")
+gym.image.attach(io: file4, filename: "nes.png", content_type: "image/png")
+gym.image.attach(io: file5, filename: "nes.png", content_type: "image/png")
 gym.save
 
 file = URI.open("https://www.qmsu.org/asset/News/21286/personaltraining.jpg?thumbnail_width=360&thumbnail_height=335&resize_type=CropToFit")
