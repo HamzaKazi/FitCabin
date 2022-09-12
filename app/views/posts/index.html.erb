@@ -9,21 +9,45 @@
 </style>
   <%# <section id="header" class="jumbotron text-center"> %>
 <div class="whole-social-page">
+  <div class="column-left-social">
+      <figure class="chart-one animate">
+        <svg role="img" xmlns="http://www.w3.org/2000/svg">
+          <title>[title here]</title>
+          <desc>[long description here]</desc>
+          <circle class="circle-background"/>
+          <circle class="circle-foreground"/>
+        </svg>
+        <figcaption>25% of all males like donuts.</figcaption>
+      </figure>
 
-     <div class="display-3">
-      <button type="button" class="btn-primary-social" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    New post
-  </button>
+      <figure class="chart-two animate">
+        <svg role="img" xmlns="http://www.w3.org/2000/svg">
+          <title>[title here]</title>
+          <desc>[long description here]</desc>
+          <circle class="circle-background"/>
+          <circle class="circle-foreground"/>
+        </svg>
+        <figcaption>50% of all males like donuts.</figcaption>
+      </figure>
+
+      <figure class="chart-three animate">
+        <svg role="img" xmlns="http://www.w3.org/2000/svg">
+          <title>[title here]</title>
+          <desc>[long description here]</desc>
+          <circle class="circle-background"/>
+          <circle class="circle-foreground"/>
+        </svg>
+        <figcaption>75% of all males like donuts.</figcaption>
+      </figure>
   </div>
-      <%# <h1 class="display-3">Social Feed Page</h1> %>
-  </section>
 
         <section class="hero">
          <div class="container">
-          <div class="row">
 		   <div class="col-lg-6 offset-lg-3">
-
-  <br>
+        <button type="button" class="btn-primary-social" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+         New post
+        </button>
+        <br>
       <%# <div class="container"> %>
       <%# <div class="row" style="width: 100%;"> %>
           <% @posts.each do |post| %>
@@ -100,6 +124,7 @@
         <div class="modal-body2">
         <%= render "new_comment", post: post %>
       </div>
+      <br>
 			   <%# <input placeholder="Write a comment" type="text"> %>
 			  </div><!--/. Search -->
 			 </div><!--/ cardbox-like -->
@@ -108,11 +133,11 @@
            </div><!--/ col-lg-6 -->
 
 
-          </div><!--/ row -->
          </div><!--/ container -->
 
           <% end %>
         </section>
+
 
 
     <p id="notice"><%= notice %></p>
