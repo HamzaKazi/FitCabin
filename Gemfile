@@ -5,6 +5,7 @@ ruby "3.1.2"
 
 gem "devise"
 
+gem "pg_search"
 
 gem 'nutritionix'
 gem 'figaro' # to handle API keys securely
