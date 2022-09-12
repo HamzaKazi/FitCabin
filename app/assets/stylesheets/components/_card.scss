@@ -9,14 +9,9 @@
 
 .index-whole-page {
   width: 100%;
-  height: 1800px;
-  background: linear-gradient(
-    to right,
-    #272727 0%,
-    #272727 80%,
-    #ff9900 50%,
-    #ff9900 100%,
-    )
+  height: 1900px;
+  background-color: #272727;
+
 }
 
 .cards-all {
@@ -144,4 +139,12 @@
   position: absolute;
   border-radius: 20px;
   margin-left: 50%;
+}
+
+ .h1 {
+  margin: 0;
+  color: #ff9100d8;
+  font-size: 100px;
+  letter-spacing: 1px;
+  text-align: center;
 }
