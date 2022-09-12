@@ -57,6 +57,20 @@ workout = Workout.create(
 )
 workout.save
 
+workout = Workout.create(
+  name: "Back",
+  date: "1/9/2022",
+  user_id: user.id
+)
+workout.save
+
+workout = Workout.create(
+  name: "Shoulders",
+  date: "3/9/2022",
+  user_id: user.id
+)
+workout.save
+
 file = URI.open("https://www.gannett-cdn.com/presto/2020/04/16/USAT/5b7ef814-a04d-44c8-86ef-1d47c798a1f1-Golds_gym_CharlesTown.jpg?crop=2655,1494,x10,y0&width=2655&height=1494&format=pjpg&auto=webp")
 file1 = URI.open("https://imageio.forbes.com/specials-images/imageserve/5f4959c43e83b9c25b58e438/0x0.jpg?format=jpg&width=1200")
 file2 = URI.open("https://www.leisureopportunities.co.uk/images/THUMB20829_768303.jpg")
@@ -184,7 +198,7 @@ gym.save
 file = URI.open("https://www.fitnessfirst.co.uk/media/ztcbzv5l/fitnessfirst-w21-interiors-bangor-106.jpg?width=540&height=405&quality=80&rnd=132890619953070000")
 puts "save worked"
 gym = Gym.create(
-  name: "FtinessFirst",
+  name: "FitnessFirst",
   address: "128 Albert St, London NW1 7NE",
   rating: 3.8,
   description: "Explore a wide variety of classes and special training programmes on offer. Browse Classes. Sign Up For Offers. Find A Gym. Courses: Bodycombat, Spinning, Circuit Training, Pilates, Boxercise.",
