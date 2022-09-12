@@ -5,6 +5,9 @@ ruby "3.1.2"
 
 gem "devise"
 
+
+gem 'nutritionix'
+gem 'figaro' # to handle API keys securely
 #geocoder
 gem "geocoder"
 
