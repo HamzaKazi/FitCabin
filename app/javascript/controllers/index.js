@@ -4,8 +4,6 @@
 
 import { application } from "./application"
 
-import HelloController from "./hello_controller"
-application.register("hello", HelloController)
 
 import LikeButtonController from "./like_button_controller"
 application.register("like-button", LikeButtonController)
@@ -15,3 +13,6 @@ application.register("map", MapController)
 
 import NavbarController from "./navbar_controller"
 application.register("navbar", NavbarController)
+
+import NutritionixController from "./nutritionix_controller"
+application.register("nutritionix", NutritionixController)

@@ -2,7 +2,19 @@
 <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css" rel="stylesheet">
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
 
+
 <div class="cards-all">
+
+<div class="map">
+<div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
+</div>
+
+<div class="cards-all" data-controller="nutritionix">
+
 <% @gyms.each do |gym| %>
   <div class="card-gym">
     <%=link_to  gym_path(gym) do cl_image_tag gym.image.key, class: "card__image" end%>
