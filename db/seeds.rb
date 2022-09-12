@@ -104,6 +104,9 @@ gym.images.attach(io: file5, filename: "nes.png", content_type: "image/png")
 gym.save
 
 file = URI.open("https://www.qmsu.org/asset/News/21286/personaltraining.jpg?thumbnail_width=360&thumbnail_height=335&resize_type=CropToFit")
+file1 = URI.open("https://www.qmsu.org/pageassets/qmotion/facilities/Qmotion-reception.jpg")
+file2 = URI.open("https://www.qmsu.org/pageassets/qmotion/facilities/Free-weights.jpg")
+file3= URI.open("https://www.qmsu.org/pageassets/qmotion/qmotionnewheader.jpg?thumbnail=true&height=750&width=2000&resize_type=ResizeFitAll")
 puts "save worked"
 gym = Gym.create(
   name: "Qmotion Sport and Fitness Centre",
@@ -113,6 +116,9 @@ gym = Gym.create(
   price: 29.99
 )
 gym.images.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.images.attach(io: file1, filename: "nes.png", content_type: "image/png")
+gym.images.attach(io: file2, filename: "nes.png", content_type: "image/png")
+gym.images.attach(io: file3, filename: "nes.png", content_type: "image/png")
 gym.save
 
 file = URI.open("https://prod-ne-cdn-media.puregym.com/media/794204/londonshoreditch201808_016.jpg?quality=80")
