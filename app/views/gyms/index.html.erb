@@ -10,7 +10,7 @@
 </div>
 </div>
 
-<div class="cards-all">
+<div class="cards-all" data-controller="nutritionix">
 <% @gyms.each do |gym| %>
   <div class="card-gym">
     <%=link_to  gym_path(gym) do cl_image_tag gym.image.key, class: "card__image" end%>
