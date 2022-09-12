@@ -25,14 +25,14 @@
 
         <!-- Product Description -->
         <div class="product-description">
-          <h1>Gym Name</h1>
+          <h1><%= @gym.name %></h1>
           <br>
-          <p>Gym Description</p>
+          <p><%= @gym.description %></p>
         </div>
 
           <!-- Product Color -->
           <div class="product-color">
-            <span>Rating</span>
+            <span><p>Rating: <%= @gym.rating %></p></span>
 
             <div class="ratings">
 
@@ -42,7 +42,7 @@
 
           <!-- Cable Configuration -->
           <div class="reviews">
-            <span>reviews</span>
+            <span>reviews...</span>
               <br>
               <br>
               <br>
@@ -51,8 +51,10 @@
 
         <!-- Product Pricing -->
         <div class="membership-fee">
-          <span>Membership Fee</span>
-          <span><a href="#" class="cart-btn">Book Now</a></span>
+
+          <span> <p>Membership Fee: <%= @gym.price%>/per month</p></span>
+          <a href="#" class="cart-btn">Book Now</a>
+
         </div>
       </div>
 </div>

@@ -12,4 +12,10 @@ class GymsController < ApplicationController
   def show
     @gym = Gym.find(params[:id])
   end
+
+  private
+  def gym_params
+    params.require(:gym).permit(:name, :address, :rating, :description, :price, :image)
+  end
+
 end

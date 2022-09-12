@@ -17,7 +17,24 @@ workout = Workout.create(date: 10112022)
 user = User.create(email: "admin@fitcabin.com", password: "123456")
 puts "user #{user.id}"
 
-
+file = URI.open("https://images.unsplash.com/photo-1623946724822-ba48a838f3da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTk4fHxneW18ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60")
+puts "Posts saved"
+post = Post.create(
+  caption: "New PR!! #LetsGO",
+  likes: 36,
+  user_id: user.id
+)
+post.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+post.save
+file = URI.open("https://images.unsplash.com/photo-1610441009633-b6ca9c6d4be2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80")
+puts "Posts saved"
+post = Post.create(
+  caption: "Morning Breakfast! #RiseNGrind",
+  likes: 87,
+  user_id: user.id
+)
+post.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+post.save
 
 workout = Workout.create(
   name: "Legs",
