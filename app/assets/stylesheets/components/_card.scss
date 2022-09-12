@@ -26,11 +26,11 @@ body {
   // gap: 2rem;
   // margin: 4rem 5vw;
   // padding: 1;
-
+  float: left;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
   gap: 15px;
-  margin: 15px;
+  margin: 10px;
   padding: 0;
 }
 
@@ -133,4 +133,13 @@ body {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
+}
+
+.map {
+  float: right;
+  width: 50%;
+  height: auto;
+  position: absolute;
+  margin-left:50%;
+  border-radius: 20px;
 }
