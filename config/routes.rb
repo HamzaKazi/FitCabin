@@ -17,6 +17,8 @@ Rails.application.routes.draw do
     resources :exercises, only: [:new, :create]
   end
 
+  resources :foods
+
 
   resources :exercises, only: [:destroy]
   resources :posts
