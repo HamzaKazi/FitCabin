@@ -81,11 +81,11 @@ gym.images.attach(io: file5, filename: "nes.png", content_type: "image/png")
 gym.save
 
 file = URI.open("https://www.thirdspace.london/media/CW-Header3B@2x.jpg")
-file1 = URI.open("https://www.thirdspace.london/media/CW-Header3B@2x.jpg")
-file2 = URI.open("https://www.thirdspace.london/media/CW-Header3B@2x.jpg")
-file3 = URI.open("https://www.thirdspace.london/media/CW-Header3B@2x.jpg")
-file4 = URI.open("https://www.thirdspace.london/media/CW-Header3B@2x.jpg")
-file5 = URI.open("https://www.thirdspace.london/media/CW-Header3B@2x.jpg")
+file1 = URI.open("https://media.vogue.co.uk/photos/5d54841cb1c563000856f935/master/pass/original")
+file2 = URI.open("https://group.canarywharf.com/wp-content/uploads/2021/03/canary-wharf-media-release-third-space-wood-wharf-310119-1-741x417-1.jpg")
+file3 = URI.open("https://www.thirdspace.london/media/22_03_03_Third_Space_Soho_03.03.22_051-scaled.jpg")
+file4 = URI.open("https://www.theresident.co.uk/resource/blob/8827672/7e7d3bca0e1884ea1d077a07b9d434bc/the-yard-at-third-space-50cea09e-data.jpg")
+file5 = URI.open("https://i.ytimg.com/vi/5Yr0o8mVofI/maxresdefault.jpg")
 puts "save worked"
 
 gym = Gym.create(
