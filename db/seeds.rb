@@ -57,8 +57,28 @@ workout = Workout.create(
 )
 workout.save
 
+workout = Workout.create(
+  name: "Back",
+  date: "1/9/2022",
+  user_id: user.id
+)
+workout.save
+
+workout = Workout.create(
+  name: "Shoulders",
+  date: "3/9/2022",
+  user_id: user.id
+)
+workout.save
+
 file = URI.open("https://www.gannett-cdn.com/presto/2020/04/16/USAT/5b7ef814-a04d-44c8-86ef-1d47c798a1f1-Golds_gym_CharlesTown.jpg?crop=2655,1494,x10,y0&width=2655&height=1494&format=pjpg&auto=webp")
+file1 = URI.open("https://imageio.forbes.com/specials-images/imageserve/5f4959c43e83b9c25b58e438/0x0.jpg?format=jpg&width=1200")
+file2 = URI.open("https://www.leisureopportunities.co.uk/images/THUMB20829_768303.jpg")
+file3 = URI.open("https://i4.hurimg.com/i/hurriyet/75/1200x675/5cecfecf67b0a90b9ca0d41f.jpg")
+file4 = URI.open("https://www.thenewsminute.com/sites/default/files/Golds_Gym_Rajamundry.jpg")
+file5 = URI.open("https://i.insider.com/5e9859ecdcd88c5e8c061688?width=700")
 puts "save worked"
+
 gym = Gym.create(
   name: "Golds Gym",
   address: "54-62 Uxbridge Rd, London W7 3SU",
@@ -66,11 +86,22 @@ gym = Gym.create(
   description: "Arnold's gym",
   price: 40
 )
-gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.images.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.images.attach(io: file1, filename: "nes.png", content_type: "image/png")
+gym.images.attach(io: file2, filename: "nes.png", content_type: "image/png")
+gym.images.attach(io: file3, filename: "nes.png", content_type: "image/png")
+gym.images.attach(io: file4, filename: "nes.png", content_type: "image/png")
+gym.images.attach(io: file5, filename: "nes.png", content_type: "image/png")
 gym.save
 
 file = URI.open("https://www.thirdspace.london/media/CW-Header3B@2x.jpg")
+file1 = URI.open("https://media.vogue.co.uk/photos/5d54841cb1c563000856f935/master/pass/original")
+file2 = URI.open("https://group.canarywharf.com/wp-content/uploads/2021/03/canary-wharf-media-release-third-space-wood-wharf-310119-1-741x417-1.jpg")
+file3 = URI.open("https://www.thirdspace.london/media/22_03_03_Third_Space_Soho_03.03.22_051-scaled.jpg")
+file4 = URI.open("https://www.theresident.co.uk/resource/blob/8827672/7e7d3bca0e1884ea1d077a07b9d434bc/the-yard-at-third-space-50cea09e-data.jpg")
+file5 = URI.open("https://i.ytimg.com/vi/5Yr0o8mVofI/maxresdefault.jpg")
 puts "save worked"
+
 gym = Gym.create(
   name: "Third Space",
   address: "Canary Wharf, 16-19 Canada Square, London E14 5ER",
@@ -78,10 +109,18 @@ gym = Gym.create(
   description: "High-end fitness club featuring a pool, sauna & spa, training equipment & a climbing wall.",
   price: 180
 )
-gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.images.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.images.attach(io: file1, filename: "nes.png", content_type: "image/png")
+gym.images.attach(io: file2, filename: "nes.png", content_type: "image/png")
+gym.images.attach(io: file3, filename: "nes.png", content_type: "image/png")
+gym.images.attach(io: file4, filename: "nes.png", content_type: "image/png")
+gym.images.attach(io: file5, filename: "nes.png", content_type: "image/png")
 gym.save
 
 file = URI.open("https://www.qmsu.org/asset/News/21286/personaltraining.jpg?thumbnail_width=360&thumbnail_height=335&resize_type=CropToFit")
+file1 = URI.open("https://www.qmsu.org/pageassets/qmotion/facilities/Qmotion-reception.jpg")
+file2 = URI.open("https://www.qmsu.org/pageassets/qmotion/facilities/Free-weights.jpg")
+file3= URI.open("https://www.qmsu.org/pageassets/qmotion/qmotionnewheader.jpg?thumbnail=true&height=750&width=2000&resize_type=ResizeFitAll")
 puts "save worked"
 gym = Gym.create(
   name: "Qmotion Sport and Fitness Centre",
@@ -90,7 +129,10 @@ gym = Gym.create(
   description: "Queen Mary University gym offering strength & cardio equipment, personal training & group classes.",
   price: 29.99
 )
-gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.images.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.images.attach(io: file1, filename: "nes.png", content_type: "image/png")
+gym.images.attach(io: file2, filename: "nes.png", content_type: "image/png")
+gym.images.attach(io: file3, filename: "nes.png", content_type: "image/png")
 gym.save
 
 file = URI.open("https://prod-ne-cdn-media.puregym.com/media/794204/londonshoreditch201808_016.jpg?quality=80")
@@ -102,7 +144,7 @@ gym = Gym.create(
   description: "The PureGym Group is one of the largest gym and fitness operators in Europe and provides high quality, low cost, flexible physical fitness facilities.",
   price: 25
 )
-gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.images.attach(io: file, filename: "nes.png", content_type: "image/png")
 gym.save
 
 file = URI.open("https://media.vanityfair.com/photos/5e8f3038b263650008165bba/4:3/w_1776,h_1332,c_limit/barrys-bootcamp-online-classes.jpg")
@@ -114,7 +156,7 @@ gym = Gym.create(
   description: "Opened in 2013, Central is the OG London studio and one of the first boutique fitness concepts to hit the UK. It was also the first basement-level Red Room.",
   price: 79.99
 )
-gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.images.attach(io: file, filename: "nes.png", content_type: "image/png")
 gym.save
 
 file = URI.open("https://www.thirdspace.london/media/blog-main-190121.jpg")
@@ -126,7 +168,7 @@ gym = Gym.create(
   description: "Join a community of riders, trainers, stretchers and activists today. T&Cs apply. Be fit. Be happy. Be well. Be human at Virgin Active. Join Today. T&Cs apply.",
   price: 150
 )
-gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.images.attach(io: file, filename: "nes.png", content_type: "image/png")
 gym.save
 
 file = URI.open("https://media-cdn.tripadvisor.com/media/photo-s/15/b1/35/1c/the-amazing-cardio-area.jpg")
@@ -138,7 +180,7 @@ gym = Gym.create(
   description: "At Gymbox Covent Garden, you've got a front-row ticket to a high-performance London gym that knows how to pull in the crowds",
   price: 30
 )
-gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.images.attach(io: file, filename: "nes.png", content_type: "image/png")
 gym.save
 
 file = URI.open("https://manofmany.com/wp-content/uploads/2018/03/Best-Boxing-Gyms-Melbourne-Dohertys-Gym.jpg")
@@ -150,19 +192,19 @@ gym = Gym.create(
   description: "Hidden away, the setting is simple and effective. Mirroring the atmosphere of traditional boxing gyms.",
   price: 45
 )
-gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.images.attach(io: file, filename: "nes.png", content_type: "image/png")
 gym.save
 
 file = URI.open("https://www.fitnessfirst.co.uk/media/ztcbzv5l/fitnessfirst-w21-interiors-bangor-106.jpg?width=540&height=405&quality=80&rnd=132890619953070000")
 puts "save worked"
 gym = Gym.create(
-  name: "FtinessFirst",
+  name: "FitnessFirst",
   address: "128 Albert St, London NW1 7NE",
   rating: 3.8,
   description: "Explore a wide variety of classes and special training programmes on offer. Browse Classes. Sign Up For Offers. Find A Gym. Courses: Bodycombat, Spinning, Circuit Training, Pilates, Boxercise.",
   price: 30
 )
-gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.images.attach(io: file, filename: "nes.png", content_type: "image/png")
 gym.save
 
 file = URI.open("https://images.squarespace-cdn.com/content/v1/5f1b2a53a0f2f72f69d3c522/1595859171436-PJRH0FRCCGSXY71X4ZUD/Gymbox+Home+Page.jpg")
@@ -174,7 +216,7 @@ gym = Gym.create(
   description: "We're home to the most unique and diverse classes in London. Olympic sized boxing rings, combat cages, world-class free weights sections, live DJs and larger-than-life personal trainers.",
   price: 69.99
 )
-gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.images.attach(io: file, filename: "nes.png", content_type: "image/png")
 gym.save
 
 file = URI.open("https://milieuconsult.com/wp-content/uploads/2015/05/TTS-Web-2.jpg")
@@ -186,7 +228,7 @@ gym = Gym.create(
   description: "Purpose-built studios for extensive yoga, hot yoga, barre and Pilates classes, led by inspirational and expert instructors. Explore Show less.",
   price: 220
 )
-gym.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+gym.images.attach(io: file, filename: "nes.png", content_type: "image/png")
 gym.save
 
 puts "User created"
