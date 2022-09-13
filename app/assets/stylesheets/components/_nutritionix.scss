@@ -1,0 +1,41 @@
+.nutri {
+  display: flex !important;
+  position: relative;
+  bottom: -274px;
+  left: 400px;
+}
+.background-workout{
+  width: 100%;
+  height: 990px;
+  background-color: #272727;
+}
+
+.logo {
+  height: 50%;
+  width: auto;
+  position: absolute;
+  left: 30px;
+  top: -100px;
+  }
+
+ .foodclass {
+    display: flex !important;
+    position: relative;
+    bottom: 628px;
+    left: 733px;
+    color: white;
+}
+
+.food-image {
+  display: flex !important;
+  position: relative;
+  bottom: 628px;
+  left: 647px;
+}
+.list-food {
+  display: grid;
+  position: relative;
+  bottom: 587px;
+  left: 632px;
+  color: white;
+}

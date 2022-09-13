@@ -6,7 +6,7 @@ export default class extends Controller {
   connect() {
     // query.addEventListener("keyup", e => {
 
-    console.log("this l work! ")
+
 
     document.querySelector("#query-search").addEventListener("click", e => {
 
@@ -45,16 +45,15 @@ export default class extends Controller {
           // const imageUrl =  <div><img src= "img" alt=""></div>
           console.log(img)
           const html = `
+          <div class="foodclass">
+            <p><b>Item: </b><span>${data.hints[0].food["label"]}</span></p>
           </div>
 
-          <p><b>Item: </b><span>${data.hints[0].food["label"]}</span></p>
-        </div>
-
-        <div>
-        <img src=${img} alt="">
+          <div class="food-image">
+            <img src=${img} alt="">
           </div>
 
-              <ul>
+              <ul class="list-food">
                   <li><b>Carbs: </b><span> ${carbsGrams} g kcal in ${weight}g of ${query} </span></li></span></li>
                   <li><b>Calories: </b><span> ${caloriesGrams} kcal in ${weight}g of ${query} </span></li>
                   <li><b>Fats: </b><span> ${fatGrams} g kcal in ${weight}g of ${query} </span></li></span></li>
