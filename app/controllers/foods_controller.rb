@@ -1,5 +1,8 @@
 class FoodsController < ApplicationController
   def index
+    @foods = Food.all
+    @foods = Food.new
+    @meal = Meal.new
     if params[:query].present?
       sql_query = "name ILIKE :query OR description ILIKE :query"
       @foods = Food.where(sql_query, query: "%#{params[:query]}%")
