@@ -27,16 +27,11 @@
 // }
 
 .container-2 {
-    max-width: 1044px;
-    margin: 0 auto;
-    padding: 0 20px;
-    background: #272727;
-    padding: 50px 0;
-    // justify-content: center;
-    // align-items: center;
-    // box-shadow: 5px 5px 20px 0px #ff9900;
-    // border-radius: 5px;
-    // margin: 10px;
+  max-width: 1044px;
+  margin: 0 auto;
+  padding: 0 20px;
+  background: #272727;
+  padding: 131px 0;
 }
 
 .carousel-2 {
@@ -336,10 +331,12 @@ text-transform: uppercase;
 text-decoration: none;
 }
 .product-description h1 {
-font-weight: 300;
-font-size: 56px;
-color: white;
-letter-spacing: -2px;
+  font-weight: 300;
+  font-size: 56px;
+  color: white;
+  letter-spacing: -2px;
+  position: relative;
+  right: 1110px;
 }
 .product-description p {
 font-size: 22px;
@@ -364,15 +361,20 @@ display: inline-block;
   color: white;
 }
 .reviews {
-font-size: 21px;
-font-weight: 400;
-color: white;
+  font-size: 21px;
+  font-weight: 400;
+  color: white;
+  position: relative;
+  top: -234px;
+  left: -650px;
 }
 
 .membership-fee {
-font-size: 21px;
-font-weight: 400;
-color: white;
+  font-size: 21px;
+  font-weight: 400;
+  color: white;
+  position: relative;
+  bottom: 190px;
 }
 /* Product Price */
 .product-price {
@@ -430,3 +432,37 @@ color: white;
 //     top: -85px;
 //   }
 // }
+.ratings {
+  font-size: 21px;
+  font-weight: 400;
+  color: white;
+  position: relative;
+  top: -201px;
+  left: -646px;
+}
+
+#new_review {
+  position: relative;
+  bottom: 145px;
+  width: 400px;
+  }
+
+  .text-muted {
+    --bs-text-opacity: 1;
+    color: #6c757d !important;
+    position: relative;
+    bottom:100px;
+}
+
+.review-box {
+  font-size: 21px;
+  font-weight: 400;
+  color: white;
+
+  .btn {
+    margin-top: 6px;
+    margin-bottom: 5px;
+    background-color: #ff9900;
+    border-radius: 3px;
+  }
+}
