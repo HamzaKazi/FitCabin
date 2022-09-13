@@ -220,8 +220,8 @@ margin-right: 40px;
 //   top: 0;
 // }
 
-$size-width: 855px;
-$size-height: 540px;
+$size-width: 770px;
+$size-height: 486px;
 
 .carousel-wrapper {
 width: $size-width * 1.15;
@@ -362,17 +362,20 @@ display: inline-block;
   font-size: 21px;
   font-weight: 400;
   color: white;
+  margin-bottom: 10px;
 }
-.reviews {
+.gym-address {
 font-size: 21px;
 font-weight: 400;
 color: white;
+margin-bottom: 8px;
 }
 
 .membership-fee {
 font-size: 21px;
 font-weight: 400;
 color: white;
+margin-bottom: 10px;
 }
 /* Product Price */
 .product-price {
@@ -397,12 +400,27 @@ color: white;
 text-decoration: none;
 padding: 10px 25px;
 transition: all .5s;
-margin-left: 20px;
+margin-left: 200px;
+margin-bottom: 8px;
 }
 .cart-btn:hover {
 box-shadow: 5px 10px black;
 color: white;
 }
+
+.review-box {
+  font-size: 21px;
+  font-weight: 400;
+  color: white;
+
+  .btn {
+    margin-top: 6px;
+    margin-bottom: 5px;
+    background-color: #ff9900;
+    border-radius: 3px;
+  }
+}
+
 
 /* Responsive */
 // @media (max-width: 940px) {

@@ -46,51 +46,45 @@
           <br>
           <p><%= @gym.description %></p>
         </div>
-        <div class="ratings">
           <!-- Product Color -->
-          <div class="product-color">
-            <span><p>Rating: <%= @gym.rating%></p></span>
-
+          <div class="gym-rating">
+            <p>Rating: <%= @gym.rating%></p>
             <%  @gym.rating.to_i.times do  %>
            <span>⭐️</span>
             <% end %>
-            </div>
           </div>
 
           <!-- Cable Configuration -->
-          <div class="reviews">
+          <div class="gym-address">
             <span><p>Address: <%= @gym.address %></p></span>
-              <br>
-              <br>
-              <br>
           </div>
 
         <!-- Product Pricing -->
         <div class="membership-fee">
-
           <span> <p>Membership Fee: £<%= @gym.price%>/per month</p></span>
           <a href="#" class="cart-btn">Take me there</a>
+        </div>
 
-        </div>
-        <br>
-       <%= simple_form_for [@gym, @review] do |f| %>
-          <%= f.input :content, placeholder: "Add your review here..." %>
-          <%= f.input :rating, as: :select, collection: (1..5), required: true, prompt: "What's your rating", input_html: { data: { controller: "star-rating" } } %>
-          <%= f.submit class:"btn btn-flat" %>
-        <% end %>
-  <% if @gym.reviews.empty? %>
-        <small><em class="text-muted">Be the first one to review this gym</em></small>
-      <% end %>
-      <% @gym.reviews.each do |review| %>
-        <div>
-          <% review.rating.times do %>
-            <i class="fas fa-star star-yellow"></i>
-          <% end %>
-          <small><em class="text-muted"><%= distance_of_time_in_words_to_now(review.created_at) %> ago</em></small>
-          <p class="mb-0"><%= review.content %></p>
-        </div>
-        <hr>
-      <% end %>
+          <div class="review-box">
+            <%= simple_form_for [@gym, @review] do |f| %>
+                <%= f.input :content, placeholder: "Add your review here..." %>
+                <%= f.input :rating, as: :select, collection: (1..5), required: true, prompt: "What's your rating", input_html: { data: { controller: "star-rating" } } %>
+                <%= f.submit class:"btn btn-flat" %>
+              <% end %>
+              <% if @gym.reviews.empty? %>
+              <small><em class="text-muted">Be the first one to review this gym</em></small>
+              <% end %>
+              <% @gym.reviews.each do |review| %>
+              <div>
+                <% review.rating.times do %>
+                  <i class="fas fa-star star-yellow"></i>
+                <% end %>
+                <small><em class="text-muted"><%= distance_of_time_in_words_to_now(review.created_at) %> ago</em></small>
+                <p class="mb-0"><%= review.content %></p>
+              </div>
+              <hr>
+            <% end %>
+          </div>
       </div>
 </div>
 
