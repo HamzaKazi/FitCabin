@@ -160,7 +160,7 @@ a {
   text-align: center;
   color: orange;
   background-color: #454545;
-  left: 610px;
+  left: 243px;
   bottom: -50px;
   box-shadow: 2px;
 }
@@ -185,24 +185,25 @@ a {
 }
 
 .lead-exercise {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 300;
-  color: whitesmoke;
+  color: #ff9900;
+  margin: 12px;
 }
 
 .heart-fitness {
   position: absolute;
   width: 794px;
-  height: 636px;
-  left: -6px;
-  top: 99px;
-  opacity: 80%
+  height: 868px;
+  left: 846px;
+  top: 183px;
+  /* opacity: 80%; */
 }
 
-.motivation{
+.motivation {
   position: relative;
   text-align: center;
-  left: 300px;
+  left: 2px;
   font-style: italic;
-  font-size: 60px;
+  font-size: 40px;
 }
