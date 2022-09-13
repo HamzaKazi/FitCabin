@@ -200,60 +200,42 @@ h2 {
     left: 30px;
     top: -100px;
     }
-    .button-23 {
-      background-color: #FF9100;
-      border: 1px solid #222222;
-      border-radius: 8px;
-      box-sizing: border-box;
+
+
+    .button-42 {
+      background-color: initial;
+      background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
+      border-radius: 6px;
       color: #FFFFFF;
+      cursor: pointer;
       display: inline-block;
-      font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,“Helvetica Neue”,sans-serif;
-      font-size: 24px;
-      font-weight: 600;
-      line-height: 20px;
-      margin: 0;
-      margin-bottom: 0rem;
-      margin-left: 35rem;
-      outline: none;
-      padding: 13px 23px;
+      font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+      height: 40px;
+      line-height: 40px;
+      outline: 0;
+      overflow: hidden;
+      padding: 0 20px;
+      pointer-events: auto;
       position: relative;
-      left: -550px;
-      bottom:1000px;
-      align-items: center;
       text-align: center;
-      text-decoration: none;
       touch-action: manipulation;
-      transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+      -moz-user-select: none;
+      -ms-user-select: none;
       user-select: none;
       -webkit-user-select: none;
-      width: auto;
-      cursor: pointer;
-    }
-    .button-23:after {
-      content: "";
-      background: #f1f1f1;
-      background: #F1F1F1;
-      display: block;
-      position: absolute;
-      padding-top: 300%;
-      padding-left: 350%;
-      margin-left: -20px !important;
-      margin-top: -120%;
-      opacity: 0;
-      transition: all 0.8s
-    }
-    .button-23:active:after {
-      padding: 0;
-      margin: 0;
-      opacity: 1;
-      transition: 0s
-    }
-    // .button-23:disabled {
-    //   border-color: #DDDDDD;
-    //   color: #DDDDDD;
-    //   cursor: not-allowed;
-    //   opacity: 1;
-    // }
+      vertical-align: top;
+      white-space: nowrap;
+      width: 50;
+      z-index: 9;
+      border: 0;
+      left: -200px;
+      top: -994px;
+      transition: box-shadow .2s;
+  }
+
+.button-42:hover {
+  box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+}
 .Lady-run {
   height: auto;
   width: auto;
