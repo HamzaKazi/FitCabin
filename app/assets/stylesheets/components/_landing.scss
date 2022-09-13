@@ -15,18 +15,12 @@
     width: 977px;
     height: 1300px;
     font-size: 70px;
-    // font-family: ‘Merriweather’, serif;
+    color: white;
+    top: 100px;
+    right: 200px;
     font-family: "Source Sans Pro", sans-serif;
   }
-h2 {
-  position: relative;
-  width: 977px;
-  height: 500px;
-  color: rgb(255, 255, 255);
-  top: 100px;
-  right: 200px;
-  font-size: 5rem;
-   }
+
    $imageIds: "1576678927484-cc907957088c", "1657211548377-67c51948661f", "1602803056945-ebac8ae8fd00";
    $bp-md: 600px;
    $bp-lg: 800px;
