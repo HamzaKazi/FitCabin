@@ -13,6 +13,7 @@ class GymsController < ApplicationController
 
   def show
     @gym = Gym.find(params[:id])
+    @review = Review.new
   end
 
   private
