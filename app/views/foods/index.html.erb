@@ -12,3 +12,67 @@
 </div>
 </div>
 </div>
+
+
+<button class="button-28" role="button">My Food Log</button>
+
+  </div>
+  <button type="button" class="log-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Add Meal
+  </button>
+</div>
+<div class="card-x">
+  <div class="row">
+    <% @foods.each do |food| %>
+        <div class="card-workout col-3 m-2" style="width: 18rem;">
+          <%= link_to  food_path(food) do %>
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title"><strong><%= food.name %></strong></h5>
+            </div>
+              <p class="card-title-date"><%=food.date.strftime('%d/%m/%Y')%></p>
+              <% end %>
+              <button type="button" class="btn btn-warning" style= "width: 100px; height: 50px; padding: 1px;" data-bs-toggle="modal" data-bs-target="#exampleModal<%= food.id %>">
+                Add Food
+              </button>
+              <%= link_to food_path(food), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this workout log?" } do %>
+                <%= image_tag "bin_delete.png", style: "width: 20px; height: 20px; position:relative; left:70px; bottom:70px;" %>
+                <% end %>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModal<%= food.id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Food</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <%= render "meal", exercise: @meal, food: food %>
+              </div>
+            </div>
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Enter details of your workout</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= render "new" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
