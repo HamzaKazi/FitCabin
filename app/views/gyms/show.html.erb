@@ -72,8 +72,28 @@
           <a href="#" class="cart-btn">Take me there</a>
 
         </div>
+        <br>
+  <% if @gym.reviews.empty? %>
+        <small><em class="text-muted">Be the first one to review this gym</em></small>
+      <% end %>
+      <% @gym.reviews.each do |review| %>
+        <div>
+          <% review.rating.times do %>
+            <i class="fas fa-star star-yellow"></i>
+          <% end %>
+          <small><em class="text-muted"><%= distance_of_time_in_words_to_now(review.created_at) %> ago</em></small>
+          <p class="mb-0"><%= review.comment %></p>
+        </div>
+        <hr>
+      <% end %>
+       <%= simple_form_for [@gym, @review] do |f| %>
+          <%= f.input :comment, placeholder: "Add your review here..." %>
+          <%= f.input :rating, as: :select, collection: (1..5), required: true, prompt: "What's your rating", input_html: { data: { controller: "star-rating" } } %>
+          <%= f.submit class:"btn btn-flat" %>
+        <% end %>
       </div>
 </div>
+
 
 
     <!-- Scripts -->
