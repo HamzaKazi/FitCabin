@@ -1,9 +1,7 @@
-<div id="header" class="jumbotron text-center" data-controller="nutritionix">
+<div class="jumbotron text-center", data-controller="nutritionix">
   <%= form_with url: foods_path, method: :get, class: "d-flex" do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find a vehicle"
-    %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
+    <%= text_field_tag :query, "" , placeholder: "Enter ingredient" %>
+    <%= text_field_tag :weight, "" , placeholder: "Enter weight in grams" %>
+    <%= submit_tag "Search", id: "query-search", class: "btn btn-primary" %>
   <% end %>
+</div>

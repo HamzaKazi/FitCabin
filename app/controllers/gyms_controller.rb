@@ -3,16 +3,16 @@ class GymsController < ApplicationController
     @gyms = Gym.all
     @markers = @gyms.geocoded.map do |gym|
       {
-      lat: gym.latitude,
-      lng: gym.longitude,
-      info_window: render_to_string(partial: "info_window", locals: {gym: gym})
-
+        lat: gym.latitude,
+        lng: gym.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {gym: gym})
       }
     end
   end
 
   def show
     @gym = Gym.find(params[:id])
+    @review = Review.new
   end
 
   private
