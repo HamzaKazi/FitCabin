@@ -19,7 +19,9 @@ Rails.application.routes.draw do
     resources :exercises, only: [:new, :create]
   end
 
-  resources :foods
+  resources :foods do
+    resources :meals, only: [:new, :create]
+  end
 
 
   resources :exercises, only: [:destroy]

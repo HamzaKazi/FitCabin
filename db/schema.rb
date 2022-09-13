@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_13_113617) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_13_150543) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -66,9 +66,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_13_113617) do
 
   create_table "foods", force: :cascade do |t|
     t.string "name"
-    t.float "calories"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "date"
   end
 
   create_table "gyms", force: :cascade do |t|
@@ -83,6 +83,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_13_113617) do
     t.string "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "meals", force: :cascade do |t|
+    t.string "name"
+    t.integer "calories"
+    t.bigint "food_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["food_id"], name: "index_meals_on_food_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -149,6 +158,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_13_113617) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "comments", "users"
   add_foreign_key "exercises", "workouts"
+  add_foreign_key "meals", "foods"
   add_foreign_key "posts", "users"
   add_foreign_key "reviews", "gyms"
   add_foreign_key "reviews", "users"
