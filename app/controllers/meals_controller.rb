@@ -20,5 +20,9 @@ class MealsController < ApplicationController
     @meal.destroy
     redirect_to workout_path, status: :see_other
   end
+  private
 
+  def meal_params
+    params.require(:meal).permit(:name, :calories, :food_id)
+  end
 end
