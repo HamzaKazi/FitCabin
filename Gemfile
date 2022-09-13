@@ -7,6 +7,8 @@ gem "devise"
 
 gem "pg_search"
 
+# gem 'simple_search_filter'
+
 gem 'nutritionix'
 gem 'figaro' # to handle API keys securely
 #geocoder
