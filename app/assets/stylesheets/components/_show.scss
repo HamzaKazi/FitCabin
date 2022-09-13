@@ -108,6 +108,7 @@
         display: block;
         flex: 1 1 auto;
         object-fit: cover;
+        border-radius: 10px;
     }
 
     figcaption {
@@ -169,6 +170,9 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border-radius: 10px;
+        border: none;
+        outline: none !important;
     }
 }
 
@@ -184,7 +188,7 @@
     to right,
     #272727 0%,
     #272727 80%,
-    #ff9900 50%,
+    #ff9900 95%,
     #ff9900 100%,
     )
   // max-width: 1200px;
@@ -322,7 +326,7 @@ $size-height: 150px;
 /* Product Description */
 .product-description {
 border-bottom: 1px solid #E1E8EE;
-margin-bottom: 20px;
+margin-bottom: 22px;
 }
 .product-description span {
 font-size: 12px;
@@ -333,12 +337,12 @@ text-decoration: none;
 }
 .product-description h1 {
 font-weight: 300;
-font-size: 52px;
+font-size: 56px;
 color: white;
 letter-spacing: -2px;
 }
 .product-description p {
-font-size: 20px;
+font-size: 22px;
 font-weight: 400;
 color: white;
 line-height: 24px;
@@ -355,18 +359,18 @@ display: inline-block;
 }
 
 .gym-rating {
-  font-size: 19px;
+  font-size: 21px;
   font-weight: 400;
   color: white;
 }
 .reviews {
-font-size: 19px;
+font-size: 21px;
 font-weight: 400;
 color: white;
 }
 
 .membership-fee {
-font-size: 19px;
+font-size: 21px;
 font-weight: 400;
 color: white;
 }
