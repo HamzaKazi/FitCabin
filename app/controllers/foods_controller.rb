@@ -1,19 +1,32 @@
 class FoodsController < ApplicationController
   def index
     @foods = Food.all
-    @foods = Food.new
+    @food = Food.new
     @meal = Meal.new
-    if params[:query].present?
-      sql_query = "name ILIKE :query OR description ILIKE :query"
-      @foods = Food.where(sql_query, query: "%#{params[:query]}%")
-    else
-      @foods = Food.all
-    end
+
   end
 
   def show
     @food = Food.find(params[:id])
     @meals = @food.meals
+
+    # API call
+    # info = []
+    # @food.meals.each do |meal|
+
+    #   #API Call
+    #   file = URI.open("https://api.edamam.com/api/food-database/v2/parser?app_id=3543b3b6&app_key=ddbbad637ebc1845703cc748ebfaac5b&ingr=#{meal.name}")
+    #   data = JSON.parse(file)
+
+    #   carbs = data.hints[0].food.nutrients["CHOCDF"]
+    #   carbs_grams = (carbs/100) * meal.weight.to_f
+
+    #   # JSOn
+    #   # info  << {
+        # carbs: carbs_grams,
+        # calorie: JSON["carbs"],
+        # fibre: JSON["carbs"]
+      # }
   end
 
   def new
@@ -22,7 +35,7 @@ class FoodsController < ApplicationController
 
   def create
     @food = Food.new(food_params)
-    @food.user = current_user
+    @food.user_id = current_user.id
     if @food.save
       redirect_to foods_path
     else
