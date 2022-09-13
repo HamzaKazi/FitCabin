@@ -4,113 +4,81 @@
 <div class="container-show">
 
       <!-- Left Column / Gym Image -->
-<div class="left-column">
-  <section>
-      <div class="container-2">
-          <div class="carousel-2">
-              <input type="radio" name="slides" checked="checked" id="slide-1">
-              <input type="radio" name="slides" id="slide-2">
-              <input type="radio" name="slides" id="slide-3">
-              <input type="radio" name="slides" id="slide-4">
-              <input type="radio" name="slides" id="slide-5">
-              <input type="radio" name="slides" id="slide-6">
-              <ul class="carousel__slides">
-                          <% @gym.images.each do |image| %>
-                  <li class="carousel__slide">
-                      <figure>
-                          <div>
-                          <%= cl_image_tag image.key%>
-                          </div>
-                      </figure>
-                  </li>
-                          <% end %>
-              </ul>
-              <ul class="carousel__thumbnails">
-                    <% @gym.images.each_with_index do |image , index| %>
-                  <li>
-                      <label for="slide-<%= index + 1 %>"><%= cl_image_tag image.key%></label>
-                  </li>
-                  <% end %>
-              </ul>
-          </div>
-      </div>
-  </section>
-</div>
-
-
-    <%# <div class="container-new">
-      <div class="carousel-new">
-        <div class="carousel__face"><span>This is something</span></div>
-        <div class="carousel__face"><span>Very special</span></div>
-        <div class="carousel__face"><span>Special is the key</span></div>
-        <div class="carousel__face"><span>For you</span></div>
-        <div class="carousel__face"><span>Just give it</span></div>
-        <div class="carousel__face"><span>A try</span></div>
-        <div class="carousel__face"><span>And see</span></div>
-        <div class="carousel__face"><span>How IT Works</span></div>
-        <div class="carousel__face"><span>Woow</span></div>
-      </div>
-    </div> %>
-
-        <%# <div class="carousel-wrapper">
-          <div class="carousel-container">
-            <div class="carousel">
-              <div> <img src="https://images.unsplash.com/photo-1540496905036-5937c10647cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="image-one" alt="" /></div>
-              <div> <img src="https://images.unsplash.com/photo-1546817372-628669db4655?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" class="image-two" alt="" /></div>
-              <div> <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="image-three" alt="" /></div>
+  <div class="left-column">
+    <section>
+        <div class="container-2">
+            <div class="carousel-2">
+                <input type="radio" name="slides" checked="checked" id="slide-1">
+                <input type="radio" name="slides" id="slide-2">
+                <input type="radio" name="slides" id="slide-3">
+                <input type="radio" name="slides" id="slide-4">
+                <input type="radio" name="slides" id="slide-5">
+                <input type="radio" name="slides" id="slide-6">
+                <ul class="carousel__slides">
+                            <% @gym.images.each do |image| %>
+                    <li class="carousel__slide">
+                        <figure>
+                            <div>
+                            <%= cl_image_tag image.key%>
+                            </div>
+                        </figure>
+                    </li>
+                            <% end %>
+                </ul>
+                <ul class="carousel__thumbnails">
+                      <% @gym.images.each_with_index do |image , index| %>
+                    <li>
+                        <label for="slide-<%= index + 1 %>"><%= cl_image_tag image.key%></label>
+                    </li>
+                    <% end %>
+                </ul>
             </div>
-          </div>
-        </div> %>
-      <%# <div>
-      <img src="https://images.unsplash.com/photo-1623874106686-5be2b325c8f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80" class="big-gym-image" alt="" />
-      </div> %>
-
-
-
-      <!-- Right Column -->
-      <div class="right-column">
-
-        <!-- Product Description -->
-        <div class="product-description">
-          <h1><%= @gym.name %></h1>
-          <br>
-          <p><%= @gym.description %></p>
         </div>
+    </section>
+  </div>
 
-          <!-- Product Color -->
-          <div class="product-color">
-            <span><p>Rating: <%= @gym.rating%></p></span>
-<%# CHANGES I HAVE MADE ARE HERE!!!!!!! %>
 
-            <%  @gym.rating.to_i.times do  %>
-           <span>⭐️</span>
-            <% end %>
 
-<%# CHANGES I HAVE MADE HERE!!!!!!! %>
-            <div class="ratings">
+        <!-- Right Column -->
+  <div class="right-column">
+
+          <!-- Product Description -->
+          <div class="product-description">
+            <h1><%= @gym.name %></h1>
+            <br>
+            <p><%= @gym.description %></p>
+          </div>
+
+            <!-- Product Color -->
+          <div class="gym-rating">
+              <span><p>Rating: <%= @gym.rating%></p></span>
+
+              <%  @gym.rating.to_i.times do  %>
+              <span>⭐️</span>
+              <% end %>
+          </div>
+            <br>
+            <br>
+            <!-- Cable Configuration -->
+            <div class="reviews">
+              <span><p>Address: <%= @gym.address %></p></span>
+                <br>
+                <br>
+                <br>
 
             </div>
 
-          </div>
+          <!-- Product Pricing -->
+          <div class="membership-fee">
 
-          <!-- Cable Configuration -->
-          <div class="reviews">
-            <span><p>Address: <%= @gym.address %></p></span>
-              <br>
-              <br>
-              <br>
+            <span> <p>Membership Fee: £<%= @gym.price%>/per month</p></span>
+            <a href="#" class="cart-btn">Take me there</a>
 
           </div>
-
-        <!-- Product Pricing -->
-        <div class="membership-fee">
-
-          <span> <p>Membership Fee: £<%= @gym.price%>/per month</p></span>
-          <a href="#" class="cart-btn">Take me there</a>
-
-        </div>
-      </div>
+  </div>
 </div>
+
+
 
 
     <!-- Scripts -->
