@@ -37,36 +37,6 @@
   </section>
 </div>
 
-
-    <%# <div class="container-new">
-      <div class="carousel-new">
-        <div class="carousel__face"><span>This is something</span></div>
-        <div class="carousel__face"><span>Very special</span></div>
-        <div class="carousel__face"><span>Special is the key</span></div>
-        <div class="carousel__face"><span>For you</span></div>
-        <div class="carousel__face"><span>Just give it</span></div>
-        <div class="carousel__face"><span>A try</span></div>
-        <div class="carousel__face"><span>And see</span></div>
-        <div class="carousel__face"><span>How IT Works</span></div>
-        <div class="carousel__face"><span>Woow</span></div>
-      </div>
-    </div> %>
-
-        <%# <div class="carousel-wrapper">
-          <div class="carousel-container">
-            <div class="carousel">
-              <div> <img src="https://images.unsplash.com/photo-1540496905036-5937c10647cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="image-one" alt="" /></div>
-              <div> <img src="https://images.unsplash.com/photo-1546817372-628669db4655?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" class="image-two" alt="" /></div>
-              <div> <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="image-three" alt="" /></div>
-            </div>
-          </div>
-        </div> %>
-      <%# <div>
-      <img src="https://images.unsplash.com/photo-1623874106686-5be2b325c8f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80" class="big-gym-image" alt="" />
-      </div> %>
-
-
-
       <!-- Right Column -->
       <div class="right-column">
 
@@ -76,21 +46,15 @@
           <br>
           <p><%= @gym.description %></p>
         </div>
-
+        <div class="ratings">
           <!-- Product Color -->
           <div class="product-color">
             <span><p>Rating: <%= @gym.rating%></p></span>
-<%# CHANGES I HAVE MADE ARE HERE!!!!!!! %>
 
             <%  @gym.rating.to_i.times do  %>
            <span>⭐️</span>
             <% end %>
-
-<%# CHANGES I HAVE MADE HERE!!!!!!! %>
-            <div class="ratings">
-
             </div>
-
           </div>
 
           <!-- Cable Configuration -->
@@ -99,7 +63,6 @@
               <br>
               <br>
               <br>
-
           </div>
 
         <!-- Product Pricing -->
