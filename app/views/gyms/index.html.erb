@@ -2,29 +2,43 @@
 <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css" rel="stylesheet">
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
 
-<div class="map">
-<div style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
-</div>
 
-<div class="cards-all" data-controller="nutritionix">
-<% @gyms.each do |gym| %>
-  <div class="card-gym">
-    <%=link_to  gym_path(gym) do cl_image_tag gym.images.first.key, class: "card__image" end%>
-      <div class="card__overlay">
-        <div class="card__header">
-          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
-          <div class="card__header-text">
-            <h3 class="card__title"><strong><%= gym.name %></strong></h3>
-            <span class="card__status"><strong>Rating:<%= gym.rating%></strong></span>
-            <span class="card__status"><strong>£<%= gym.price%>/monthly</strong></span>
-          </div>
-          <%# <p class="card__description">Lorem ipsum dolor sit amet consectetur</p> %>
+
+
+<div class="index-whole-page">
+<h1>  GYMS </h1>
+  <img src = "https://res.cloudinary.com/hamzakazi/image/upload/v1662475252/Screenshot_2022-09-05_at_14.42.14-removebg-preview_dayrpd.png" class = "logo" alt = "Test Image" />
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="cards-all">
+
+
+      <% @gyms.each do |gym| %>
+        <div class="card-gym">
+          <%=link_to  gym_path(gym) do cl_image_tag gym.images.first.key, class: "card__image" end%>
+            <div class="card__overlay">
+              <div class="card__header">
+                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+                <div class="card__header-text">
+                  <h3 class="card__title"><strong><%= gym.name %></strong></h3>
+                  <span class="card__status"><strong>Rating:<%= gym.rating%></strong></span>
+                  <span class="card__status"><strong>£<%= gym.price%>/monthly</strong></span>
+                </div>
+                <%# <p class="card__description">Lorem ipsum dolor sit amet consectetur</p> %>
+              </div>
+                  <p class="card__description"><strong>Read more</strong></p>
+            </div>
         </div>
-            <p class="card__description"><strong>Read more</strong></p>
+        <% end %>
+  </div>
+
+  <div class= map>
+      <div style="width: 100%; height: 1800px;"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
   </div>
-  <% end %>
+</div>

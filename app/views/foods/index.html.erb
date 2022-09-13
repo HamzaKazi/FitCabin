@@ -1,0 +1,9 @@
+<div id="header" class="jumbotron text-center" data-controller="nutritionix">
+  <%= form_with url: foods_path, method: :get, class: "d-flex" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a vehicle"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
