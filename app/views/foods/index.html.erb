@@ -14,11 +14,11 @@
 </div>
 
 
-<button class="button-28" role="button">My workouts</button>
+<button class="button-28" role="button">My Food Log</button>
 
   </div>
   <button type="button" class="log-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-        Log workout
+        Add Meal
   </button>
 </div>
 <div class="card-x">
@@ -33,7 +33,7 @@
               <p class="card-title-date"><%=food.date.strftime('%d/%m/%Y')%></p>
               <% end %>
               <button type="button" class="btn btn-warning" style= "width: 100px; height: 50px; padding: 1px;" data-bs-toggle="modal" data-bs-target="#exampleModal<%= food.id %>">
-                Add exercise
+                Add Food
               </button>
               <%= link_to food_path(food), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this workout log?" } do %>
                 <%= image_tag "bin_delete.png", style: "width: 20px; height: 20px; position:relative; left:70px; bottom:70px;" %>
@@ -44,7 +44,7 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Add exercise details</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Add Food</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
