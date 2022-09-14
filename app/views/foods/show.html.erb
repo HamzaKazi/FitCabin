@@ -1,6 +1,5 @@
 
-<div class = exercise-background >
-<img src= "https://res.cloudinary.com/hamzakazi/image/upload/v1663064465/pngfind.com-fitness-png-312642_ncnugy.png" class = "heart-fitness" alt = "" />
+<div class = "background-workout" >
 <h1 class=""><%= @food.name %></h1>
 <p class = "date-title" >Date: <%=@food.date.strftime('%d/%m/%Y')%></p>
 
@@ -26,6 +25,6 @@
   <%= form_with url: food_path, method: :get, class: "nutri d-flex" do %>
     <%= text_field_tag :query, "" , placeholder: "Enter ingredient", class:"anything" %>
     <%= text_field_tag :weight, "" , placeholder: "Enter weight in grams" %>
-    <%= submit_tag "Search", id: "query-search", class: "btn btn-primary" %>
+    <%= submit_tag "Search", id: "query-search", class: "btn-nutri btn-primary" %>
   <% end %>
 </div>

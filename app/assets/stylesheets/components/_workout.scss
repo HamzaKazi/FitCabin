@@ -7,9 +7,6 @@
 .logo {
   height: 50%;
   width: auto;
-  position: absolute;
-  left: 30px;
-  top: -100px;
   }
 
   .card-workout {
@@ -208,10 +205,19 @@ a {
   font-size: 40px;
 }
 
+
 .fa-solid-workout {
   color: orange;
   font-size: 30px;
   margin: auto;
   margin-left: -12px;
   margin-bottom: 30px;
+}
+.workout-day-title {
+  margin: 0;
+  color: #ffffff;
+  font-size: 4REM;
+  letter-spacing: 1px;
+  text-align: center;
+
 }

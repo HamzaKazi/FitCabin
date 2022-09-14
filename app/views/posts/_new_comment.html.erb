@@ -5,10 +5,10 @@
   <div class="col-sm- col-md-12 form-group">
    <%= form.hidden_field :post_id %>
 
-  <%= form.text_area :content, class: "form-control mr-3", placeholder: "Add comment" %>
+  <%= form.text_area :content, class: "form-control mr-3", placeholder: "Enter your comment" %>
 
 
   <div class="actions">
-    <%= form.submit class:"comment-button"%>
+    <%= form.submit "Comment", class:"comment-button"%>
   </div>
 <% end %>
