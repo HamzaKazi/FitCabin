@@ -93,9 +93,8 @@
 			  </ul>
 			  <ul>
 
-         <li>
-
-            <%= link_to like_post_path(post), id: "post-#{post.id}", data: { turbo_method: 'put', controller: "like-button"} do %>
+         <li data-controller="like-button">
+            <%= link_to like_post_path(post), id: "post-#{post.id}", data: { turbo_method: 'put'} do %>
               <i class="fa-solid fa-heart" ></i>
             <% end %>
          </li>
