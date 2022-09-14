@@ -28,7 +28,7 @@ class CommentsController < ApplicationController
     end
   end
 
-  # def index
+  # def inde
   #   @comments = Comment.where(user_id: current_user.id)
   # end
 
