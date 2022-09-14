@@ -2,21 +2,22 @@
 <div class="container">
 
    <img src = "https://res.cloudinary.com/hamzakazi/image/upload/v1662475252/Screenshot_2022-09-05_at_14.42.14-removebg-preview_dayrpd.png" class = "logo" alt = "Test Image" />
-
+       <img src = "https://res.cloudinary.com/hamzakazi/image/upload/v1663154017/orange-juice-flavor-stock-photography-orange-juice-ead4877300f954797dc9c85069955a01_dera4f.png" class = "orange-splash" alt = "" />
+    <img src = "https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fres.cloudinary.com%2Fhamzakazi%2Fimage%2Fupload%2Fv1663156033%2FNicePng_juice-splash-png_853594_qyds2y.png" class = "second-splash" alt = "" />
 </div>
 </div>
 </div>
 
 
-<button class="button-28" role="button">My Food Log</button>
+<div class="button-28-food" >My Food Log</div>
 
   </div>
-  <button type="button" class="log-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  <button type="button" class="log-btn-food" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
         Add Meal
   </button>
 </div>
 <div class="card-x">
-  <div class="row">
+  <div class="row-food">
     <% @foods.each do |food| %>
         <div class="card-workout col-3 m-2" style="width: 18rem;">
           <%= link_to  food_path(food) do %>
@@ -29,7 +30,7 @@
               <button type="button" class="btn btn-warning" style= "width: 100px; height: 50px; padding: 1px;" data-bs-toggle="modal" data-bs-target="#exampleModal<%= food.id %>">
                 Add Food
               </button>
-              <%= link_to food_path(food), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this workout log?" } do %>
+              <%= link_to food_path(food), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this meal log?" } do %>
                 <%= image_tag "bin_delete.png", style: "width: 20px; height: 20px; position:relative; left:70px; bottom:70px;" %>
                 <% end %>
           </div>
@@ -59,7 +60,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Enter details of your workout</h5>
+        <h5 class="modal-title" id="staticBackdropLabel">Log your food</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
