@@ -13,12 +13,12 @@
     )
   }
   h2.lead {
-    font-size: 70px;
-    color: white;
-    margin-right: auto;
-    font-family: "Source Sans Pro", sans-serif;
-    margin-left: 35px;
-    margin-top: 196px;
+      font-size: 70px;
+      color: white;
+      margin-right: auto;
+      font-family: "Source Sans Pro", sans-serif;
+      margin-left: 35px;
+      margin-top: 206px;
   }
 
    $imageIds: "1576678927484-cc907957088c", "1657211548377-67c51948661f", "1602803056945-ebac8ae8fd00";
@@ -35,13 +35,13 @@
     }
 
    .page-content {
-     display: grid;
-     grid-gap: 2rem;
-     padding: 1rem;
-     max-width: 1200px;
-     margin-right: auto;
-     margin-left: 30px;
-    //  margin-bottom: 20px;
+    display: grid;
+    grid-gap: 2rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-top: 61px;
+    margin-left: 30px;
      @media (min-width: $bp-md) {
        grid-template-columns: repeat(2, 1fr);
      }
@@ -223,7 +223,7 @@
       transition: box-shadow .2s;
       margin: auto;
       margin-left: 500px;
-      margin-bottom: 330px;
+      margin-bottom: 269px;
   }
 
 .button-42:hover {
