@@ -29,7 +29,7 @@ class CommentsController < ApplicationController
   end
 
   # def inde
-  #   @comments = Comment.where(user_id: current_user.id)
+  #   @comments = Commen.where(user_id: current_user.id)
   # end
 
   def destroy
