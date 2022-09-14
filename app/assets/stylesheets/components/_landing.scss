@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@600&display=swap");
 .container-landing{
+  overflow-y: hidden;
   width: 100%;
-  height: auto;
+  height: 120vh;
+  margin-right: auto;
   background: linear-gradient(
     to right,
     #272727 0%,
@@ -234,8 +236,8 @@
   height: auto;
   width: auto;
   position: absolute;
-  right: -950px;
-  top: -450px;
+  top: -90px;
+  right: -15px;
 }
 a {
   text-decoration: none !important;
