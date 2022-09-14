@@ -1,0 +1,9 @@
+ <div class="modal-body">
+          <%= simple_form_for [food, @meal] do |f| %>
+            <%= f.error_notification %>
+             <%= f.input :name, label: "Type of food", placeholder: "Chicken breast, Oatmeal, Protein Bar ...."%>
+            <%= f.input :calories, label: "Weight", placeholder: ""  %>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <%= f.button :submit, "Submit", class: "btn btn btn-lg "%>
+          <% end %>
+  </div>

@@ -9,4 +9,6 @@ class Food < ApplicationRecord
   # using: {
   #   tsearch: { prefix: true }
   # }
+  has_many :meals
+
 end

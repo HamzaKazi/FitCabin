@@ -7,11 +7,32 @@
 
 <div class="index-whole-page">
 <h1>  GYMS </h1>
-  <img src = "https://res.cloudinary.com/hamzakazi/image/upload/v1662475252/Screenshot_2022-09-05_at_14.42.14-removebg-preview_dayrpd.png" class = "logo" alt = "Test Image" />
-  <br>
-  <br>
-  <br>
-  <br>
+  <%# <img src = "https://res.cloudinary.com/hamzakazi/image/upload/v1662475252/Screenshot_2022-09-05_at_14.42.14-removebg-preview_dayrpd.png" class = "logo" alt = "Test Image" /> %>
+
+<div class="mt-5">
+  <%= form_with url: gyms_path, method: :get, class: "d-flex" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a gym"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
+
+   <%= form_with url: gyms_path, method: :get, class: "d-flex" do %>
+      <%= select_tag :price, options_for_select([ ["High to Low", "H"], ["Low to High", "L"]]) %>
+      <% if params[:rating].present? %>
+        <%= hidden_field_tag :rating, params[:rating], as: :hidden %>
+      <% end %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
+
+  <%= form_with url: gyms_path, method: :get, class: "d-flex" do |f| %>
+      <%= f.select :rating, [[ 1.0, "1"], [ 2.0, "2"], [ 3.0, "3"], [ 4.0, "4"], [5.0, "5"]] %>
+      <%= f.submit "Search", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
   <div class="cards-all">
 
 
@@ -40,5 +61,7 @@
         data-map-markers-value="<%= @markers.to_json %>"
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
+
   </div>
+
 </div>
