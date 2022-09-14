@@ -27,11 +27,11 @@
             </div>
               <p class="card-title-date"><%=workout.date.strftime('%d/%m/%Y')%></p>
               <% end %>
-              <button type="button" class="btn btn-warning" style= "width: 100px; height: 50px; padding: 1px;" data-bs-toggle="modal" data-bs-target="#exampleModal<%= workout.id %>">
-                Add exercise
-              </button>
+              <p type="" class="btn btn-warning" style= "width: 0px; height: 0px; padding: 0px;" data-bs-toggle="modal" data-bs-target="#exampleModal<%= workout.id %>">
+               <i class="fa-solid-workout fa-plus"></i>
+              </p>
               <%= link_to workout_path(workout), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this workout log?" } do %>
-                <%= image_tag "bin_delete.png", style: "width: 20px; height: 20px; position:relative; left:70px; bottom:70px;" %>
+                <%= image_tag "bin_delete.png", style: "width: 20px; height: 20px; position:relative; left:110px; bottom:90px;" %>
                 <% end %>
           </div>
         </div>
