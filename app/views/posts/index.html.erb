@@ -93,11 +93,14 @@
 			  </ul>
 			  <ul>
 
-         <li>
-            <%= link_to like_post_path(post), data: { turbo_method: 'put', controller: "like_button"} do %>
-              <i class="fa-solid fa-heart"></i>
+
+         <li data-controller="like-button">
+            <%= link_to like_post_path(post), id: "post-#{post.id}", data: { turbo_method: 'put'} do %>
+              <i class="fa-solid fa-heart" ></i>
             <% end %>
          </li>
+
+
 
 			   <li><a href="#"><img src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/3.jpeg" class="img-fluid rounded-circle" alt="User"></a></li>
 			   <li><a href="#"><img src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/1.jpg" class="img-fluid rounded-circle" alt="User"></a></li>
@@ -108,12 +111,23 @@
 			  </ul>
         <!--/ comment section-->
         <div class="row" style="width: 100%;">
-        <div class="comments">
-        	<li><span> <% post.comments.each do |comment| %>
-          FitCabin_Username
-          <p class="comment-card-title" style="color:black;"><%= comment.content%></p>
-          <% end %>
-          </span></li>
+
+          <div class="comments">
+            <li><span> <% post.comments.each do |comment| %>
+            FitCabin_Username
+            <p class="comment-card-title" style="color:black;"><%= comment.content%></p>
+            <% end %>
+            </span></li>
+          </div>
+        </div><!--/ cardbox-base -->
+        <div class="cardbox-comments">
+          <span class="comment-avatar float-left">
+          <a href=""><img class="rounded-circle" src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/6.jpg" alt="..."></a>
+          </span>
+          <div class="search">
+          <div class="modal-body2">
+          <%= render "new_comment", post: post %>
+
         </div>
 			 </div><!--/ cardbox-base -->
 			 <div class="cardbox-comments">
