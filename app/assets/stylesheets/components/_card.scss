@@ -14,9 +14,17 @@
 
 }
 
+.find-a-gym {
+  margin: auto;
+  width: 30%;
+
+}
+
 .mt-5 {
   margin-left: 20px;
   margin-right: 20px;
+  margin-bottom: 10px;
+
   .btn {
   background-color: #ff9900;
   border-radius: 3px;
@@ -27,6 +35,10 @@
     margin-top: 8px;
     color: white;
   }
+}
+
+.gym-title {
+  color: white;
 }
 .cards-all {
   // display: grid;
