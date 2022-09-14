@@ -16,7 +16,7 @@ class PostsController < ApplicationController
     end
 
     @post.save!
-    redirect_to posts_path, status: :see_other
+    redirect_to posts_path(anchor: "post-#{@post.id}")
   end
 
   def show
