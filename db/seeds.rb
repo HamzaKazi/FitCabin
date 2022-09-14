@@ -27,6 +27,17 @@ post = Post.create(
 )
 post.image.attach(io: file, filename: "nes.png", content_type: "image/png")
 post.save
+
+file = URI.open("https://i2-prod.mirror.co.uk/incoming/article13142117.ece/ALTERNATES/s1200b/1_Cristiano-Ronaldo-in-the-gym.jpg")
+puts "Posts saved"
+post = Post.create(
+  caption: "SIUUU!",
+  likes: 1200,
+  user_id: user.id
+)
+post.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+post.save
+
 file = URI.open("https://images.unsplash.com/photo-1610441009633-b6ca9c6d4be2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80")
 puts "Posts saved"
 post = Post.create(
@@ -87,7 +98,7 @@ workout.save
 # review.save
 
 file = URI.open("https://www.gannett-cdn.com/presto/2020/04/16/USAT/5b7ef814-a04d-44c8-86ef-1d47c798a1f1-Golds_gym_CharlesTown.jpg?crop=2655,1494,x10,y0&width=2655&height=1494&format=pjpg&auto=webp")
-file1 = URI.open("https://imageio.forbes.com/specials-images/imageserve/5f4959c43e83b9c25b58e438/0x0.jpg?format=jpg&width=1200")
+file1 = URI.open("https://www.leisureopportunities.co.uk/images/THUMB20829_768303.jpg")
 file2 = URI.open("https://www.leisureopportunities.co.uk/images/THUMB20829_768303.jpg")
 file3 = URI.open("https://i4.hurimg.com/i/hurriyet/75/1200x675/5cecfecf67b0a90b9ca0d41f.jpg")
 file4 = URI.open("https://www.thenewsminute.com/sites/default/files/Golds_Gym_Rajamundry.jpg")

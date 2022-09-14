@@ -22,14 +22,14 @@ class CommentsController < ApplicationController
     @comment.post = @post
     @comment.user = current_user
     if @comment.save
-      redirect_to posts_path
+      redirect_to posts_path(anchor: "post-#{@post.id}")
     else
       render "new"
     end
   end
 
-  # def index
-  #   @comments = Comment.where(user_id: current_user.id)
+  # def inde
+  #   @comments = Commen.where(user_id: current_user.id)
   # end
 
   def destroy

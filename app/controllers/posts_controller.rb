@@ -16,7 +16,7 @@ class PostsController < ApplicationController
     end
 
     @post.save!
-    redirect_to posts_path, status: :see_other
+    redirect_to posts_path(anchor: "post-#{@post.id}")
   end
 
   def show
@@ -29,7 +29,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to posts_path
     else
-      render :new, status: :unprocessable_entity
+      render :new
     end
   end
 

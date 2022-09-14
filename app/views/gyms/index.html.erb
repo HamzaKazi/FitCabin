@@ -6,19 +6,21 @@
 
 
 <div class="index-whole-page">
-  <h1>  GYMS </h1>
+    <br>
+  <h1 class="gym-title">Find Your Gym</h1>
     <%# <img src = "https://res.cloudinary.com/hamzakazi/image/upload/v1662475252/Screenshot_2022-09-05_at_14.42.14-removebg-preview_dayrpd.png" class = "logo" alt = "Test Image" /> %>
 
   <div class="mt-5">
-    <%= form_with url: gyms_path, method: :get, class: "d-flex" do %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Find a gym"
-      %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
-    <% end %>
-
+    <div class="find-a-gym">
+      <%= form_with url: gyms_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a gym"
+        %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+      <% end %>
+    </div>
     <h4 class="sort-index">Sort</h4>
     <%= form_with url: gyms_path, method: :get, class: "d-flex" do %>
         <%= select_tag :price, options_for_select([ ["High to Low", "H"], ["Low to High", "L"]]) %>
