@@ -51,10 +51,10 @@
         <br>
       <%# <div class="container"> %>
       <%# <div class="row" style="width: 100%;"> %>
-          <% @posts.each do |post| %>
     <div class="cardbox shadow-lg bg-white">
-
 			 <div class="cardbox-heading">
+          <% @posts.each do |post| %>
+
 			  <!-- START dropdown-->
 			  <div class="dropdown float-right">
 			   <button class="btn btn-flat btn-flat-icon" type="button" data-toggle="dropdown" aria-expanded="false">
@@ -132,11 +132,11 @@
 		</div><!--/ cardbox -->
 
            </div><!--/ col-lg-6 -->
+          <% end %>
 
 
          </div><!--/ container -->
 
-          <% end %>
         </section>
 
 
