@@ -3,12 +3,6 @@
 
    <img src = "https://res.cloudinary.com/hamzakazi/image/upload/v1662475252/Screenshot_2022-09-05_at_14.42.14-removebg-preview_dayrpd.png" class = "logo" alt = "Test Image" />
 
-<div class="jumbotron text-center", data-controller="nutritionix">
-  <%= form_with url: foods_path, method: :get, class: "nutri d-flex" do %>
-    <%= text_field_tag :query, "" , placeholder: "Enter ingredient", class:"anything" %>
-    <%= text_field_tag :weight, "" , placeholder: "Enter weight in grams" %>
-    <%= submit_tag "Search", id: "query-search", class: "btn btn-primary" %>
-  <% end %>
 </div>
 </div>
 </div>
@@ -28,7 +22,7 @@
           <%= link_to  food_path(food) do %>
           <div class="card-body">
             <div class="d-flex justify-content-between">
-              <h5 class="card-title"><strong><%= food.name %></strong></h5>
+              <h5 class="card-title-food"><strong><%= food.name %></strong></h5>
             </div>
               <p class="card-title-date"><%=food.date.strftime('%d/%m/%Y')%></p>
               <% end %>

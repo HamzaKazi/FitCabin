@@ -12,6 +12,7 @@ puts "Cleaning up database..."
 Workout.destroy_all
 User.destroy_all
 Gym.destroy_all
+Post.destroy_all
 puts "Database cleaned"
 workout = Workout.create(date: 10112022)
 user = User.create(email: "admin@fitcabin.com", password: "123456")
@@ -70,6 +71,20 @@ workout = Workout.create(
   user_id: user.id
 )
 workout.save
+
+# review = Review.create(
+#   content: "Amazing gym, 10/10 would recommend!",
+#   rating: 5,
+#   user_id: user.id
+# )
+# review.save
+
+# review = Review.create(
+#   content: "The music is a bit too loud, other than that it's alright",
+#   rating: 4,
+#   user_id: user.id
+# )
+# review.save
 
 file = URI.open("https://www.gannett-cdn.com/presto/2020/04/16/USAT/5b7ef814-a04d-44c8-86ef-1d47c798a1f1-Golds_gym_CharlesTown.jpg?crop=2655,1494,x10,y0&width=2655&height=1494&format=pjpg&auto=webp")
 file1 = URI.open("https://imageio.forbes.com/specials-images/imageserve/5f4959c43e83b9c25b58e438/0x0.jpg?format=jpg&width=1200")

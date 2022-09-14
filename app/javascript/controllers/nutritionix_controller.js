@@ -53,14 +53,14 @@ export default class extends Controller {
             <img src=${img} alt="">
           </div>
 
-              <ul class="list-food">
-                  <li><b>Carbs: </b><span> ${carbsGrams} g kcal in ${weight}g of ${query} </span></li></span></li>
-                  <li><b>Calories: </b><span> ${caloriesGrams} kcal in ${weight}g of ${query} </span></li>
-                  <li><b>Fats: </b><span> ${fatGrams} g kcal in ${weight}g of ${query} </span></li></span></li>
-                  <li><b>Fibre: </b><span> ${fibreGrams} g kcal in ${weight}g of ${query} </span></li></span></li>
-                  <li><b>Protein: </b><span> ${proteinGrams} g kcal in ${weight}g of ${query} </span></li></span></li>
-
-              </ul>
+          <ul class="list-food">
+          <li><b>Carbs: </b><span> ${carbsGrams} g kcal in ${weight}g of ${query} </span></li></span></li>
+          <li><b>Calories: </b><span> ${caloriesGrams} kcal in ${weight}g of ${query} </span></li>
+          <li><b>Fats: </b><span> ${fatGrams} g kcal in ${weight}g of ${query} </span></li></span></li>
+          <li><b>Fibre: </b><span> ${fibreGrams} g kcal in ${weight}g of ${query} </span></li></span></li>
+          <li><b>Protein: </b><span> ${proteinGrams} g kcal in ${weight}g of ${query} </span></li></span></li>
+          </ul>
+          link_to "add", food_path(@food, name: name, calories: carbsGrams)
 
           </div>
           `
