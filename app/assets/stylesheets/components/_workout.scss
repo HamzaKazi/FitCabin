@@ -7,9 +7,6 @@
 .logo {
   height: 50%;
   width: auto;
-  position: absolute;
-  left: 30px;
-  top: -100px;
   }
 
   .card-workout {
@@ -206,4 +203,12 @@ a {
   left: 2px;
   font-style: italic;
   font-size: 40px;
+}
+
+.workout-day-title {
+  margin: 0;
+  color: #ffffff;
+  font-size: 4REM;
+  letter-spacing: 1px;
+  text-align: center;
 }
