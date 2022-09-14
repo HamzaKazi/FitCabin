@@ -10,16 +10,17 @@
   <%# <section id="header" class="jumbotron text-center"> %>
 <div class="whole-social-page">
   <div class="column-left-social">
+      <h4 class = "circletext">Fats</h4>
       <figure class="chart-one animate">
         <svg role="img" xmlns="http://www.w3.org/2000/svg">
-          <title>[title here]</title>
-          <desc>[long description here]</desc>
+          <title>[Carbs]</title>
+          <desc>[these are your carbs]</desc>
           <circle class="circle-background"/>
           <circle class="circle-foreground"/>
         </svg>
         <figcaption>25% of all males like donuts.</figcaption>
       </figure>
-
+        <h4 class = "circletext">Protein</h4>
       <figure class="chart-two animate">
         <svg role="img" xmlns="http://www.w3.org/2000/svg">
           <title>[title here]</title>
@@ -29,7 +30,7 @@
         </svg>
         <figcaption>50% of all males like donuts.</figcaption>
       </figure>
-
+        <h4 class = "circletext">Carbs</h4>
       <figure class="chart-three animate">
         <svg role="img" xmlns="http://www.w3.org/2000/svg">
           <title>[title here]</title>
@@ -50,10 +51,10 @@
         <br>
       <%# <div class="container"> %>
       <%# <div class="row" style="width: 100%;"> %>
-          <% @posts.each do |post| %>
     <div class="cardbox shadow-lg bg-white">
-
 			 <div class="cardbox-heading">
+          <% @posts.each do |post| %>
+
 			  <!-- START dropdown-->
 			  <div class="dropdown float-right">
 			   <button class="btn btn-flat btn-flat-icon" type="button" data-toggle="dropdown" aria-expanded="false">
@@ -145,14 +146,26 @@
 		</div><!--/ cardbox -->
 
            </div><!--/ col-lg-6 -->
+       <div class="black-line"></div>
+          <% end %>
 
 
          </div><!--/ container -->
 
-          <% end %>
         </section>
 
-
+   <!-- <div class="social-page">  <%#  this container display flex kustyfy spcae between%>
+      <div class="circle-container">
+      </div>
+      <div class="center-column">
+        <div class="add-post">
+        </div>
+        <div class="conntainer-posts">
+        </div>
+      </div>
+      <div class="right-column">
+      </div>
+    </div> -->
 
     <p id="notice"><%= notice %></p>
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
