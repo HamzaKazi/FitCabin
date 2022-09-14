@@ -8,7 +8,6 @@
 </div>
 </div>
 
-
 <div class="button-28-food" >My Food Log</div>
 
   </div>
@@ -27,7 +26,7 @@
             </div>
               <p class="card-title-date"><%=food.date.strftime('%d/%m/%Y')%></p>
               <% end %>
-              <button type="button" class="btn btn-warning" style= "width: 100px; height: 50px; padding: 1px;" data-bs-toggle="modal" data-bs-target="#exampleModal<%= food.id %>">
+              <button type="button" class="btn-add-food btn-warning" style= "width: 100px; height: 50px; padding: 1px;" data-bs-toggle="modal" data-bs-target="#exampleModal<%= food.id %>">
                 Add Food
               </button>
               <%= link_to food_path(food), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this meal log?" } do %>
