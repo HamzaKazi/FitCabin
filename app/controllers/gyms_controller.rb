@@ -24,7 +24,6 @@ class GymsController < ApplicationController
     end
 
 
-
         @markers = @gyms.map do |gym|
         {
           lat: gym.latitude,

@@ -9,6 +9,5 @@ class Food < ApplicationRecord
   # using: {
   #   tsearch: { prefix: true }
   # }
-  has_many :meals
-
+  has_many :meals, dependent: :destroy
 end
