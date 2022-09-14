@@ -8,14 +8,14 @@
 .column-left-social {
   position: fixed;
   float: left;
-  margin-top: 100px;
-  margin-left: 110px;
+  margin-top: 60px;
+  margin-left: 135px;
   align-items: center;
 }
 $configs: (
 	chart-one: (
 		svgSize: 200px,
-		percentage: 25,
+		percentage: 38,
 		strokeWidth: 10px,
 		backgroundColor: #818181,
 		foregroundColor: #ff9900,
@@ -26,7 +26,7 @@ $configs: (
 	),
 	chart-two: (
 		svgSize: 200px,
-		percentage: 50,
+		percentage: 61,
 		strokeWidth: 10px,
 		backgroundColor: #818181,
 		foregroundColor: #ff9900,
@@ -37,7 +37,7 @@ $configs: (
 	),
 	chart-three: (
 		svgSize: 200px,
-		percentage: 75,
+		percentage: 54,
 		strokeWidth: 10px,
 		backgroundColor: #818181,
 		foregroundColor: #ff9900,
@@ -132,16 +132,17 @@ $labelData: '';
 }
 
 .chart-one {
-  margin-bottom: 30px;
+  margin-bottom: 18px;
   margin-left: 30px;
 }
 
 .chart-two {
-  margin-bottom: 30px;
+  margin-bottom: 18px;
   margin-left: 30px;
 }
 
 .chart-three {
+  margin-left: 18px;
   margin-left: 30px;
 }
 
@@ -155,6 +156,12 @@ $labelData: '';
     #ff9900 50%,
     #ff9900 100%,
     )
+}
+
+.circletext{
+  color: white;
+  position: relative;
+  margin-left: 105px;
 }
 
 .display-3 {
