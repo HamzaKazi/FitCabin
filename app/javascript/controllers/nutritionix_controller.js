@@ -47,9 +47,7 @@ export default class extends Controller {
           const html = `
           <div class="foodclass">
             <p><b>Item: </b><span>${data.hints[0].food["label"]}</span></p>
-          </div>
 
-          <div class="food-image">
             <img src=${img} alt="">
           </div>
 
