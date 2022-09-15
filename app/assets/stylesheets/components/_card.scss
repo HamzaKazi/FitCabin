@@ -170,14 +170,13 @@
 }
 
 .map {
-  // float: right;
-  // width: 50%;
-  // height: auto;
-  position: sticky !important;
+  float: right;
+  width: 50%;
+  height: auto;
+  position: absolute;
   border-radius: 20px;
   margin-left: 50%;
-  margin-right: 0px;
-  margin-bottom: -106%;
+  margin-right: 20px;
 }
 
  .h1 {
