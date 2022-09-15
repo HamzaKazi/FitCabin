@@ -143,9 +143,24 @@ a {
   text-decoration: none !important;
 }
 
-.modal-body {
- border:1px solid rgb(221, 144, 2);
- border-radius: 1rem;
+.modal-heading {
+  text-align: center !important;
+  // margin: auto !important;
+}
+
+.modal-content {
+ border-radius: 20px !important;
+ background-color: #454545 !important;
+ border: 2px solid #FF9900 !important;
+ text-align: center !important;
+ color: white !important;
+ font-size: 20px !important;
+
+ .btn {
+  border: 2px solid #FF9900 !important;
+  border-radius: 15px !important;
+  color: white !important;
+ }
 }
 
 .card-exercise {
