@@ -24,28 +24,31 @@
  .foodclass {
   position: relative;
     font-size: 40px;
-    bottom: 751px;
+    bottom: 725px;
     left: 841px;
     color: white;
     align-items: center;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .list-food {
   display: grid;
   position: relative;
   bottom: 720px;
-  left: 756px;
+  left: 802px;
   color: white;
   font-size: 22px;
+  font-family: 'Lato', sans-serif;
 }
 h5.card-title-food, .card-title-food.h5 {
   /* margin-top: -27px; */
-  font-family: "Nunito", "Helvetica", "sans-serif";
   font-weight: 500;
   line-height: 1;
   color: #ff9100;
   font-size: 32px;
   margin: auto;
+  font-family: 'Lato', sans-serif;
+
 }
 
 .button-28-food {
@@ -55,12 +58,11 @@ h5.card-title-food, .card-title-food.h5 {
     box-sizing: border-box;
     color: #ffffff;
     display: inline-block;
-    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     font-size: 42px;
     font-weight: 600;
     line-height: normal;
     margin: 0;
-    min-height: 60px;
+    min-height: 100px;
     width: 20px;
     outline: none;
     padding: 16px 24px;
@@ -79,6 +81,8 @@ h5.card-title-food, .card-title-food.h5 {
     mix-blend-mode: color-dodge;
     border: 5px solid #FF9900;
     border-radius: 20px;
+    font-family: 'Open Sans', sans-serif;
+
   }
 
   .log-btn-food {
@@ -89,12 +93,11 @@ h5.card-title-food, .card-title-food.h5 {
     box-sizing: border-box;
     color: #ffffff;
     display: inline-block;
-    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     font-size: 42px;
     font-weight: 600;
     line-height: normal;
     margin: 0;
-    min-height: 60px;
+    min-height: 100px;
     width: 20px;
     outline: none;
     padding: 16px 24px;
@@ -110,6 +113,7 @@ h5.card-title-food, .card-title-food.h5 {
     height: 93px;
     left: 594px;
     top: 789px;
+    font-family: 'Open Sans', sans-serif;
       }
 
     .orange-splash {
@@ -146,3 +150,21 @@ h5.card-title-food, .card-title-food.h5 {
     padding: 1px;
     border-radius: 10px;
     }
+
+    .title-nutrition {
+      margin: 0;
+  color: #ffffffd8;
+  font-size: 100px;
+  letter-spacing: 1px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  }
+
+  .calorie-count {
+    text-align: right;
+    position: absolute;
+    top: 27vh;
+    color: #ffffff;
+    right: 42vh;
+    font-family: 'Lato', sans-serif;
+}
