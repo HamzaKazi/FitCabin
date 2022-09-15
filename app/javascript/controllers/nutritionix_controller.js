@@ -25,20 +25,20 @@ export default class extends Controller {
       .then((data) => {
         // console.log(data.parsed[0])
 
-          const carbs = parseFloat(data.hints[0].food.nutrients["CHOCDF"])
-          let carbsGrams = (carbs/100) * parseFloat(`${weight}`)
+          const carbs = parseFloat(data.hints[0].food.nutrients["CHOCDF"]).toFixed(2)
+          let carbsGrams = (carbs/100) * parseFloat(`${weight}`).toFixed(2)
 
-          const calories = parseFloat(data.hints[0].food.nutrients["ENERC_KCAL"])
-          let caloriesGrams = (calories/100) * parseFloat(`${weight}`)
+          const calories = parseFloat(data.hints[0].food.nutrients["ENERC_KCAL"]).toFixed(2)
+          let caloriesGrams = (calories/100) * parseFloat(`${weight}`).toFixed(2)
 
-          const fat = parseFloat(data.hints[0].food.nutrients["FAT"])
-          let fatGrams = (fat/100) * parseFloat(`${weight}`)
+          const fat = parseFloat(data.hints[0].food.nutrients["FAT"]).toFixed(2)
+          let fatGrams = (fat/100) * parseFloat(`${weight}`).toFixed(2)
 
-          const fibre = parseFloat(data.hints[0].food.nutrients["FIBTG"]) || "No fibre"
-          let fibreGrams = (fibre/100) * parseFloat(`${weight}`)
+          const fibre = parseFloat(data.hints[0].food.nutrients["FIBTG"]).toFixed(2)
+          let fibreGrams = (fibre/100) * parseFloat(`${weight}`).toFixed(2)
 
-          const protein = parseFloat(data.hints[0].food.nutrients["PROCNT"])
-          let proteinGrams = (protein/100) * parseFloat(`${weight}`)
+          const protein = parseFloat(data.hints[0].food.nutrients["PROCNT"]).toFixed(2)
+          let proteinGrams = (protein/100) * parseFloat(`${weight}`).toFixed(2)
 
           console.log(parseFloat(data.hints[0].food.nutrients["CHOCDF"]));
           const img = data.hints[0].food["image"]
@@ -52,11 +52,12 @@ export default class extends Controller {
           </div>
 
           <ul class="list-food">
-          <li><b>Carbs: </b><span> ${carbsGrams} g kcal in ${weight}g of ${query} </span></li></span></li>
-          <li><b>Calories: </b><span> ${caloriesGrams} kcal in ${weight}g of ${query} </span></li>
-          <li><b>Fats: </b><span> ${fatGrams} g kcal in ${weight}g of ${query} </span></li></span></li>
-          <li><b>Fibre: </b><span> ${fibreGrams} g kcal in ${weight}g of ${query} </span></li></span></li>
-          <li><b>Protein: </b><span> ${proteinGrams} g kcal in ${weight}g of ${query} </span></li></span></li>
+          <p><b>In ${weight}g of ${query}:<b></p>
+          <li><b>Carbs: </b><span> ${parseFloat(carbsGrams).toFixed(2)} g kcal </span></li></span></li>
+          <li><b>Calories: </b><span> ${parseFloat(caloriesGrams).toFixed(2)} kcal </span></li>
+          <li><b>Fats: </b><span> ${parseFloat(fatGrams).toFixed(2)} g kcal </span></li></span></li>
+          <li><b>Fibre: </b><span> ${parseFloat(fibreGrams).toFixed(2)} g kcal </span></li></span></li>
+          <li><b>Protein: </b><span> ${parseFloat(proteinGrams).toFixed(2)} g kcal </span></li></span></li>
           </ul>
           link_to "add", food_path(@food, name: name, calories: carbsGrams)
 
