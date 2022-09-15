@@ -127,16 +127,17 @@
 }
 
 .card__title {
-  font-size: 1.1em;
+  font-size: 1.2em;
   margin: 0 0 .2em;
   color: white;
   padding-left: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
 }
 
 .card__tagline {
   display: block;
   margin: 1em 0;
-  font-family: “MockFlowFont”;
   font-size: .7em;
   color: #ff9900;
 }
@@ -145,6 +146,7 @@
   font-size: .9em;
   color: white;
   padding-left: 10px;
+  font-family: 'Lato', sans-serif;
 }
 
 .card__description {
@@ -152,21 +154,23 @@
   padding: 0 1.4em 1em;
   margin: 0;
   color: white;
-  font-family: “MockFlowFont”;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
+  font-family: 'Lato', sans-serif;
+
 }
 
 .map {
-  float: right;
-  width: 50%;
-  height: auto;
-  position: absolute;
+  // float: right;
+  // width: 50%;
+  // height: auto;
+  position: sticky !important;
   border-radius: 20px;
   margin-left: 50%;
-  margin-right: 20px;
+  margin-right: 0px;
+  margin-bottom: -106%;
 }
 
  .h1 {

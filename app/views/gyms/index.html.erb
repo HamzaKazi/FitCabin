@@ -47,19 +47,19 @@
                   <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
                   <div class="card__header-text">
                     <h3 class="card__title"><strong><%= gym.name %></strong></h3>
-                    <span class="card__status"><strong>Rating:<%= gym.rating%></strong></span>
-                    <span class="card__status"><strong>£<%= gym.price%>/monthly</strong></span>
+                    <span class="card__status">Rating:<%= gym.rating%></span>
+                    <span class="card__status"><%= gym.price%>/monthly</span>
                   </div>
                   <%# <p class="card__description">Lorem ipsum dolor sit amet consectetur</p> %>
                 </div>
-                    <p class="card__description"><strong>Read more</strong></p>
+                    <p class="card__description">Read more</p>
               </div>
           </div>
           <% end %>
     </div>
 
     <div class= "map">
-        <div style="width: 100%; height: 1800px;"
+        <div style="width: 100%; height: 800px;"
           data-controller="map"
           data-map-markers-value="<%= @markers.to_json %>"
           data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
