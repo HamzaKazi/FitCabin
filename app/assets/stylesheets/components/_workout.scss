@@ -7,7 +7,20 @@
 .logo {
   height: 50%;
   width: auto;
+  position: absolute;
+  left: 30px;
+  top: -6vw;
   }
+
+  .heart {
+      position: absolute;
+      width: 129vw;
+      height: 54vw;
+      left: -17vw;
+      top: 9vw;
+      opacity: 20%;
+    }
+
 
   .card-workout {
     // position: absolute;
@@ -48,45 +61,49 @@
   -webkit-user-select: none;
   touch-action: manipulation;
   width: 100%;
-  position: absolute;
+  position: relative;
   width: 350px;
   height: 93px;
-  left: 850px;
-  top: 202px;
+  left: 41vw;
+  top: 6vw;
   mix-blend-mode: color-dodge;
   border: 5px solid #FF9900;
   border-radius: 20px;
 }
 
 .log-btn {
-  appearance: none;
-  background-color: #FF9900;
-  border-radius: 15px;
-  border: 3.5px solid black;
-  box-sizing: border-box;
-  color: #ffffff;
-  display: inline-block;
-  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  font-size: 42px;
-  font-weight: 600;
-  line-height: normal;
-  margin: 0;
-  min-height: 60px;
-  width: 20px;
-  outline: none;
-  padding: 16px 24px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: 100%;
-  position: absolute;
-  width: 350px;
-  height: 93px;
-  left: 850px;
-  top: 900px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #FF9900;
+    border-radius: 15px;
+    border: 3.5px solid black;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 42px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    width: 20px;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+    position: relative;
+    width: 350px;
+    height: 93px;
+    left: 51vw;
+    top: 41vw;
     }
 
     .btn-warning {
@@ -114,22 +131,13 @@
       text-decoration: none !important;
       font-size: 20px;
   }
-// ADDED A NEW CSS FOR DATE!!!!
-  .heart {
-    position: absolute;
-    width: 1700px;
-    height: 915px;
-    left: -76px;
-    top: 131px;
-    opacity: 20%;
-}
 
 .lady {
-    position: absolute;
-    width: 794px;
-    height: 676px;
-    left: -180px;
-    top: 302px;
+  position: absolute;
+  width: 48vw;
+  height: 41vw;
+  left: -11vw;
+  top: 22.75vw;
 }
 
 
@@ -203,15 +211,6 @@ a {
   margin: 12px;
 }
 
-.heart-fitness {
-  position: absolute;
-  width: 794px;
-  height: 868px;
-  left: 846px;
-  top: 183px;
-  /* opacity: 80%; */
-}
-
 .motivation {
   position: relative;
   text-align: center;
@@ -219,7 +218,6 @@ a {
   font-style: italic;
   font-size: 40px;
 }
-
 
 .fa-solid-workout {
   color: orange;
@@ -234,5 +232,14 @@ a {
   font-size: 4REM;
   letter-spacing: 1px;
   text-align: center;
+}
 
+.fa-trash {
+  color: red;
+}
+
+.heart-fitness {
+  position: absolute;
+  right: -10vw;
+  top: 6.4vw;
 }
