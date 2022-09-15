@@ -15,9 +15,10 @@ Gym.destroy_all
 Post.destroy_all
 puts "Database cleaned"
 workout = Workout.create(date: 10112022)
-user = User.create(email: "admin@fitcabin.com", password: "123456")
+user = User.create(email: "admin@fitcabin.com", password: "123456", first_name: "PrinceOfBahrain")
+user1 = User.create(email: "stacey@fitcabin.com", password: "123456", first_name: "StaceyTHEgoat")
 user2 = User.create(email: "ronaldo@fitcabin.com", password: "123456", first_name: "Ronaldo")
-user3 = User.create(email: "Tate@fitcabin.com", password: "123456", first_name: "")
+user3 = User.create(email: "Tate@fitcabin.com", password: "123456", first_name: "CobraTate")
 puts "user #{user.id}"
 
 # file = URI.open("https://images.unsplash.com/photo-1623946724822-ba48a838f3da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTk4fHxneW18ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60")
@@ -37,7 +38,7 @@ puts "Posts saved"
 post = Post.create(
   caption: "#RiseNGrind",
   likes: 87,
-  user_id: user.id
+  user_id: user1.id
 )
 post.image.attach(io: file, filename: "nes.png", content_type: "image/png")
 post.save
