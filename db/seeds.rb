@@ -35,7 +35,7 @@ puts "user #{user.id}"
 file = URI.open("https://images.unsplash.com/photo-1610441009633-b6ca9c6d4be2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80")
 puts "Posts saved"
 post = Post.create(
-  caption: "Morning Breakfast! #RiseNGrind",
+  caption: "#RiseNGrind",
   likes: 87,
   user_id: user.id
 )
