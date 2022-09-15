@@ -34,12 +34,18 @@
   .sort-index {
     margin-top: 8px;
     color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-style: bold;
+
   }
 }
 
 .gym-title {
   color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 5rem;
 }
+
 .cards-all {
   // display: grid;
   // grid-template-columns: repeat(3, 1fr);
@@ -179,6 +185,8 @@
   font-size: 100px;
   letter-spacing: 1px;
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
+
 }
 
 .form-control-gym {
