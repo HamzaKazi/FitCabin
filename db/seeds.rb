@@ -16,14 +16,38 @@ Post.destroy_all
 puts "Database cleaned"
 workout = Workout.create(date: 10112022)
 user = User.create(email: "admin@fitcabin.com", password: "123456")
+user2 = User.create(email: "ronaldo@fitcabin.com", password: "123456", first_name: "Ronaldo")
+user3 = User.create(email: "Tate@fitcabin.com", password: "123456", first_name: "")
 puts "user #{user.id}"
 
-file = URI.open("https://images.unsplash.com/photo-1623946724822-ba48a838f3da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTk4fHxneW18ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60")
+# file = URI.open("https://images.unsplash.com/photo-1623946724822-ba48a838f3da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTk4fHxneW18ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60")
+# puts "Posts saved"
+# post = Post.create(
+#   caption: "New PR!! #LetsGO",
+#   likes: 210,
+#   user_id: user.id
+# )
+# post.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+# post.save
+
+
+
+file = URI.open("https://images.unsplash.com/photo-1610441009633-b6ca9c6d4be2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80")
 puts "Posts saved"
 post = Post.create(
-  caption: "New PR!! #LetsGO",
-  likes: 36,
+  caption: "Morning Breakfast! #RiseNGrind",
+  likes: 87,
   user_id: user.id
+)
+post.image.attach(io: file, filename: "nes.png", content_type: "image/png")
+post.save
+
+file = URI.open("https://preview.redd.it/13gbec0cm0f81.jpg?width=640&crop=smart&auto=webp&s=cca3d2226a89017eccdd2f458b379a404183ead6")
+puts "Posts saved"
+post = Post.create(
+  caption: "TOP G!",
+  likes: 450,
+  user_id: user3.id
 )
 post.image.attach(io: file, filename: "nes.png", content_type: "image/png")
 post.save
@@ -32,18 +56,8 @@ file = URI.open("https://i2-prod.mirror.co.uk/incoming/article13142117.ece/ALTER
 puts "Posts saved"
 post = Post.create(
   caption: "SIUUU!",
-  likes: 1200,
-  user_id: user.id
-)
-post.image.attach(io: file, filename: "nes.png", content_type: "image/png")
-post.save
-
-file = URI.open("https://images.unsplash.com/photo-1610441009633-b6ca9c6d4be2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80")
-puts "Posts saved"
-post = Post.create(
-  caption: "Morning Breakfast! #RiseNGrind",
-  likes: 87,
-  user_id: user.id
+  likes: 1236,
+  user_id: user2.id
 )
 post.image.attach(io: file, filename: "nes.png", content_type: "image/png")
 post.save
@@ -82,6 +96,20 @@ workout = Workout.create(
   user_id: user.id
 )
 workout.save
+
+food = Food.create(
+  name: "Breakfast",
+  date: "15/9/2022",
+  user_id: user.id
+)
+food.save
+
+food = Food.create(
+  name: "Lunch",
+  date: "15/9/2022",
+  user_id: user.id
+)
+food.save
 
 # review = Review.create(
 #   content: "Amazing gym, 10/10 would recommend!",

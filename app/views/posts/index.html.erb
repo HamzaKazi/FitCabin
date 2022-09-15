@@ -71,7 +71,7 @@
                       <a href=""><img class="img-fluid rounded-circle" src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/4.jpg" alt="User"></a>
                       </div>
                       <div class="media-body">
-                        <p class="m-0">FitCabin_Username</p>
+                       <p class="m-0"><%= post.user.first_name %></p>
                       <small><span><i class="icon ion-md-pin"></i> London, England</span></small>
                       <small><span><i class="icon ion-md-time"></i> 10 hours ago</span></small>
                       </div>
@@ -89,9 +89,9 @@
             <div class="cardbox-base">
               <ul class="float-right">
               <li><a><i class="fa fa-comments"></i></a></li>
-              <li><a><em class="mr-5"><%= post.likes%></em></a></li>
+              <li><a><em class="mr-5"><%= post.likes+200 %></em></a></li>
               <li><a><i class="fa fa-share-alt"></i></a></li>
-              <li><a><em class="mr-3">03</em></a></li>
+            <li><a><em class="mr-3"><%= post.likes+32 %></em></a></li>
               </ul>
               <ul>
 
