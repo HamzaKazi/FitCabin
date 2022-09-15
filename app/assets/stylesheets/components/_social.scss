@@ -181,9 +181,9 @@ $labelData: '';
 }
 
 .btn-primary-social {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border: 2px solid #ff9900;
-	display: right;
+	display: center;
 	padding: .75rem 1.25rem;
 	border-radius: 10rem;
 	color: #fff;
@@ -361,7 +361,7 @@ text-align: center;
  position: relative;
  top: 4px;
  font-size: 16px;
- color: #8d8d8d;
+ color: #ff9900;
  margin-right: 15px;
 }
 .cardbox-base li a span{
@@ -401,6 +401,7 @@ text-align: center;
 }
 .comment-card-title {
   margin-bottom: 0.50rem;
+
   padding: 0px 40px 20px 40px !important;
   font-size: 16px;
 }
@@ -414,6 +415,7 @@ text-align: center;
   display: flex;
   justify-content: space-between;
   font-family: 'Nunito', sans-serif;
+
   font-size: 17px  /* 1em = 10px */
   // display: inline-block;
 }
@@ -439,11 +441,15 @@ text-align: center;
   position: relative;
   top: 34px;
 }
-
+.social-row {
+  display: contents;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
 .search {
 //  position: relative;
 //  right: -60px;
-//  top: -40px;
+//  top: -40px
 //  margin-bottom: -40px;
 //  border: 2px solid #f4f4f4;
  width: 90%;

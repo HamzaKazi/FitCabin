@@ -29,13 +29,13 @@
 
 
               <p type="" class="btn btn-warning" style= "width: 0px; height: 0px; padding: 0px;" data-bs-toggle="modal" data-bs-target="#exampleModal<%= food.id %>">
-                <i class="fa-solid-workout fa-plus"></i>
+                <i class="fa-solid-workout fa-plus fa-sm"></i>
               </p>
 
               <%= link_to food_path(food), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this meal log?" } do %>
-                <%= image_tag "bin_delete.png", style: "width: 20px; height: 20px; position:relative; left:110px; bottom:90px;" %>
+                <i class="fa-solid fa-trash" style = "width: 20px; height: 20px; position:relative; left:110px; bottom:90px;"></i>
 
- 
+
                 <% end %>
           </div>
         </div>
